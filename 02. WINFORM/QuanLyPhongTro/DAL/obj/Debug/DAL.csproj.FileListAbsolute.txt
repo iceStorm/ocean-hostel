@@ -1,0 +1,14 @@
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\QuanLyPhongTro\DAL\bin\Debug\DAL.dll
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\QuanLyPhongTro\DAL\bin\Debug\DAL.pdb
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\QuanLyPhongTro\DAL\bin\Debug\DTO.dll
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\QuanLyPhongTro\DAL\bin\Debug\DTO.pdb
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\QuanLyPhongTro\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\QuanLyPhongTro\DAL\obj\Debug\DAL.dll
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\QuanLyPhongTro\DAL\obj\Debug\DAL.pdb
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\DAL\bin\Debug\DAL.dll
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\DAL\bin\Debug\DAL.pdb
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\DAL\bin\Debug\DTO.dll
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\DAL\bin\Debug\DTO.pdb
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\DAL\obj\Debug\DAL.dll
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\DAL\obj\Debug\DAL.pdb

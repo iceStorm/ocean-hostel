@@ -1,0 +1,18 @@
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\QuanLyPhongTro\BLL\bin\Debug\BLL.dll
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\QuanLyPhongTro\BLL\bin\Debug\BLL.pdb
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\QuanLyPhongTro\BLL\bin\Debug\DAL.dll
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\QuanLyPhongTro\BLL\bin\Debug\DTO.dll
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\QuanLyPhongTro\BLL\bin\Debug\DAL.pdb
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\QuanLyPhongTro\BLL\bin\Debug\DTO.pdb
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\QuanLyPhongTro\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\QuanLyPhongTro\BLL\obj\Debug\BLL.dll
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\QuanLyPhongTro\BLL\obj\Debug\BLL.pdb
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\BLL\bin\Debug\BLL.dll
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\BLL\bin\Debug\BLL.pdb
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\BLL\bin\Debug\DAL.dll
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\BLL\bin\Debug\DTO.dll
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\BLL\bin\Debug\DAL.pdb
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\BLL\bin\Debug\DTO.pdb
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\BLL\obj\Debug\BLL.dll
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\BLL\obj\Debug\BLL.pdb
