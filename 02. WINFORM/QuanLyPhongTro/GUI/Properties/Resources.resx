@@ -121,4 +121,31 @@
   <data name="ColorLayer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\LOGIN_BACKGROUNDS\ColorLayer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_chart_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-chart-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_collaborator_female_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-collaborator-female-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_exit_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-exit-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_password_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-password-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_private_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-private-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_shutdown_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-shutdown-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_stairs_up_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-stairs-up-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_time_machine_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-time-machine-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_user_group_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-user-group-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

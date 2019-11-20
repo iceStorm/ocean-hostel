@@ -169,21 +169,23 @@
       <DependentUpon>fMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
+    <None Include="bin\Debug\ICONS\icons8-stairs-up-32.png" />
+    <None Include="bin\Debug\ICONS\icons8-user-group-32.png" />
+    <None Include="bin\Debug\ICONS\icons8-collaborator-female-32.png" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -202,6 +204,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\LOGIN_BACKGROUNDS\ColorLayer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-chart-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-time-machine-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-password-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-exit-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-shutdown-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-private-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
