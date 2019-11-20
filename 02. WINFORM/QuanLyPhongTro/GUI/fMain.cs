@@ -124,5 +124,19 @@ namespace GUI
             FormDashboard.MdiParent = this;
             FormDashboard.Show();
         }
+
+        private void btn_thoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void fMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dr = XtraMessageBox.Show("Xác nhận thoát ?", "Thông báo",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dr == DialogResult.No)
+                e.Cancel = true;
+        }
     }
 }

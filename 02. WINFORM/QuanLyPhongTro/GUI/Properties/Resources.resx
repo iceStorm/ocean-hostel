@@ -127,8 +127,20 @@
   <data name="icons8_collaborator_female_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ICONS\icons8-collaborator-female-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_condo_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-condo-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_contract_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-contract-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_exit_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ICONS\icons8-exit-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_family_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-family-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_home_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-home-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_password_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ICONS\icons8-password-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -144,6 +156,9 @@
   </data>
   <data name="icons8_time_machine_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ICONS\icons8-time-machine-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_traveler_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-traveler-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_user_group_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ICONS\icons8-user-group-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

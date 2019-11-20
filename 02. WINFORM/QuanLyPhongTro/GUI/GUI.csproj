@@ -223,6 +223,24 @@
   <ItemGroup>
     <None Include="bin\Debug\ICONS\icons8-private-32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-home-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-condo-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-contract-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-family-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-traveler-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ChildrenForms\HeThong\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
