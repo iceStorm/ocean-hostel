@@ -63,7 +63,7 @@ namespace GUI
 
 
             #region Animator
-            
+
             this.animator = new Animator();
             animator.AnimationType = AnimationType.Mosaic;
 
@@ -152,7 +152,7 @@ namespace GUI
 
 
         #region CLICK EVENTS
-        
+
         private void btn_dangNhap_Click(object sender, EventArgs e)
         {
             fMain FormMain = new fMain();
@@ -223,7 +223,7 @@ namespace GUI
         }
 
         #endregion
-        
+
 
 
         private void textBoxes_Keypress(object sender, KeyPressEventArgs e)

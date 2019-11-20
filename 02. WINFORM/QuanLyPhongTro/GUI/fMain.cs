@@ -90,7 +90,7 @@ namespace GUI
 
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            foreach(Form childForm in this.MdiChildren)
+            foreach (Form childForm in this.MdiChildren)
                 if (childForm.Name == "f")
                 {
                     childForm.Activate();
@@ -124,7 +124,5 @@ namespace GUI
             FormDashboard.MdiParent = this;
             FormDashboard.Show();
         }
-
-
     }
 }
