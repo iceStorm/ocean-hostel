@@ -47,6 +47,7 @@ namespace GUI
             }
 
             this.bunifuRadialGauge1.Value += 1;
+            this.bunifuCircleProgressbar1.Value += 1;
         }
 
         private void fDashboard_Load(object sender, EventArgs e)

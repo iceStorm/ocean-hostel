@@ -111,13 +111,27 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.BonusSkins.v19.1" />
-    <Reference Include="DevExpress.Data.v19.1" />
-    <Reference Include="DevExpress.Utils.v19.1" />
-    <Reference Include="DevExpress.Sparkline.v19.1.Core" />
-    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v19.1" />
-    <Reference Include="DevExpress.Printing.v19.1.Core" />
+    <Reference Include="DevExpress.BonusSkins.v19.1">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v19.1">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v19.1">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v19.1.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v19.1">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v19.1.Core">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MaterialSkin">
       <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\MaterialSkin.dll</HintPath>
     </Reference>
@@ -168,6 +182,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fDashboard.resx">
+      <DependentUpon>fDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fLock.resx">
       <DependentUpon>fLock.cs</DependentUpon>
     </EmbeddedResource>
