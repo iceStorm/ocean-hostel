@@ -10,15 +10,74 @@ namespace DAL
 {
     public class DataProvider
     {
-        private static string myConnStr = @"Data Source=azure-sqlexpress.database.windows.net;
-                                            Initial Catalog=ocean-motel;
-                                            User ID=azure-admin";
+        private static string myConnStr = @"Data Source=.\sqlexpress;
+                                            Initial Catalog=OCEAN_HOSTEL;
+                                            Integrated Security=True";
 
         private static SqlConnection connection = new SqlConnection(myConnStr);
 
-        public static string TestConnection()
+
+        private static SqlParameter[] GetParamsList(string query, object[] parameters)
         {
-            return connection.State.ToString();
+            List<SqlParameter> result = new List<SqlParameter>();
+            List<string> segments = query.Split(' ').ToList<string>();
+
+            int countParams = 0;
+            foreach (string segment in segments)
+                if (segment.Contains('@'))
+                {
+                    SqlParameter sp = new SqlParameter
+                    {
+                        ParameterName = segment.Substring(1),
+                        Value = parameters[countParams++]
+                    };
+
+                    result.Add(sp);
+                }
+
+            return result.ToArray();
+        }
+
+
+        protected static DataTable ExecuteQuery(string query, object[] parameters = null)
+        {
+            SqlCommand command = new SqlCommand(query, connection);
+
+            if (parameters != null)
+                command.Parameters.AddRange(GetParamsList(query, parameters));
+
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+
+            return dt;
+        }
+
+
+        protected int ExecuteNonQuery(string query, object[] parameters = null)
+        {
+            if (connection.State == ConnectionState.Closed)
+                connection.Open();
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            if (parameters != null)
+                command.Parameters.AddRange(GetParamsList(query, parameters));
+
+            return command.ExecuteNonQuery();
+        }
+
+        protected object ExecuteScalar(string query, object[] parameters = null)
+        {
+            if (connection.State == ConnectionState.Closed)
+                connection.Open();
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            if (parameters != null)
+                command.Parameters.AddRange(GetParamsList(query, parameters));
+
+            return command.ExecuteScalar();
         }
     }
 }

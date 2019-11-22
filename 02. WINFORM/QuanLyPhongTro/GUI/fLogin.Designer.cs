@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fLogin));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
@@ -47,9 +44,9 @@
             this.pn_imageSlider = new System.Windows.Forms.Panel();
             this.pn_colorLayer = new System.Windows.Forms.Panel();
             this.pn_right = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btn_cancel = new System.Windows.Forms.Label();
             this.lb_nhoMatKhau = new Bunifu.UI.WinForms.BunifuLabel();
             this.chb_ghiNho = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.btn_cancel = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pn_left.SuspendLayout();
             this.pn_imageSlider.SuspendLayout();
             this.pn_colorLayer.SuspendLayout();
@@ -62,7 +59,7 @@
             this.btn_dangNhap.AnimationSpeed = 200;
             this.btn_dangNhap.AutoGenerateColors = false;
             this.btn_dangNhap.BackColor = System.Drawing.Color.Transparent;
-            this.btn_dangNhap.BackColor1 = System.Drawing.Color.Transparent;
+            this.btn_dangNhap.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(50)))));
             this.btn_dangNhap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_dangNhap.BackgroundImage")));
             this.btn_dangNhap.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btn_dangNhap.ButtonText = "Đăng Nhập";
@@ -70,50 +67,50 @@
             this.btn_dangNhap.ColorContrastOnClick = 45;
             this.btn_dangNhap.ColorContrastOnHover = 45;
             this.btn_dangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btn_dangNhap.CustomizableEdges = borderEdges1;
-            this.btn_dangNhap.DialogResult = System.Windows.Forms.DialogResult.None;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btn_dangNhap.CustomizableEdges = borderEdges2;
+            this.btn_dangNhap.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_dangNhap.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn_dangNhap.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btn_dangNhap.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btn_dangNhap.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btn_dangNhap.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_dangNhap.ForeColor = System.Drawing.Color.Blue;
+            this.btn_dangNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_dangNhap.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.btn_dangNhap.IconMarginLeft = 11;
             this.btn_dangNhap.IconPadding = 10;
             this.btn_dangNhap.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_dangNhap.IdleBorderColor = System.Drawing.Color.Blue;
-            this.btn_dangNhap.IdleBorderRadius = 12;
+            this.btn_dangNhap.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_dangNhap.IdleBorderRadius = 43;
             this.btn_dangNhap.IdleBorderThickness = 1;
-            this.btn_dangNhap.IdleFillColor = System.Drawing.Color.Transparent;
+            this.btn_dangNhap.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(50)))));
             this.btn_dangNhap.IdleIconLeftImage = null;
             this.btn_dangNhap.IdleIconRightImage = null;
             this.btn_dangNhap.IndicateFocus = false;
-            this.btn_dangNhap.Location = new System.Drawing.Point(144, 426);
+            this.btn_dangNhap.Location = new System.Drawing.Point(37, 426);
             this.btn_dangNhap.Name = "btn_dangNhap";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties1.BorderRadius = 12;
-            stateProperties1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties1.BorderThickness = 1;
-            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties1.ForeColor = System.Drawing.Color.White;
-            stateProperties1.IconLeftImage = null;
-            stateProperties1.IconRightImage = null;
-            this.btn_dangNhap.onHoverState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties2.BorderRadius = 12;
-            stateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties2.BorderThickness = 1;
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties2.ForeColor = System.Drawing.Color.White;
-            stateProperties2.IconLeftImage = null;
-            stateProperties2.IconRightImage = null;
-            this.btn_dangNhap.OnPressedState = stateProperties2;
-            this.btn_dangNhap.Size = new System.Drawing.Size(131, 48);
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.BorderRadius = 43;
+            stateProperties3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties3.BorderThickness = 1;
+            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.ForeColor = System.Drawing.Color.White;
+            stateProperties3.IconLeftImage = null;
+            stateProperties3.IconRightImage = null;
+            this.btn_dangNhap.onHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties4.BorderRadius = 43;
+            stateProperties4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties4.BorderThickness = 1;
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties4.ForeColor = System.Drawing.Color.White;
+            stateProperties4.IconLeftImage = null;
+            stateProperties4.IconRightImage = null;
+            this.btn_dangNhap.OnPressedState = stateProperties4;
+            this.btn_dangNhap.Size = new System.Drawing.Size(234, 48);
             this.btn_dangNhap.TabIndex = 3;
             this.btn_dangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_dangNhap.TextMarginLeft = 0;
@@ -260,9 +257,9 @@
             this.pn_right.BackColor = System.Drawing.Color.White;
             this.pn_right.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pn_right.BackgroundImage")));
             this.pn_right.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pn_right.Controls.Add(this.btn_cancel);
             this.pn_right.Controls.Add(this.lb_nhoMatKhau);
             this.pn_right.Controls.Add(this.chb_ghiNho);
-            this.pn_right.Controls.Add(this.btn_cancel);
             this.pn_right.Controls.Add(this.btn_dangNhap);
             this.pn_right.Controls.Add(this.lb_loginTitle);
             this.pn_right.Controls.Add(this.txt_matKhau);
@@ -279,6 +276,20 @@
             this.pn_right.Quality = 10;
             this.pn_right.Size = new System.Drawing.Size(302, 497);
             this.pn_right.TabIndex = 11;
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancel.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_cancel.Location = new System.Drawing.Point(267, 0);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(35, 35);
+            this.btn_cancel.TabIndex = 102;
+            this.btn_cancel.Text = "×";
+            this.btn_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // lb_nhoMatKhau
             // 
@@ -349,75 +360,10 @@
             this.chb_ghiNho.ThreeState = false;
             this.chb_ghiNho.ToolTipText = null;
             // 
-            // btn_cancel
-            // 
-            this.btn_cancel.AllowToggling = false;
-            this.btn_cancel.AnimationSpeed = 200;
-            this.btn_cancel.AutoGenerateColors = false;
-            this.btn_cancel.BackColor = System.Drawing.Color.Transparent;
-            this.btn_cancel.BackColor1 = System.Drawing.Color.Transparent;
-            this.btn_cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_cancel.BackgroundImage")));
-            this.btn_cancel.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_cancel.ButtonText = "Huỷ";
-            this.btn_cancel.ButtonTextMarginLeft = 0;
-            this.btn_cancel.ColorContrastOnClick = 45;
-            this.btn_cancel.ColorContrastOnHover = 45;
-            this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btn_cancel.CustomizableEdges = borderEdges2;
-            this.btn_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_cancel.DisabledBorderColor = System.Drawing.Color.Empty;
-            this.btn_cancel.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btn_cancel.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btn_cancel.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btn_cancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_cancel.ForeColor = System.Drawing.Color.Crimson;
-            this.btn_cancel.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cancel.IconMarginLeft = 11;
-            this.btn_cancel.IconPadding = 10;
-            this.btn_cancel.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cancel.IdleBorderColor = System.Drawing.Color.Crimson;
-            this.btn_cancel.IdleBorderRadius = 12;
-            this.btn_cancel.IdleBorderThickness = 1;
-            this.btn_cancel.IdleFillColor = System.Drawing.Color.Transparent;
-            this.btn_cancel.IdleIconLeftImage = null;
-            this.btn_cancel.IdleIconRightImage = null;
-            this.btn_cancel.IndicateFocus = false;
-            this.btn_cancel.Location = new System.Drawing.Point(32, 426);
-            this.btn_cancel.Name = "btn_cancel";
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.BorderRadius = 12;
-            stateProperties3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties3.BorderThickness = 1;
-            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.ForeColor = System.Drawing.Color.White;
-            stateProperties3.IconLeftImage = null;
-            stateProperties3.IconRightImage = null;
-            this.btn_cancel.onHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties4.BorderRadius = 12;
-            stateProperties4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties4.BorderThickness = 1;
-            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties4.ForeColor = System.Drawing.Color.White;
-            stateProperties4.IconLeftImage = null;
-            stateProperties4.IconRightImage = null;
-            this.btn_cancel.OnPressedState = stateProperties4;
-            this.btn_cancel.Size = new System.Drawing.Size(106, 48);
-            this.btn_cancel.TabIndex = 4;
-            this.btn_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_cancel.TextMarginLeft = 0;
-            this.btn_cancel.UseDefaultRadiusAndThickness = true;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
-            // 
             // fLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btn_cancel;
             this.ClientSize = new System.Drawing.Size(915, 497);
             this.Controls.Add(this.pn_left);
             this.Controls.Add(this.pn_right);
@@ -451,9 +397,9 @@
         private System.Windows.Forms.Panel pn_colorLayer;
         private System.Windows.Forms.Panel pn_imageSlider;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_dangNhap;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_cancel;
         private Bunifu.UI.WinForms.BunifuCheckBox chb_ghiNho;
         private Bunifu.UI.WinForms.BunifuLabel lb_nhoMatKhau;
         private Bunifu.Framework.UI.BunifuGradientPanel pn_right;
+        private System.Windows.Forms.Label btn_cancel;
     }
 }

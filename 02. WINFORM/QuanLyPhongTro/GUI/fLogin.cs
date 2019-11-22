@@ -12,6 +12,8 @@ using AnimatorNS;
 using System.Drawing.Text;
 using System.Drawing.Drawing2D;
 using System.IO;
+using BLL;
+using DTO;
 
 namespace GUI
 {
@@ -32,7 +34,10 @@ namespace GUI
         {
             InitializeComponent();
             LoadListBgrImages();
-            this.FormBorderStyle = FormBorderStyle.None;
+            this.FormBorderStyle = FormBorderStyle.None;    //  Make the form be BorderLess
+
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.btn_cancel, "Đóng");
 
 
             #region Panel image slider (pn_imageSlider)
@@ -129,7 +134,7 @@ namespace GUI
         #endregion
 
 
-        #region MAKE THE FORM DRAGGABLE WHEN BORDERLESS
+        #region MAKE THE FORM DRAGGABLE WHEN IT'S BORDERLESS
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -155,10 +160,47 @@ namespace GUI
 
         private void btn_dangNhap_Click(object sender, EventArgs e)
         {
-            fMain FormMain = new fMain();
-            this.Hide();
-            FormMain.ShowDialog();
-            this.Show();
+            if (CheckBeforeLogin() == false)
+                return;
+
+
+            DTO_NGUOIDUNG nguoiDung = new DTO_NGUOIDUNG
+            {
+                TenDangNhap = txt_tenTaiKhoan.Text,
+                MatKhau = txt_matKhau.Text
+            };
+
+
+            try
+            {
+                DataTable dt = BLL_NGUOIDUNG.GetAccountInfo_By_Credentials(nguoiDung);
+
+                if (dt.Rows.Count > 0)
+                {
+                    nguoiDung.Ho = dt.Rows[0]["HO"].ToString();
+                    nguoiDung.Ten = dt.Rows[0]["TEN"].ToString();
+                    nguoiDung.TrangThai = dt.Rows[0]["TRANGTHAI"].ToString();
+                    nguoiDung.DangNhapLanCuoi = DateTime.Parse(dt.Rows[0]["DANGNHAPLANCUOI"].ToString());
+
+                    fMain FormMain = new fMain(nguoiDung);
+                    this.Hide();
+                    FormMain.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    XtraMessageBox.Show("Thông tin đăng nhập không chính xác, vui lòng kiểm tra lại !",
+                        "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    this.txt_matKhau.Focus();
+                    this.txt_matKhau.SelectAll();
+                }
+            }
+            catch(Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message,
+                        "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)
@@ -180,7 +222,7 @@ namespace GUI
         #region SHOW - HIDE CONTROLS
         private async void ShowControls()
         {
-            animator.Show(lb_loginTitle);
+            animator.Show(lb_loginTitle, true);
 
             await Task.Delay(250);
             animator.Show(lb_tenTaiKhoan, true, Animation.VertSlide);
@@ -226,10 +268,53 @@ namespace GUI
 
 
 
+        private bool CheckBeforeLogin()
+        {
+            bool state = true;
+
+
+            if (String.IsNullOrWhiteSpace(this.txt_tenTaiKhoan.Text))
+            {
+                state = false;
+
+                XtraMessageBox.Show("Chưa nhập tên tài khoản !", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                this.txt_tenTaiKhoan.Focus();
+            }
+            else
+            {
+                if (String.IsNullOrWhiteSpace(this.txt_matKhau.Text))
+                {
+                    state = false;
+
+                    XtraMessageBox.Show("Chưa nhập mật khẩu !", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    this.txt_matKhau.Focus();
+                }
+            }
+
+
+            return state;
+        }
+
         private void textBoxes_Keypress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == 32)    //  Là dấu cách
-                e.Handled = true;   //  Chặn nhập vào
+            switch (e.KeyChar)
+            {
+                case (char)Keys.Space:
+                    {
+                        e.Handled = true;   //  Chặn nhập vào phím Space
+                        break;
+                    }
+
+                case (char)Keys.Enter:
+                    {
+                        this.btn_dangNhap.PerformClick();   //  Nhấn nút Đăng Nhập
+                        break;
+                    }
+            }
         }
 
         private void fLogin_Load(object sender, EventArgs e)

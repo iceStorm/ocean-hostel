@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DTO;
+using BLL;
 
 namespace GUI
 {
@@ -19,11 +21,15 @@ namespace GUI
                                            "Metropolis", "Liquid", "Dark Side", "Valentine", "Lilian",
                                            "Glass Oceans", "Money Twins"};
         private Timer timer_open;
+        private DTO_NGUOIDUNG nguoiDung;
 
-        public fMain()
+        public fMain(DTO_NGUOIDUNG nguoiDung)
         {
+            this.nguoiDung = nguoiDung;
             InitializeComponent();
             SetFormSize();
+
+            this.rib_main.Minimized = true;
 
             this.Opacity = 0;
             this.timer_open = new Timer();
@@ -56,6 +62,7 @@ namespace GUI
 
             this.txt_date.Caption = DateTime.Today.ToLongDateString();
             this.txt_time.Caption = DateTime.Today.ToLongTimeString();
+            this.txt_tenNhanVien.Caption = String.Format("{0} {1}", nguoiDung.Ho, nguoiDung.Ten);
 
 
             fDashboard FormDashboard = new fDashboard();
@@ -99,7 +106,7 @@ namespace GUI
 
             Form f = new Form();
             f.WindowState = FormWindowState.Maximized;
-            f.BackColor = Color.Crimson;
+            f.BackColor = Color.LimeGreen;
             f.Name = "f";
             f.MdiParent = this;
             f.Text = "Tabbed Child Form";

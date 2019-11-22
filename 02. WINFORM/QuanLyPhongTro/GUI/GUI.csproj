@@ -148,6 +148,12 @@
     <Compile Include="fDashboard.Designer.cs">
       <DependentUpon>fDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="fLock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLock.Designer.cs">
+      <DependentUpon>fLock.cs</DependentUpon>
+    </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fLock.resx">
+      <DependentUpon>fLock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +249,51 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ChildrenForms\HeThong\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-pie-chart-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-school-director-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-racism-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-light-automation-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-sell-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-no-parking-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-denied-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-chart-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-people-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-manager-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-good-pincode-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-lock-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-lease-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-dog-house-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-print-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

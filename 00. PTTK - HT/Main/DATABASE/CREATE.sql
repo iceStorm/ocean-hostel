@@ -22,7 +22,7 @@ CREATE  TABLE   NGUOIDUNG
     MATKHAU         VARCHAR(100)                NOT NULL,   --  Mật khẩu dài khi được mã hoá
     HO              NVARCHAR(10)                NOT NULL,
     TEN             NVARCHAR(30)                NOT NULL,
-    DANGNHAPLANCUOI DATETIME                    NULL,
+    DANGNHAPLANCUOI DATETIME                    NOT NULL				DEFAULT '2000-01-01',
     TRANGTHAI       BIT                         NOT NULL                DEFAULT 'True',     --  Active hay chưa
 
     CONSTRAINT      PK__NGUOIDUNG               PRIMARY KEY(TENDN)
