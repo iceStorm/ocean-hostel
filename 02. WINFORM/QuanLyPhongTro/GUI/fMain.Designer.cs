@@ -33,9 +33,9 @@
             this.rib_main = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_phong = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_dayNha = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_tang = new DevExpress.XtraBars.BarButtonItem();
             this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.txt_date = new DevExpress.XtraBars.BarStaticItem();
             this.txt_time = new DevExpress.XtraBars.BarStaticItem();
@@ -105,9 +105,9 @@
             this.rib_main.SearchEditItem,
             this.barButtonItem1,
             this.barButtonItem3,
-            this.barButtonItem4,
-            this.barButtonItem5,
-            this.barButtonItem6,
+            this.btn_phong,
+            this.btn_dayNha,
+            this.btn_tang,
             this.skinRibbonGalleryBarItem1,
             this.txt_date,
             this.txt_time,
@@ -151,7 +151,7 @@
             this.rib_main.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.False;
             this.rib_main.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.True;
             this.rib_main.ShowToolbarCustomizeItem = false;
-            this.rib_main.Size = new System.Drawing.Size(990, 143);
+            this.rib_main.Size = new System.Drawing.Size(990, 155);
             this.rib_main.StatusBar = this.ribbonStatusBar1;
             this.rib_main.Toolbar.ShowCustomizeItem = false;
             this.rib_main.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Above;
@@ -172,29 +172,31 @@
             this.barButtonItem3.Name = "barButtonItem3";
             this.barButtonItem3.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
-            // barButtonItem4
+            // btn_phong
             // 
-            this.barButtonItem4.Caption = "Danh sách Phòng";
-            this.barButtonItem4.Id = 5;
-            this.barButtonItem4.ImageOptions.Image = global::GUI.Properties.Resources.icons8_dog_house_32;
-            this.barButtonItem4.Name = "barButtonItem4";
-            this.barButtonItem4.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_phong.Caption = "Danh sách Phòng";
+            this.btn_phong.Id = 5;
+            this.btn_phong.ImageOptions.Image = global::GUI.Properties.Resources.icons8_dog_house_32;
+            this.btn_phong.Name = "btn_phong";
+            this.btn_phong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
-            // barButtonItem5
+            // btn_dayNha
             // 
-            this.barButtonItem5.Caption = "Dãy nhà";
-            this.barButtonItem5.Id = 6;
-            this.barButtonItem5.ImageOptions.Image = global::GUI.Properties.Resources.icons8_condo_32;
-            this.barButtonItem5.Name = "barButtonItem5";
-            this.barButtonItem5.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_dayNha.Caption = "Dãy nhà";
+            this.btn_dayNha.Id = 6;
+            this.btn_dayNha.ImageOptions.Image = global::GUI.Properties.Resources.icons8_condo_32;
+            this.btn_dayNha.Name = "btn_dayNha";
+            this.btn_dayNha.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_dayNha.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_dayNha_ItemClick);
             // 
-            // barButtonItem6
+            // btn_tang
             // 
-            this.barButtonItem6.Caption = "Tầng";
-            this.barButtonItem6.Id = 7;
-            this.barButtonItem6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.Image")));
-            this.barButtonItem6.Name = "barButtonItem6";
-            this.barButtonItem6.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_tang.Caption = "Tầng";
+            this.btn_tang.Id = 7;
+            this.btn_tang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_tang.ImageOptions.Image")));
+            this.btn_tang.Name = "btn_tang";
+            this.btn_tang.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_tang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_tang_ItemClick);
             // 
             // skinRibbonGalleryBarItem1
             // 
@@ -465,9 +467,9 @@
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.AllowTextClipping = false;
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem4);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem5);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem6);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btn_phong);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btn_dayNha);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btn_tang);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.ShowCaptionButton = false;
             this.ribbonPageGroup1.Text = "Thông tin Phòng trọ";
@@ -615,10 +617,10 @@
             this.ribbonStatusBar1.ItemLinks.Add(this.txt_time);
             this.ribbonStatusBar1.ItemLinks.Add(this.barButtonItem7);
             this.ribbonStatusBar1.ItemLinks.Add(this.txt_tenNhanVien);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 648);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 657);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.rib_main;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(990, 31);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(990, 22);
             // 
             // xtraTabbedMdiManager
             // 
@@ -632,7 +634,7 @@
             // pn_seperator
             // 
             this.pn_seperator.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pn_seperator.Location = new System.Drawing.Point(0, 143);
+            this.pn_seperator.Location = new System.Drawing.Point(0, 155);
             this.pn_seperator.Name = "pn_seperator";
             this.pn_seperator.Size = new System.Drawing.Size(990, 16);
             this.pn_seperator.TabIndex = 3;
@@ -666,7 +668,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar1;
             this.Text = "Phần mềm Quản lý Phòng trọ";
-            this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fMain_FormClosing);
             this.Load += new System.EventHandler(this.fMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.rib_main)).EndInit();
@@ -698,9 +699,9 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
+        private DevExpress.XtraBars.BarButtonItem btn_phong;
+        private DevExpress.XtraBars.BarButtonItem btn_dayNha;
+        private DevExpress.XtraBars.BarButtonItem btn_tang;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;

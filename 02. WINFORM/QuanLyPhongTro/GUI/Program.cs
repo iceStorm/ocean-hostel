@@ -20,7 +20,7 @@ namespace GUI
             Application.SetCompatibleTextRenderingDefault(false);
 
             BonusSkins.Register();
-            Application.Run(new fLogin());
+            Application.Run(new fMain());
         }
     }
 }

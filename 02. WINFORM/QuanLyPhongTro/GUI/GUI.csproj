@@ -132,6 +132,9 @@
     <Reference Include="DevExpress.Printing.v19.1.Core">
       <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="MaterialSkin">
       <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\MaterialSkin.dll</HintPath>
     </Reference>
@@ -156,6 +159,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChildrenForms\QuanLyPhong\DayNha\fAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\DayNha\fAlter.Designer.cs">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\DayNha\fDayNha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\DayNha\fDayNha.Designer.cs">
+      <DependentUpon>fDayNha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\Phong\fPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\Phong\fPhong.Designer.cs">
+      <DependentUpon>fPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\Tang\fAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\Tang\fAlter.Designer.cs">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\Tang\fTang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\Tang\fTang.Designer.cs">
+      <DependentUpon>fTang.cs</DependentUpon>
+    </Compile>
     <Compile Include="fDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,8 +213,26 @@
     <Compile Include="fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="fModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fModel.Designer.cs">
+      <DependentUpon>fModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChildrenForms\QuanLyPhong\DayNha\fAlter.resx">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyPhong\DayNha\fDayNha.resx">
+      <DependentUpon>fDayNha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyPhong\Tang\fAlter.resx">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyPhong\Tang\fTang.resx">
+      <DependentUpon>fTang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fDashboard.resx">
       <DependentUpon>fDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fModel.resx">
+      <DependentUpon>fModel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <None Include="bin\Debug\ICONS\icons8-stairs-up-32.png" />

@@ -24,11 +24,11 @@ namespace DAL
 
             int countParams = 0;
             foreach (string segment in segments)
-                if (segment.Contains('@'))
+                if (segment.Contains("@@"))
                 {
                     SqlParameter sp = new SqlParameter
                     {
-                        ParameterName = segment.Substring(1),
+                        ParameterName = segment,
                         Value = parameters[countParams++]
                     };
 
@@ -54,7 +54,7 @@ namespace DAL
         }
 
 
-        protected int ExecuteNonQuery(string query, object[] parameters = null)
+        protected static int ExecuteNonQuery(string query, object[] parameters = null)
         {
             if (connection.State == ConnectionState.Closed)
                 connection.Open();
@@ -67,7 +67,7 @@ namespace DAL
             return command.ExecuteNonQuery();
         }
 
-        protected object ExecuteScalar(string query, object[] parameters = null)
+        protected static object ExecuteScalar(string query, object[] parameters = null)
         {
             if (connection.State == ConnectionState.Closed)
                 connection.Open();

@@ -23,9 +23,18 @@ namespace GUI
         private Timer timer_open;
         private DTO_NGUOIDUNG nguoiDung;
 
-        public fMain(DTO_NGUOIDUNG nguoiDung)
+        public fMain(DTO_NGUOIDUNG nguoiDung = null)
         {
-            this.nguoiDung = nguoiDung;
+            if (nguoiDung != null)
+                this.nguoiDung = nguoiDung;
+            else
+                this.nguoiDung = new DTO_NGUOIDUNG
+                {
+                    Ho = "",
+                    Ten = ""
+                };
+
+
             InitializeComponent();
             SetFormSize();
 
@@ -97,19 +106,15 @@ namespace GUI
 
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            foreach (Form childForm in this.MdiChildren)
-                if (childForm.Name == "f")
+            foreach (XtraForm childForm in this.MdiChildren)
+                if (childForm.Name == "fModel")
                 {
                     childForm.Activate();
                     return;
                 }
 
-            Form f = new Form();
-            f.WindowState = FormWindowState.Maximized;
-            f.BackColor = Color.LimeGreen;
-            f.Name = "f";
+            XtraForm f = new fModel();
             f.MdiParent = this;
-            f.Text = "Tabbed Child Form";
             f.Show();
         }
 
@@ -120,14 +125,14 @@ namespace GUI
 
         private void barButtonItem21_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            foreach (Form childForm in this.MdiChildren)
+            foreach (XtraForm childForm in this.MdiChildren)
                 if (childForm.Name == "fDashboard")
                 {
                     childForm.Activate();
                     return;
                 }
 
-            fDashboard FormDashboard = new fDashboard();
+            XtraForm FormDashboard = new fDashboard();
             FormDashboard.MdiParent = this;
             FormDashboard.Show();
         }
@@ -144,6 +149,34 @@ namespace GUI
 
             if (dr == DialogResult.No)
                 e.Cancel = true;
+        }
+
+        private void btn_dayNha_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (XtraForm childForm in this.MdiChildren)
+                if (childForm.Name == "fDayNha")
+                {
+                    childForm.Activate();
+                    return;
+                }
+
+            XtraForm FormDayNha = new ChildrenForms.QuanLyPhong.fDayNha();
+            FormDayNha.MdiParent = this;
+            FormDayNha.Show();
+        }
+
+        private void btn_tang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (XtraForm childForm in this.MdiChildren)
+                if (childForm.Name == "fTang")
+                {
+                    childForm.Activate();
+                    return;
+                }
+
+            XtraForm FormTang = new ChildrenForms.QuanLyPhong.fTang();
+            FormTang.MdiParent = this;
+            FormTang.Show();
         }
     }
 }
