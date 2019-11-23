@@ -118,11 +118,6 @@ namespace GUI
             f.Show();
         }
 
-        private void pn_seperator_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void barButtonItem21_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             foreach (XtraForm childForm in this.MdiChildren)

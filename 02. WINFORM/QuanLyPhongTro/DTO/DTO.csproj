@@ -40,7 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTO_KHU.cs" />
+    <Compile Include="DTO_LOAIPHONG.cs" />
     <Compile Include="DTO_NGUOIDUNG.cs" />
+    <Compile Include="DTO_PHONG.cs" />
     <Compile Include="DTO_TANG.cs" />
     <Compile Include="Khach.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

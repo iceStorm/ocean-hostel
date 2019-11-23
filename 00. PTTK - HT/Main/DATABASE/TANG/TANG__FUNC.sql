@@ -1,0 +1,65 @@
+USE OCEAN_HOSTEL
+GO
+
+
+CREATE	FUNCTION	FUNC__TANG__GetNextID()
+RETURNS VARCHAR(10)
+AS
+BEGIN
+	DECLARE @MAXID INT
+
+	SELECT @MAXID = CONVERT(INT, MAX(SUBSTRING(MATANG, 5, LEN(MAKHU) - 4)))
+	FROM TANG
+	
+	---------------------------------
+	IF (@MAXID IS NULL)
+		SET @MAXID = '0'
+	
+	
+	DECLARE @DISTANCE INT
+	IF (LEN(@MAXID + 1) > LEN(@MAXID))	--	Trường hợp chữ số cuối cùng của đơn vị
+		SET @DISTANCE = 6 - (LEN(@MAXID) + 1)
+	ELSE
+		SET @DISTANCE = 6 - LEN(@MAXID)
+	
+	---------------------------------
+	DECLARE @RESULT VARCHAR(10)
+	SET @RESULT = 'TANG' + REPLICATE('0', @DISTANCE) + CONVERT(VARCHAR, @MAXID + 1)
+	
+	RETURN @RESULT + CONVERT(VARCHAR, @MAXID + 1)
+END
+GO
+
+
+-------------------------------------
+CREATE	FUNCTION	FUNC__TANG__GetNextFloorName(@MAKHU VARCHAR(10))
+RETURNS NVARCHAR(15)
+AS
+BEGIN
+	DECLARE @COUNT INT
+	
+	SELECT @COUNT = COUNT(MATANG)	--	Đếm số tầng của Khu hiện tại
+	FROM TANG
+	WHERE MAKHU = @MAKHU
+	
+	
+	----------------------------------------------------------------
+	DECLARE @RESULT NVARCHAR(15)
+	
+	IF @COUNT = 0					--	Khu chưa có tầng
+		SET @RESULT = N'Tầng 1'
+	ELSE
+	BEGIN
+		DECLARE @MAXFLOOR INT
+		
+		SELECT @MAXFLOOR = MAX(CONVERT(INT, SUBSTRING(TENTANG, 6, LEN(TENTANG) - 5)))
+		FROM TANG
+		WHERE MAKHU = @MAKHU
+		
+		SET @RESULT = N'Tầng ' + CONVERT(VARCHAR, @MAXFLOOR + 1)
+	END
+	
+	
+	RETURN @RESULT
+END
+GO

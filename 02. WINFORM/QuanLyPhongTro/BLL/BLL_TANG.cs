@@ -21,10 +21,15 @@ namespace BLL
             return DAL_TANG.ThemTang(Tang) == 1;
         }
 
+        public static string LayTenTangTiepTheo(DTO_TANG tang)
+        {
+            return DAL_TANG.LayTenTangTiepTheo(tang).ToString();
+        }
+        /*
         public static bool CapNhatTang(DTO_TANG Tang)
         {
             return DAL_TANG.CapNhatTang(Tang) == 1;
-        }
+        }*/
 
         public static bool XoaTang(DTO_TANG Tang)
         {

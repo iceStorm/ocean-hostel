@@ -16,6 +16,35 @@ namespace BLL
             return DAL_KHU.LayDanhSachKhu();
         }
 
+        public static string[] LayDanhSachTenKhu()
+        {
+            DataTable dt = LayDanhSachKhu();
+            List<string> result = new List<string>();
+
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow dr in dt.Rows)
+                    result.Add(dr["TENKHU"].ToString());
+            }
+
+            return result.ToArray();
+        }
+
+        public static string LayMaKhuTheoTenKhu(DTO_KHU khu)
+        {
+            string result = "";
+            DataTable dt = LayDanhSachKhu();
+
+            foreach (DataRow dr in dt.Rows)
+                if (dr["TENKHU"].ToString() == khu.TenKhu)
+                {
+                    result = dr["MAKHU"].ToString();
+                    break;
+                }
+
+            return result;
+        }
+
         public static bool ThemKhu(DTO_KHU khu)
         {
             return DAL_KHU.ThemKhu(khu) == 1;

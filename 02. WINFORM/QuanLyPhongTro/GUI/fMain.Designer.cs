@@ -638,7 +638,6 @@
             this.pn_seperator.Name = "pn_seperator";
             this.pn_seperator.Size = new System.Drawing.Size(990, 16);
             this.pn_seperator.TabIndex = 3;
-            this.pn_seperator.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_seperator_Paint);
             // 
             // defaultBarAndDockingController1
             // 

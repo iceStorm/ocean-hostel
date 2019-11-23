@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="BLL_KHU.cs" />
     <Compile Include="BLL_NGUOIDUNG.cs" />
+    <Compile Include="BLL_TANG.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
