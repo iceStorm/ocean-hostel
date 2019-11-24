@@ -40,7 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL_KHU.cs" />
+    <Compile Include="DAL_LOAIPHONG.cs" />
     <Compile Include="DAL_NGUOIDUNG.cs" />
+    <Compile Include="DAL_PHONG.cs" />
     <Compile Include="DAL_TANG.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

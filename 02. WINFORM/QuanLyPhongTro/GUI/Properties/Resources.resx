@@ -118,94 +118,112 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ColorLayer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\LOGIN_BACKGROUNDS\ColorLayer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_chart_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-chart-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_chart_32__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-chart-32 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_collaborator_female_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-collaborator-female-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_condo_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-condo-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_contract_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-contract-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_denied_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-denied-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_dog_house_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-dog-house-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_exit_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-exit-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_family_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-family-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_print_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-print-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_good_pincode_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ICONS\icons8-good-pincode-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_home_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-home-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="home_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_lease_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-lease-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_collaborator_female_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-collaborator-female-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_light_automation_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-light-automation-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_lock_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-lock-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_manager_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-manager-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_no_parking_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-no-parking-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_password_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-password-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_people_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-people-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_exit_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-exit-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_pie_chart_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ICONS\icons8-pie-chart-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_print_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-print-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_family_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-family-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_private_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-private-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_racism_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-racism-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_school_director_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-school-director-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_sell_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-sell-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_chart_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-chart-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_shutdown_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ICONS\icons8-shutdown-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="home_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_chart_32__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-chart-32 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_manager_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-manager-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_stairs_up_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ICONS\icons8-stairs-up-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_time_machine_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ICONS\icons8-time-machine-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_school_director_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-school-director-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_denied_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-denied-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ColorLayer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\LOGIN_BACKGROUNDS\ColorLayer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_traveler_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ICONS\icons8-traveler-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_contract_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-contract-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_dog_house_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-dog-house-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_condo_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-condo-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_password_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-password-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_light_automation_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-light-automation-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_people_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-people-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_no_parking_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-no-parking-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_home_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-home-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_lock_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-lock-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_lease_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-lease-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_sell_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-sell-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_private_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-private-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bopermission_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bopermission_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_user_group_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ICONS\icons8-user-group-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_time_machine_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-time-machine-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_racism_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-racism-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bopermission_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bopermission_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_log_cabin_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-log-cabin-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_two_beds_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ICONS\icons8-two-beds-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

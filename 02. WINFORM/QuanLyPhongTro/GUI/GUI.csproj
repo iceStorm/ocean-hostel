@@ -171,6 +171,24 @@
     <Compile Include="ChildrenForms\QuanLyPhong\DayNha\fDayNha.Designer.cs">
       <DependentUpon>fDayNha.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\LoaiPhong\fAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\LoaiPhong\fAlter.Designer.cs">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\LoaiPhong\fLoaiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\LoaiPhong\fLoaiPhong.Designer.cs">
+      <DependentUpon>fLoaiPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\Phong\fAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\Phong\fAlter.Designer.cs">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildrenForms\QuanLyPhong\Phong\fPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +244,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildrenForms\QuanLyPhong\DayNha\fDayNha.resx">
       <DependentUpon>fDayNha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyPhong\LoaiPhong\fAlter.resx">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyPhong\LoaiPhong\fLoaiPhong.resx">
+      <DependentUpon>fLoaiPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyPhong\Phong\fAlter.resx">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyPhong\Phong\fPhong.resx">
+      <DependentUpon>fPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildrenForms\QuanLyPhong\Tang\fAlter.resx">
       <DependentUpon>fAlter.cs</DependentUpon>
@@ -365,6 +395,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\ICONS\icons8-print-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bopermission_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bopermission_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-two-beds-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-log-cabin-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

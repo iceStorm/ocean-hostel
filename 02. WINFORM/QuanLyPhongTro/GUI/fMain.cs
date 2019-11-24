@@ -173,5 +173,33 @@ namespace GUI
             FormTang.MdiParent = this;
             FormTang.Show();
         }
+
+        private void btn_loaiPhong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (XtraForm childForm in this.MdiChildren)
+                if (childForm.Name == "fLoaiPhong")
+                {
+                    childForm.Activate();
+                    return;
+                }
+
+            XtraForm FormLoaiPhong = new ChildrenForms.QuanLyPhong.LoaiPhong.fLoaiPhong();
+            FormLoaiPhong.MdiParent = this;
+            FormLoaiPhong.Show();
+        }
+
+        private void btn_phong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (XtraForm childForm in this.MdiChildren)
+                if (childForm.Name == "fPhong")
+                {
+                    childForm.Activate();
+                    return;
+                }
+
+            XtraForm FormPhong = new ChildrenForms.QuanLyPhong.fPhong();
+            FormPhong.MdiParent = this;
+            FormPhong.Show();
+        }
     }
 }

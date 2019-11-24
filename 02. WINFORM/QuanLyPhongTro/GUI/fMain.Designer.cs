@@ -61,6 +61,7 @@
             this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem26 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_loaiPhong = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -70,6 +71,7 @@
             this.ribbonPageGroup17 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup19 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -90,10 +92,10 @@
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.pn_seperator = new System.Windows.Forms.Panel();
-            this.defaultBarAndDockingController1 = new DevExpress.XtraBars.DefaultBarAndDockingController(this.components);
+            this.defaultBarAndDockingController = new DevExpress.XtraBars.DefaultBarAndDockingController(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.rib_main)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.defaultBarAndDockingController1.Controller)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.defaultBarAndDockingController.Controller)).BeginInit();
             this.SuspendLayout();
             // 
             // rib_main
@@ -132,9 +134,10 @@
             this.barButtonItem24,
             this.barButtonItem25,
             this.barButtonItem26,
-            this.barButtonItem2});
+            this.barButtonItem2,
+            this.btn_loaiPhong});
             this.rib_main.Location = new System.Drawing.Point(0, 0);
-            this.rib_main.MaxItemId = 46;
+            this.rib_main.MaxItemId = 47;
             this.rib_main.Name = "rib_main";
             this.rib_main.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage8,
@@ -176,9 +179,11 @@
             // 
             this.btn_phong.Caption = "Danh sách Phòng";
             this.btn_phong.Id = 5;
-            this.btn_phong.ImageOptions.Image = global::GUI.Properties.Resources.icons8_dog_house_32;
+            this.btn_phong.ImageOptions.Image = global::GUI.Properties.Resources.icons8_log_cabin_32;
+            this.btn_phong.ImageOptions.LargeImage = global::GUI.Properties.Resources.icons8_log_cabin_32;
             this.btn_phong.Name = "btn_phong";
             this.btn_phong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_phong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_phong_ItemClick);
             // 
             // btn_dayNha
             // 
@@ -389,9 +394,19 @@
             // 
             this.barButtonItem2.Caption = "Tạm Khoá";
             this.barButtonItem2.Id = 45;
-            this.barButtonItem2.ImageOptions.Image = global::GUI.Properties.Resources.icons8_lock_32;
+            this.barButtonItem2.ImageOptions.Image = global::GUI.Properties.Resources.bopermission_16x16;
+            this.barButtonItem2.ImageOptions.LargeImage = global::GUI.Properties.Resources.bopermission_32x32;
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // btn_loaiPhong
+            // 
+            this.btn_loaiPhong.Caption = "Cài đặt thông tin Loại phòng";
+            this.btn_loaiPhong.Id = 46;
+            this.btn_loaiPhong.ImageOptions.Image = global::GUI.Properties.Resources.icons8_two_beds_32;
+            this.btn_loaiPhong.Name = "btn_loaiPhong";
+            this.btn_loaiPhong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_loaiPhong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_loaiPhong_ItemClick);
             // 
             // ribbonPage8
             // 
@@ -460,7 +475,8 @@
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
+            this.ribbonPageGroup1,
+            this.ribbonPageGroup19});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Quản lý Phòng";
             // 
@@ -473,6 +489,14 @@
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.ShowCaptionButton = false;
             this.ribbonPageGroup1.Text = "Thông tin Phòng trọ";
+            // 
+            // ribbonPageGroup19
+            // 
+            this.ribbonPageGroup19.AllowTextClipping = false;
+            this.ribbonPageGroup19.ItemLinks.Add(this.btn_loaiPhong);
+            this.ribbonPageGroup19.Name = "ribbonPageGroup19";
+            this.ribbonPageGroup19.ShowCaptionButton = false;
+            this.ribbonPageGroup19.Text = "Loại phòng";
             // 
             // ribbonPage2
             // 
@@ -639,13 +663,17 @@
             this.pn_seperator.Size = new System.Drawing.Size(990, 16);
             this.pn_seperator.TabIndex = 3;
             // 
-            // defaultBarAndDockingController1
+            // defaultBarAndDockingController
             // 
-            this.defaultBarAndDockingController1.Controller.AppearancesRibbon.FormCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.defaultBarAndDockingController1.Controller.AppearancesRibbon.FormCaption.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.defaultBarAndDockingController1.Controller.AppearancesRibbon.FormCaption.Options.UseFont = true;
-            this.defaultBarAndDockingController1.Controller.AppearancesRibbon.PageHeader.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.defaultBarAndDockingController1.Controller.AppearancesRibbon.PageHeader.Options.UseFont = true;
+            this.defaultBarAndDockingController.Controller.AppearancesRibbon.FormCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.defaultBarAndDockingController.Controller.AppearancesRibbon.FormCaption.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.defaultBarAndDockingController.Controller.AppearancesRibbon.FormCaption.Options.UseFont = true;
+            this.defaultBarAndDockingController.Controller.AppearancesRibbon.PageGroupCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
+            this.defaultBarAndDockingController.Controller.AppearancesRibbon.PageGroupCaption.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.defaultBarAndDockingController.Controller.AppearancesRibbon.PageGroupCaption.Options.UseFont = true;
+            this.defaultBarAndDockingController.Controller.AppearancesRibbon.PageHeader.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.defaultBarAndDockingController.Controller.AppearancesRibbon.PageHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.defaultBarAndDockingController.Controller.AppearancesRibbon.PageHeader.Options.UseFont = true;
             // 
             // fMain
             // 
@@ -671,7 +699,7 @@
             this.Load += new System.EventHandler(this.fMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.rib_main)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.defaultBarAndDockingController1.Controller)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.defaultBarAndDockingController.Controller)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -739,7 +767,9 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem26;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup18;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
-        private DevExpress.XtraBars.DefaultBarAndDockingController defaultBarAndDockingController1;
+        private DevExpress.XtraBars.DefaultBarAndDockingController defaultBarAndDockingController;
+        private DevExpress.XtraBars.BarButtonItem btn_loaiPhong;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup19;
 
     }
 }
