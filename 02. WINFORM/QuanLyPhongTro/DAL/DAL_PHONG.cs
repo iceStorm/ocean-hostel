@@ -61,5 +61,19 @@ namespace DAL
             return ExecuteNonQuery(query, obj);
         }
 
+        public static int XoaPhong(DTO_PHONG phong)
+        {
+            string query = @"EXEC dbo.PROC__PHONG__DELETE
+                             @MAPHG = @@MAPHG";
+
+            return ExecuteNonQuery(query, new object[]{phong.MaPhong});
+        }
+
+        public static object PhongDaDuocThamChieu(DTO_PHONG phong)
+        {
+            string query = @"SELECT dbo.FUNC__PHONG__IsReferenced( @@MAPHG )";
+            return ExecuteNonQuery(query, new object[]{phong.MaPhong});
+        }
+
     }
 }

@@ -2,6 +2,8 @@ USE OCEAN_HOSTEL
 GO
 
 
+
+--------------------------------------------------------
 CREATE	PROC	PROC__PHONG__GetList
 AS
 BEGIN

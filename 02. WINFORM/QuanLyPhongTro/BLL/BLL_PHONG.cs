@@ -26,6 +26,21 @@ namespace BLL
             return DAL_PHONG.SuaPhong(phong) == 1;
         }
 
+        public static bool XoaPhong(DTO_PHONG phong)
+        {
+            return DAL_PHONG.XoaPhong(phong) == 1;
+        }
+
+        public static bool PhongDaDuocThamChieu(DTO_PHONG phong)
+        {
+            bool state = false;
+
+            if ((int)DAL_PHONG.PhongDaDuocThamChieu(phong) > 0)
+                state = true;
+
+            return state;
+        }
+
 
     }
 }

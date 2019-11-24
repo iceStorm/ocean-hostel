@@ -101,7 +101,33 @@ namespace GUI.ChildrenForms.QuanLyPhong
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
+            try
+            {
+                DTO_PHONG phong = LayPhongHienTai();
 
+                if (BLL_PHONG.PhongDaDuocThamChieu(phong) == true)
+                    XtraMessageBox.Show("Thông tin phòng đang được sử dụng, không thể xoá !",
+                        "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                else
+                {
+                    DialogResult dr = XtraMessageBox.Show(String.Format("Xác nhận xoá thông tin: {0} ?", phong.TenPhong),
+                        "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (dr == DialogResult.Yes)
+                        if (BLL_PHONG.XoaPhong(phong) == true)
+                        {
+                            XtraMessageBox.Show("Xoá phòng thành công !", "Thông báo",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            LoadData();
+                        }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Lỗi truy vấn !\n\n" + "Nội dung lỗi:\n" + ex.Message,
+                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
 
