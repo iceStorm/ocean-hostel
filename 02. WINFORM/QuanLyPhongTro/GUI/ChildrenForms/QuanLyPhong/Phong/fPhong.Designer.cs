@@ -193,6 +193,7 @@
             this.btn_lamMoi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_lamMoi.TextMarginLeft = 0;
             this.btn_lamMoi.UseDefaultRadiusAndThickness = true;
+            this.btn_lamMoi.Click += new System.EventHandler(this.btn_lamMoi_Click);
             // 
             // btn_xoa
             // 
@@ -256,6 +257,7 @@
             this.btn_xoa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_xoa.TextMarginLeft = 0;
             this.btn_xoa.UseDefaultRadiusAndThickness = true;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // btn_sua
             // 
@@ -319,6 +321,7 @@
             this.btn_sua.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_sua.TextMarginLeft = 0;
             this.btn_sua.UseDefaultRadiusAndThickness = true;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // btn_them
             // 
@@ -382,6 +385,7 @@
             this.btn_them.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_them.TextMarginLeft = 0;
             this.btn_them.UseDefaultRadiusAndThickness = true;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // fPhong
             // 
@@ -392,6 +396,7 @@
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Name = "fPhong";
             this.Text = "Danh sách Phòng";
+            this.Load += new System.EventHandler(this.fPhong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_phong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView_phong)).EndInit();
             this.bunifuGradientPanel2.ResumeLayout(false);

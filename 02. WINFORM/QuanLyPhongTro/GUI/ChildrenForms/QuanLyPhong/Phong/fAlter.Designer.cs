@@ -35,78 +35,52 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_giaPhong = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            Bunifu.ToggleSwitch.ToggleState toggleState1 = new Bunifu.ToggleSwitch.ToggleState();
+            Bunifu.ToggleSwitch.ToggleState toggleState2 = new Bunifu.ToggleSwitch.ToggleState();
+            Bunifu.ToggleSwitch.ToggleState toggleState3 = new Bunifu.ToggleSwitch.ToggleState();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_tenLoaiPhong = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txt_tenPhong = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.btn_huy = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_them = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cb_tenTang = new MetroFramework.Controls.MetroComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cb_tenLoaiPhong = new MetroFramework.Controls.MetroComboBox();
+            this.chb_dangSuaChua = new Bunifu.ToggleSwitch.BunifuToggleSwitch();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.num_soLuongToiDa = new DevExpress.XtraEditors.SpinEdit();
+            this.cb_tenKhu = new MetroFramework.Controls.MetroComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.num_soLuongToiDa.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(407, 159);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 21);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "VNĐ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(100, 157);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 21);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Giá phòng";
-            // 
-            // txt_giaPhong
-            // 
-            this.txt_giaPhong.Depth = 0;
-            this.txt_giaPhong.Hint = "";
-            this.txt_giaPhong.Location = new System.Drawing.Point(225, 155);
-            this.txt_giaPhong.MaxLength = 32767;
-            this.txt_giaPhong.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txt_giaPhong.Name = "txt_giaPhong";
-            this.txt_giaPhong.PasswordChar = '\0';
-            this.txt_giaPhong.SelectedText = "";
-            this.txt_giaPhong.SelectionLength = 0;
-            this.txt_giaPhong.SelectionStart = 0;
-            this.txt_giaPhong.Size = new System.Drawing.Size(176, 23);
-            this.txt_giaPhong.TabIndex = 12;
-            this.txt_giaPhong.TabStop = false;
-            this.txt_giaPhong.UseSystemPasswordChar = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(100, 117);
+            this.label1.Location = new System.Drawing.Point(88, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 21);
+            this.label1.Size = new System.Drawing.Size(89, 21);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Tên loại phòng";
+            this.label1.Text = "Tên phòng";
             // 
-            // txt_tenLoaiPhong
+            // txt_tenPhong
             // 
-            this.txt_tenLoaiPhong.Depth = 0;
-            this.txt_tenLoaiPhong.Hint = "";
-            this.txt_tenLoaiPhong.Location = new System.Drawing.Point(225, 115);
-            this.txt_tenLoaiPhong.MaxLength = 32767;
-            this.txt_tenLoaiPhong.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txt_tenLoaiPhong.Name = "txt_tenLoaiPhong";
-            this.txt_tenLoaiPhong.PasswordChar = '\0';
-            this.txt_tenLoaiPhong.SelectedText = "";
-            this.txt_tenLoaiPhong.SelectionLength = 0;
-            this.txt_tenLoaiPhong.SelectionStart = 0;
-            this.txt_tenLoaiPhong.Size = new System.Drawing.Size(216, 23);
-            this.txt_tenLoaiPhong.TabIndex = 11;
-            this.txt_tenLoaiPhong.TabStop = false;
-            this.txt_tenLoaiPhong.UseSystemPasswordChar = false;
+            this.txt_tenPhong.Depth = 0;
+            this.txt_tenPhong.Hint = "";
+            this.txt_tenPhong.Location = new System.Drawing.Point(225, 43);
+            this.txt_tenPhong.MaxLength = 32767;
+            this.txt_tenPhong.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txt_tenPhong.Name = "txt_tenPhong";
+            this.txt_tenPhong.PasswordChar = '\0';
+            this.txt_tenPhong.SelectedText = "";
+            this.txt_tenPhong.SelectionLength = 0;
+            this.txt_tenPhong.SelectionStart = 0;
+            this.txt_tenPhong.Size = new System.Drawing.Size(216, 23);
+            this.txt_tenPhong.TabIndex = 11;
+            this.txt_tenPhong.TabStop = false;
+            this.txt_tenPhong.UseSystemPasswordChar = false;
             // 
             // btn_huy
             // 
@@ -145,7 +119,7 @@
             this.btn_huy.IdleIconLeftImage = null;
             this.btn_huy.IdleIconRightImage = null;
             this.btn_huy.IndicateFocus = false;
-            this.btn_huy.Location = new System.Drawing.Point(306, 250);
+            this.btn_huy.Location = new System.Drawing.Point(297, 370);
             this.btn_huy.Name = "btn_huy";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties1.BorderRadius = 3;
@@ -170,6 +144,7 @@
             this.btn_huy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_huy.TextMarginLeft = 0;
             this.btn_huy.UseDefaultRadiusAndThickness = true;
+            this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
             // 
             // btn_them
             // 
@@ -208,7 +183,7 @@
             this.btn_them.IdleIconLeftImage = null;
             this.btn_them.IdleIconRightImage = null;
             this.btn_them.IndicateFocus = false;
-            this.btn_them.Location = new System.Drawing.Point(104, 250);
+            this.btn_them.Location = new System.Drawing.Point(92, 370);
             this.btn_them.Name = "btn_them";
             stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties3.BorderRadius = 3;
@@ -233,19 +208,183 @@
             this.btn_them.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_them.TextMarginLeft = 0;
             this.btn_them.UseDefaultRadiusAndThickness = true;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(88, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 21);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Chọn khu";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(88, 144);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 21);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Chọn tầng";
+            // 
+            // cb_tenTang
+            // 
+            this.cb_tenTang.BackColor = System.Drawing.Color.White;
+            this.cb_tenTang.FormattingEnabled = true;
+            this.cb_tenTang.ItemHeight = 23;
+            this.cb_tenTang.Location = new System.Drawing.Point(225, 140);
+            this.cb_tenTang.Name = "cb_tenTang";
+            this.cb_tenTang.Size = new System.Drawing.Size(216, 29);
+            this.cb_tenTang.Sorted = true;
+            this.cb_tenTang.TabIndex = 16;
+            this.cb_tenTang.UseCustomBackColor = true;
+            this.cb_tenTang.UseSelectable = true;
+            this.cb_tenTang.SelectedIndexChanged += new System.EventHandler(this.cb_tenTang_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(88, 192);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(92, 21);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Loại phòng";
+            // 
+            // cb_tenLoaiPhong
+            // 
+            this.cb_tenLoaiPhong.BackColor = System.Drawing.Color.White;
+            this.cb_tenLoaiPhong.FormattingEnabled = true;
+            this.cb_tenLoaiPhong.ItemHeight = 23;
+            this.cb_tenLoaiPhong.Location = new System.Drawing.Point(225, 188);
+            this.cb_tenLoaiPhong.Name = "cb_tenLoaiPhong";
+            this.cb_tenLoaiPhong.Size = new System.Drawing.Size(216, 29);
+            this.cb_tenLoaiPhong.Sorted = true;
+            this.cb_tenLoaiPhong.TabIndex = 16;
+            this.cb_tenLoaiPhong.UseCustomBackColor = true;
+            this.cb_tenLoaiPhong.UseSelectable = true;
+            this.cb_tenLoaiPhong.SelectedIndexChanged += new System.EventHandler(this.cb_loaiPhong_SelectedIndexChanged);
+            // 
+            // chb_dangSuaChua
+            // 
+            this.chb_dangSuaChua.Animation = 5;
+            this.chb_dangSuaChua.BackColor = System.Drawing.Color.Transparent;
+            this.chb_dangSuaChua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chb_dangSuaChua.BackgroundImage")));
+            this.chb_dangSuaChua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chb_dangSuaChua.Location = new System.Drawing.Point(225, 288);
+            this.chb_dangSuaChua.Name = "chb_dangSuaChua";
+            this.chb_dangSuaChua.Size = new System.Drawing.Size(43, 20);
+            this.chb_dangSuaChua.TabIndex = 17;
+            toggleState1.BackColor = System.Drawing.Color.Empty;
+            toggleState1.BackColorInner = System.Drawing.Color.Empty;
+            toggleState1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(0)))), ((int)(((byte)(140)))));
+            toggleState1.BorderColorInner = System.Drawing.Color.Empty;
+            toggleState1.BorderRadius = 1;
+            toggleState1.BorderRadiusInner = 1;
+            toggleState1.BorderThickness = 1;
+            toggleState1.BorderThicknessInner = 1;
+            this.chb_dangSuaChua.ToggleStateDisabled = toggleState1;
+            toggleState2.BackColor = System.Drawing.Color.Gray;
+            toggleState2.BackColorInner = System.Drawing.Color.White;
+            toggleState2.BorderColor = System.Drawing.Color.Gray;
+            toggleState2.BorderColorInner = System.Drawing.Color.White;
+            toggleState2.BorderRadius = 17;
+            toggleState2.BorderRadiusInner = 15;
+            toggleState2.BorderThickness = 1;
+            toggleState2.BorderThicknessInner = 1;
+            this.chb_dangSuaChua.ToggleStateOff = toggleState2;
+            toggleState3.BackColor = System.Drawing.Color.LimeGreen;
+            toggleState3.BackColorInner = System.Drawing.Color.White;
+            toggleState3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            toggleState3.BorderColorInner = System.Drawing.Color.White;
+            toggleState3.BorderRadius = 17;
+            toggleState3.BorderRadiusInner = 15;
+            toggleState3.BorderThickness = 1;
+            toggleState3.BorderThicknessInner = 1;
+            this.chb_dangSuaChua.ToggleStateOn = toggleState3;
+            this.chb_dangSuaChua.Value = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(88, 288);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(116, 21);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Đang sửa chữa";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(88, 240);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(122, 21);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Số lượng tối đa";
+            // 
+            // num_soLuongToiDa
+            // 
+            this.num_soLuongToiDa.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.num_soLuongToiDa.Location = new System.Drawing.Point(225, 237);
+            this.num_soLuongToiDa.Name = "num_soLuongToiDa";
+            this.num_soLuongToiDa.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.num_soLuongToiDa.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.num_soLuongToiDa.Properties.Appearance.Options.UseBackColor = true;
+            this.num_soLuongToiDa.Properties.Appearance.Options.UseFont = true;
+            this.num_soLuongToiDa.Properties.Appearance.Options.UseTextOptions = true;
+            this.num_soLuongToiDa.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.num_soLuongToiDa.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.num_soLuongToiDa.Properties.MaxValue = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.num_soLuongToiDa.Size = new System.Drawing.Size(216, 26);
+            this.num_soLuongToiDa.TabIndex = 18;
+            // 
+            // cb_tenKhu
+            // 
+            this.cb_tenKhu.BackColor = System.Drawing.Color.White;
+            this.cb_tenKhu.FormattingEnabled = true;
+            this.cb_tenKhu.ItemHeight = 23;
+            this.cb_tenKhu.Location = new System.Drawing.Point(225, 92);
+            this.cb_tenKhu.Name = "cb_tenKhu";
+            this.cb_tenKhu.Size = new System.Drawing.Size(216, 29);
+            this.cb_tenKhu.Sorted = true;
+            this.cb_tenKhu.TabIndex = 16;
+            this.cb_tenKhu.UseCustomBackColor = true;
+            this.cb_tenKhu.UseSelectable = true;
+            this.cb_tenKhu.SelectedIndexChanged += new System.EventHandler(this.cb_tenKhu_SelectedIndexChanged);
             // 
             // fAlter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 409);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txt_giaPhong);
+            this.ClientSize = new System.Drawing.Size(551, 438);
+            this.Controls.Add(this.num_soLuongToiDa);
+            this.Controls.Add(this.chb_dangSuaChua);
+            this.Controls.Add(this.cb_tenLoaiPhong);
+            this.Controls.Add(this.cb_tenKhu);
+            this.Controls.Add(this.cb_tenTang);
             this.Controls.Add(this.btn_huy);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_them);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_tenLoaiPhong);
+            this.Controls.Add(this.txt_tenPhong);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -253,6 +392,8 @@
             this.Name = "fAlter";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm thông tin phòng";
+            this.Load += new System.EventHandler(this.fAlter_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.num_soLuongToiDa.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,12 +401,19 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txt_giaPhong;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_huy;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_them;
         private System.Windows.Forms.Label label1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txt_tenLoaiPhong;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txt_tenPhong;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private MetroFramework.Controls.MetroComboBox cb_tenTang;
+        private System.Windows.Forms.Label label3;
+        private MetroFramework.Controls.MetroComboBox cb_tenLoaiPhong;
+        private Bunifu.ToggleSwitch.BunifuToggleSwitch chb_dangSuaChua;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private DevExpress.XtraEditors.SpinEdit num_soLuongToiDa;
+        private MetroFramework.Controls.MetroComboBox cb_tenKhu;
     }
 }

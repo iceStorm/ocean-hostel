@@ -38,7 +38,7 @@ namespace GUI
             InitializeComponent();
             SetFormSize();
 
-            this.rib_main.Minimized = true;
+            //this.rib_main.Minimized = true;
 
             this.Opacity = 0;
             this.timer_open = new Timer();
@@ -74,9 +74,18 @@ namespace GUI
             this.txt_tenNhanVien.Caption = String.Format("{0} {1}", nguoiDung.Ho, nguoiDung.Ten);
 
 
-            fDashboard FormDashboard = new fDashboard();
-            FormDashboard.MdiParent = this;
-            FormDashboard.Show();
+            //fDashboard FormDashboard = new fDashboard();
+            //FormDashboard.MdiParent = this;
+            //FormDashboard.Show();
+        }
+
+        private void fMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dr = XtraMessageBox.Show("Xác nhận thoát ?", "Thông báo",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dr == DialogResult.No)
+                e.Cancel = true;
         }
 
         private void HideSkins(string[] skinsToHide)
@@ -104,48 +113,9 @@ namespace GUI
             }
         }
 
-        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            foreach (XtraForm childForm in this.MdiChildren)
-                if (childForm.Name == "fModel")
-                {
-                    childForm.Activate();
-                    return;
-                }
 
-            XtraForm f = new fModel();
-            f.MdiParent = this;
-            f.Show();
-        }
 
-        private void barButtonItem21_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            foreach (XtraForm childForm in this.MdiChildren)
-                if (childForm.Name == "fDashboard")
-                {
-                    childForm.Activate();
-                    return;
-                }
-
-            XtraForm FormDashboard = new fDashboard();
-            FormDashboard.MdiParent = this;
-            FormDashboard.Show();
-        }
-
-        private void btn_thoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            this.Close();
-        }
-
-        private void fMain_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult dr = XtraMessageBox.Show("Xác nhận thoát ?", "Thông báo",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (dr == DialogResult.No)
-                e.Cancel = true;
-        }
-
+        #region QUẢN LÝ PHÒNG
         private void btn_dayNha_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             foreach (XtraForm childForm in this.MdiChildren)
@@ -201,5 +171,25 @@ namespace GUI
             FormPhong.MdiParent = this;
             FormPhong.Show();
         }
+        #endregion
+
+
+        #region HỆ THỐNG
+        private void btn_dashboard_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            
+        }
+
+        private void btn_lichSu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+        private void btn_thoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
+
+
     }
 }

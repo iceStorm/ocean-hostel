@@ -16,6 +16,15 @@ namespace DAL
             return ExecuteQuery(query);
         }
 
+        public static DataTable LayDanhSachTang_TheoTenKhu(DTO_KHU khu)
+        {
+            string query = @"SELECT TENTANG
+                             FROM TANG
+                             WHERE MAKHU = @@MAKHU";
+            
+            return ExecuteQuery(query, new object[]{khu.MaKhu});
+        }
+
         public static int ThemTang(DTO_TANG tang)
         {
             string query = @"EXEC PROC__TANG__INSERT @MAKHU = @@MAKHU";

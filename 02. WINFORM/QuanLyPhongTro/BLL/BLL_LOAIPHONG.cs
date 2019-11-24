@@ -11,9 +11,35 @@ namespace BLL
 {
     public class BLL_LOAIPHONG
     {
-        public static DataTable LayDanhSachLoaiPhong()
+        public static DataTable LayDanhSachLoaiPhong()      //  Lấy cả giá phòng
         {
             return DAL_LOAIPHONG.LayDanhSachLoaiPhong();
+        }
+
+        public static string LayMaLoaiPhong_TheoTenLoaiPhong(DTO_LOAIPHONG loaiPhong)
+        {
+            DataTable dt = LayDanhSachLoaiPhong();
+            string maLoaiPhong = "";
+
+            foreach (DataRow dr in dt.Rows)
+                if (dr["TENLOAIPHG"].ToString() == loaiPhong.TenLoaiPhong)
+                {
+                    maLoaiPhong = dr["MALOAIPHG"].ToString();
+                    break;
+                }
+
+            return maLoaiPhong;
+        }
+
+        public static string[] LayDanhSachTenLoaiPhong()               //  Chỉ lấy tên loại phòng
+        {
+            DataTable dt = LayDanhSachLoaiPhong();
+            List<string> result = new List<string>();
+
+            foreach (DataRow dr in dt.Rows)
+                result.Add(dr["TENLOAIPHG"].ToString());
+
+            return result.ToArray();
         }
 
         public static bool ThemLoaiPhong(DTO_LOAIPHONG loaiPhong)

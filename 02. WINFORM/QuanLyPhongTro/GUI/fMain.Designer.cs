@@ -246,7 +246,7 @@
             this.btn_lichSu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_lichSu.ImageOptions.Image")));
             this.btn_lichSu.Name = "btn_lichSu";
             this.btn_lichSu.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.btn_lichSu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
+            this.btn_lichSu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_lichSu_ItemClick);
             // 
             // btn_doiMatKhau
             // 
@@ -349,7 +349,7 @@
             this.btn_dashboard.ImageOptions.Image = global::GUI.Properties.Resources.icons8_chart_32__1_;
             this.btn_dashboard.Name = "btn_dashboard";
             this.btn_dashboard.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.btn_dashboard.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem21_ItemClick);
+            this.btn_dashboard.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_dashboard_ItemClick);
             // 
             // btn_thoat
             // 

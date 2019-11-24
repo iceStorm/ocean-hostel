@@ -21,6 +21,36 @@ namespace BLL
             return DAL_TANG.ThemTang(Tang) == 1;
         }
 
+        public static string LayMaTang_TheoTenTang_MaKhu(DTO_TANG tang, DTO_KHU khu)
+        {
+            DataTable dt = LayDanhSachTang();
+            string maTang = "";
+
+            foreach (DataRow dr in dt.Rows)
+                if (dr["MAKHU"].ToString() == khu.MaKhu)
+                    if (dr["TENTANG"].ToString() == tang.TenTang)
+                    {
+                        maTang = dr["MATANG"].ToString();
+                        break;
+                    }
+
+            return maTang;
+        }
+
+
+        public static string[] LayDanhSachTang_TheoTenKhu(DTO_KHU khu)
+        {
+            khu.MaKhu = BLL_KHU.LayMaKhuTheoTenKhu(khu);
+            DataTable dt = DAL_TANG.LayDanhSachTang_TheoTenKhu(khu);
+
+            List<string> tenTang = new List<string>();
+
+            foreach (DataRow dr in dt.Rows)
+                tenTang.Add(dr["TENTANG"].ToString());
+
+            return tenTang.ToArray();
+        }
+
         public static string LayTenTangTiepTheo(DTO_TANG tang)
         {
             return DAL_TANG.LayTenTangTiepTheo(tang).ToString();

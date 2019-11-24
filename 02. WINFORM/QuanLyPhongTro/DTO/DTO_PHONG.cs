@@ -14,6 +14,34 @@ namespace DTO
         string _tenPhong;
         int _soLuongToiDa;
         int _soLuongDangO;
+        string _dangSuaChua;
+        string _tenKhu;
+        string _tenTang;
+        string _tenLoaiPhong;
+
+        public string TenLoaiPhong
+        {
+            get { return _tenLoaiPhong; }
+            set { _tenLoaiPhong = value; }
+        }
+
+        public string TenKhu
+        {
+            get { return _tenKhu; }
+            set { _tenKhu = value; }
+        }
+
+        public string TenTang
+        {
+            get { return _tenTang; }
+            set { _tenTang = value; }
+        }
+
+        public string DangSuaChua
+        {
+            get { return _dangSuaChua; }
+            set { _dangSuaChua = value; }
+        }
 
         public string MaLoaiPhong
         {

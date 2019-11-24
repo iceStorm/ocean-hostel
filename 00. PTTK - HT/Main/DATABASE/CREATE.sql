@@ -121,14 +121,14 @@ CREATE  TABLE   PHONG
     TENPHG          NVARCHAR(15)                NOT NULL,
     SOLG_TOIDA      INT                         NOT NULL,
     SOLG_DANGO      INT                         NOT NULL            DEFAULT 0,
-    TRANGTHAI       NVARCHAR(15)                NOT NULL            DEFAULT N'Còn trống',
+    DANGSUACHUA     BIT							NOT NULL            DEFAULT 'False',
     MATANG          VARCHAR(10)                 NOT NULL,
     MALOAIPHG       VARCHAR(15)                 NOT NULL,
 
     CONSTRAINT      PK__PHONG                   PRIMARY KEY(MAPHG),
     CONSTRAINT      FK__PHONG__MATANG           FOREIGN KEY(MATANG) REFERENCES TANG(MATANG),
     CONSTRAINT      FK__PHONG__MALOAIPHG        FOREIGN KEY(MALOAIPHG)  REFERENCES LOAIPHONG(MALOAIPHG),
-    CONSTRAINT      CK__PHONG__TRANGTHAI        CHECK(TRANGTHAI IN (N'Còn trống', N'Đã đầy', N'Đang sửa chữa'))
+    CONSTRAINT		UN__PHONG__TENPHG			UNIQUE(TENPHG)
 );
 
 
