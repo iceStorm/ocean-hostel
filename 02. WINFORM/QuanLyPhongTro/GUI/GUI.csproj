@@ -33,83 +33,109 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Animator">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Animator.dll</HintPath>
+    <Reference Include="Animator, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Animator.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.Core">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.Core.dll</HintPath>
+    <Reference Include="Bunifu.Core, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForm.BunifuShadowPanel">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForm.BunifuShadowPanel.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForm.BunifuShadowPanel, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForm.BunifuShadowPanel.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock, Version=1.11.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuGauge">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGauge, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel, Version=1.11.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuPages">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages, Version=1.11.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar, Version=1.11.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuSlider">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuTransition">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.ToggleSwitch">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu.UI.WinForms.ToggleSwitch.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.ToggleSwitch, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.ToggleSwitch.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.BonusSkins.v19.1">
       <Private>True</Private>
@@ -132,20 +158,30 @@
     <Reference Include="DevExpress.Printing.v19.1.Core">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="MaterialSkin">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\MaterialSkin.dll</HintPath>
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="MetroFramework">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\MetroFramework.dll</HintPath>
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="MetroFramework.Design">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\MetroFramework.Design.dll</HintPath>
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="MetroFramework.Fonts">
-      <HintPath>..\..\..\..\..\..\..\..\..\Desktop\ocean-hostel-master\02. WINFORM\QuanLyPhongTro\GUI\bin\Debug\MetroFramework.Fonts.dll</HintPath>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
