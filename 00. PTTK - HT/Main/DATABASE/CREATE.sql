@@ -136,11 +136,10 @@ CREATE  TABLE   THIETBI
 (
     MATBI           VARCHAR(10),
     TENTBI          NVARCHAR(25)                NOT NULL,
-    GIATBI          INT                         NOT NULL,
+    GIATBI          INT							NOT NULL,
     NGAYNHAP        DATE                        NOT NULL            DEFAULT GETDATE(),
     SOLG_PHANBO     INT                         NOT NULL            DEFAULT 0,
     SOLG_TON        INT                         NOT NULL,
-    SOLG_HONG       INT                         NOT NULL            DEFAULT 0,
 
     CONSTRAINT      PK__THIETBI                 PRIMARY KEY(MATBI),
     CONSTRAINT      UN__THIETBI                 UNIQUE(TENTBI)

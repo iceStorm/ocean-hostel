@@ -52,8 +52,8 @@
             this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
             this.btn_dangXuat = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_thietBi = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_phanBoThietBi = new DevExpress.XtraBars.BarButtonItem();
             this.btn_dashboard = new DevExpress.XtraBars.BarButtonItem();
             this.btn_thoat = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
@@ -126,8 +126,8 @@
             this.barButtonItem16,
             this.barButtonItem17,
             this.btn_dangXuat,
-            this.barButtonItem19,
-            this.barButtonItem20,
+            this.btn_thietBi,
+            this.btn_phanBoThietBi,
             this.btn_dashboard,
             this.btn_thoat,
             this.barButtonItem23,
@@ -326,21 +326,23 @@
             this.btn_dangXuat.Name = "btn_dangXuat";
             this.btn_dangXuat.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
-            // barButtonItem19
+            // btn_thietBi
             // 
-            this.barButtonItem19.Caption = "Danh mục thiết bị";
-            this.barButtonItem19.Id = 35;
-            this.barButtonItem19.ImageOptions.Image = global::GUI.Properties.Resources.icons8_light_automation_32;
-            this.barButtonItem19.Name = "barButtonItem19";
-            this.barButtonItem19.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_thietBi.Caption = "Danh mục thiết bị";
+            this.btn_thietBi.Id = 35;
+            this.btn_thietBi.ImageOptions.Image = global::GUI.Properties.Resources.icons8_light_automation_32;
+            this.btn_thietBi.Name = "btn_thietBi";
+            this.btn_thietBi.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_thietBi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_thietBi_ItemClick);
             // 
-            // barButtonItem20
+            // btn_phanBoThietBi
             // 
-            this.barButtonItem20.Caption = "Phân bổ thiết bị";
-            this.barButtonItem20.Id = 36;
-            this.barButtonItem20.ImageOptions.Image = global::GUI.Properties.Resources.icons8_sell_32;
-            this.barButtonItem20.Name = "barButtonItem20";
-            this.barButtonItem20.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_phanBoThietBi.Caption = "Phân bổ thiết bị";
+            this.btn_phanBoThietBi.Id = 36;
+            this.btn_phanBoThietBi.ImageOptions.Image = global::GUI.Properties.Resources.icons8_sell_32;
+            this.btn_phanBoThietBi.Name = "btn_phanBoThietBi";
+            this.btn_phanBoThietBi.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_phanBoThietBi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_phanBoThietBi_ItemClick);
             // 
             // btn_dashboard
             // 
@@ -551,8 +553,8 @@
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.AllowTextClipping = false;
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem19);
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem20);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btn_thietBi);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btn_phanBoThietBi);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.ShowCaptionButton = false;
             this.ribbonPageGroup3.Text = "Thiết bị";
@@ -755,8 +757,8 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem16;
         private DevExpress.XtraBars.BarButtonItem barButtonItem17;
         private DevExpress.XtraBars.BarButtonItem btn_dangXuat;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem19;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem20;
+        private DevExpress.XtraBars.BarButtonItem btn_thietBi;
+        private DevExpress.XtraBars.BarButtonItem btn_phanBoThietBi;
         private DevExpress.XtraBars.BarButtonItem btn_dashboard;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup16;
         private DevExpress.XtraBars.BarButtonItem btn_thoat;

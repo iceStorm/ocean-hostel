@@ -158,6 +158,8 @@
     <Reference Include="DevExpress.Printing.v19.1.Core">
       <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.XtraGauges.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v19.1.Win, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
@@ -167,6 +169,7 @@
     <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\MaterialSkin.dll</HintPath>
@@ -243,28 +246,46 @@
     <Compile Include="ChildrenForms\QuanLyPhong\Tang\fTang.Designer.cs">
       <DependentUpon>fTang.cs</DependentUpon>
     </Compile>
-    <Compile Include="fDashboard.cs">
+    <Compile Include="ChildrenForms\QuanLyThietBi\DanhMucThietBi\fAlter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fDashboard.Designer.cs">
+    <Compile Include="ChildrenForms\QuanLyThietBi\DanhMucThietBi\fAlter.Designer.cs">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyThietBi\DanhMucThietBi\fDanhMucThietBi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyThietBi\DanhMucThietBi\fDanhMucThietBi.Designer.cs">
+      <DependentUpon>fDanhMucThietBi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyThietBi\PhanBoThietBi\fPhanBoThietBi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyThietBi\PhanBoThietBi\fPhanBoThietBi.Designer.cs">
+      <DependentUpon>fPhanBoThietBi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDashboard\fDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDashboard\fDashboard.Designer.cs">
       <DependentUpon>fDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="fLock.cs">
+    <Compile Include="FormLock\fLock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fLock.Designer.cs">
+    <Compile Include="FormLock\fLock.Designer.cs">
       <DependentUpon>fLock.cs</DependentUpon>
     </Compile>
-    <Compile Include="fLogin.cs">
+    <Compile Include="FormLogin\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fLogin.Designer.cs">
+    <Compile Include="FormLogin\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="fMain.cs">
+    <Compile Include="FormMain\fMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fMain.Designer.cs">
+    <Compile Include="FormMain\fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
     <Compile Include="fModel.cs">
@@ -299,16 +320,25 @@
     <EmbeddedResource Include="ChildrenForms\QuanLyPhong\Tang\fTang.resx">
       <DependentUpon>fTang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fDashboard.resx">
+    <EmbeddedResource Include="ChildrenForms\QuanLyThietBi\DanhMucThietBi\fAlter.resx">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyThietBi\DanhMucThietBi\fDanhMucThietBi.resx">
+      <DependentUpon>fDanhMucThietBi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyThietBi\PhanBoThietBi\fPhanBoThietBi.resx">
+      <DependentUpon>fPhanBoThietBi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDashboard\fDashboard.resx">
       <DependentUpon>fDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fLock.resx">
+    <EmbeddedResource Include="FormLock\fLock.resx">
       <DependentUpon>fLock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fLogin.resx">
+    <EmbeddedResource Include="FormLogin\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fMain.resx">
+    <EmbeddedResource Include="FormMain\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fModel.resx">

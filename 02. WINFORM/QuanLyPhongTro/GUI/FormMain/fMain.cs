@@ -191,5 +191,38 @@ namespace GUI
         #endregion
 
 
+        #region THIẾT BỊ
+        
+        private void btn_thietBi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (XtraForm childForm in this.MdiChildren)
+                if (childForm.Name == "fDanhMucThietBi")
+                {
+                    childForm.Activate();
+                    return;
+                }
+
+            XtraForm FormThietBi = new ChildrenForms.QuanLyThietBi.DanhMucThietBi.fDanhMucThietBi();
+            FormThietBi.MdiParent = this;
+            FormThietBi.Show();
+        }
+        private void btn_phanBoThietBi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (XtraForm childForm in this.MdiChildren)
+                if (childForm.Name == "fPhanBoThietBi")
+                {
+                    childForm.Activate();
+                    return;
+                }
+
+            XtraForm FormPhanBoThietBi = new ChildrenForms.QuanLyThietBi.PhanBoThietBi.fPhanBoThietBi();
+            FormPhanBoThietBi.MdiParent = this;
+            FormPhanBoThietBi.Show();
+        }
+
+        #endregion
+
+
+
     }
 }

@@ -44,7 +44,6 @@
             this.gridControl_phong = new DevExpress.XtraGrid.GridControl();
             this.gridView_phong = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
             this.btn_lamMoi = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_xoa = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_sua = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -52,7 +51,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_phong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView_phong)).BeginInit();
             this.bunifuGradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl_phong
@@ -102,7 +100,6 @@
             this.bunifuGradientPanel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
             this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel2.Controls.Add(this.searchControl1);
             this.bunifuGradientPanel2.Controls.Add(this.btn_lamMoi);
             this.bunifuGradientPanel2.Controls.Add(this.btn_xoa);
             this.bunifuGradientPanel2.Controls.Add(this.btn_sua);
@@ -117,19 +114,6 @@
             this.bunifuGradientPanel2.Quality = 10;
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(806, 64);
             this.bunifuGradientPanel2.TabIndex = 6;
-            // 
-            // searchControl1
-            // 
-            this.searchControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchControl1.Location = new System.Drawing.Point(577, 19);
-            this.searchControl1.Name = "searchControl1";
-            this.searchControl1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchControl1.Properties.Appearance.Options.UseFont = true;
-            this.searchControl1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Repository.ClearButton(),
-            new DevExpress.XtraEditors.Repository.SearchButton()});
-            this.searchControl1.Size = new System.Drawing.Size(217, 26);
-            this.searchControl1.TabIndex = 4;
             // 
             // btn_lamMoi
             // 
@@ -168,7 +152,7 @@
             this.btn_lamMoi.IdleIconLeftImage = null;
             this.btn_lamMoi.IdleIconRightImage = null;
             this.btn_lamMoi.IndicateFocus = false;
-            this.btn_lamMoi.Location = new System.Drawing.Point(453, 13);
+            this.btn_lamMoi.Location = new System.Drawing.Point(576, 13);
             this.btn_lamMoi.Name = "btn_lamMoi";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties1.BorderRadius = 3;
@@ -232,7 +216,7 @@
             this.btn_xoa.IdleIconLeftImage = null;
             this.btn_xoa.IdleIconRightImage = null;
             this.btn_xoa.IndicateFocus = false;
-            this.btn_xoa.Location = new System.Drawing.Point(306, 13);
+            this.btn_xoa.Location = new System.Drawing.Point(429, 13);
             this.btn_xoa.Name = "btn_xoa";
             stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties3.BorderRadius = 3;
@@ -296,7 +280,7 @@
             this.btn_sua.IdleIconLeftImage = null;
             this.btn_sua.IdleIconRightImage = null;
             this.btn_sua.IndicateFocus = false;
-            this.btn_sua.Location = new System.Drawing.Point(159, 12);
+            this.btn_sua.Location = new System.Drawing.Point(282, 12);
             this.btn_sua.Name = "btn_sua";
             stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties5.BorderRadius = 3;
@@ -360,7 +344,7 @@
             this.btn_them.IdleIconLeftImage = null;
             this.btn_them.IdleIconRightImage = null;
             this.btn_them.IndicateFocus = false;
-            this.btn_them.Location = new System.Drawing.Point(12, 13);
+            this.btn_them.Location = new System.Drawing.Point(135, 13);
             this.btn_them.Name = "btn_them";
             stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties7.BorderRadius = 3;
@@ -400,7 +384,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_phong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView_phong)).EndInit();
             this.bunifuGradientPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -410,7 +393,6 @@
         private DevExpress.XtraGrid.GridControl gridControl_phong;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView_phong;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
-        private DevExpress.XtraEditors.SearchControl searchControl1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_lamMoi;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_xoa;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_sua;
