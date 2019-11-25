@@ -16,6 +16,13 @@ namespace DAL
             return ExecuteQuery(query);
         }
 
+
+        public static DataTable LayDanhSachPhong_TheoMaTang(DTO_TANG tang)
+        {
+            string query = @"SELECT * FROM PHONG WHERE MATANG = @@MATANG";
+            return ExecuteQuery(query, new object[]{tang.MaTang});
+        }
+
         public static int ThemPhong(DTO_PHONG phong)
         {
             string query = @"EXEC PROC__PHONG__INSERT

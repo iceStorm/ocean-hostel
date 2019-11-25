@@ -38,6 +38,7 @@ namespace GUI.ChildrenForms.QuanLyThietBi.DanhMucThietBi
             this.gridView_thietBi.Columns["NGAYNHAP"].Caption = "Ngày nhập";
             this.gridView_thietBi.Columns["SOLG_TON"].Caption = "Số lượng tồn";
             this.gridView_thietBi.Columns["SOLG_PHANBO"].Caption = "Số lượng phân bổ";
+            this.gridView_thietBi.Columns["SOLG_HONG"].Caption = "Số lượng hư hỏng";
         }
 
         private void btn_them_Click(object sender, EventArgs e)
@@ -114,6 +115,11 @@ namespace GUI.ChildrenForms.QuanLyThietBi.DanhMucThietBi
                 XtraMessageBox.Show("Lỗi truy vấn !\n\n" + "Nội dung lỗi:\n" + ex.Message,
                         "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void btn_lamMoi_Click(object sender, EventArgs e)
+        {
+            LoadData();
         }
 
     }

@@ -140,6 +140,7 @@ CREATE  TABLE   THIETBI
     NGAYNHAP        DATE                        NOT NULL            DEFAULT GETDATE(),
     SOLG_PHANBO     INT                         NOT NULL            DEFAULT 0,
     SOLG_TON        INT                         NOT NULL,
+    SOLG_HONG		INT							NOT NULL			DEFAULT 0
 
     CONSTRAINT      PK__THIETBI                 PRIMARY KEY(MATBI),
     CONSTRAINT      UN__THIETBI                 UNIQUE(TENTBI)

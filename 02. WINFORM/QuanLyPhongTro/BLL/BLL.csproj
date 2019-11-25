@@ -45,6 +45,7 @@
     <Compile Include="BLL_PHONG.cs" />
     <Compile Include="BLL_TANG.cs" />
     <Compile Include="BLL_THIETBI.cs" />
+    <Compile Include="BLL_THIETBI_PHONG.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -258,6 +258,12 @@
     <Compile Include="ChildrenForms\QuanLyThietBi\DanhMucThietBi\fDanhMucThietBi.Designer.cs">
       <DependentUpon>fDanhMucThietBi.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildrenForms\QuanLyThietBi\PhanBoThietBi\fAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyThietBi\PhanBoThietBi\fAlter.Designer.cs">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildrenForms\QuanLyThietBi\PhanBoThietBi\fPhanBoThietBi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -325,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildrenForms\QuanLyThietBi\DanhMucThietBi\fDanhMucThietBi.resx">
       <DependentUpon>fDanhMucThietBi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyThietBi\PhanBoThietBi\fAlter.resx">
+      <DependentUpon>fAlter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildrenForms\QuanLyThietBi\PhanBoThietBi\fPhanBoThietBi.resx">
       <DependentUpon>fPhanBoThietBi.cs</DependentUpon>

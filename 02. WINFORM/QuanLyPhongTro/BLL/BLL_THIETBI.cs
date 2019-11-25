@@ -16,6 +16,32 @@ namespace BLL
             return DAL_THIETBI.LayDanhSachThietBi();
         }
 
+        public static string LayMaThietBiTheoTenThietBi(DTO_THIETBI thietBi)
+        {
+            DataTable dt = LayDanhSachThietBi();
+            string maThietBi = "";
+
+            foreach (DataRow dr in dt.Rows)
+                if (thietBi.TenThietBi == (string)dr["TENTBI"])
+                {
+                    maThietBi = (string)dr["MATBI"];
+                    break;
+                }
+
+            return maThietBi;
+        }
+
+        public static string[] LayDanhSachTenThietBi()
+        {
+            DataTable dt = LayDanhSachThietBi();
+            List<string> result = new List<string>();
+
+            foreach (DataRow dr in dt.Rows)
+                result.Add((string)dr["TENTBI"]);
+
+            return result.ToArray();
+        }
+
         public static bool ThemThietBi(DTO_THIETBI thietBi)
         {
             return DAL_THIETBI.ThemThietBi(thietBi) == 1;

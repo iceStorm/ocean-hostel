@@ -45,6 +45,7 @@
     <Compile Include="DAL_PHONG.cs" />
     <Compile Include="DAL_TANG.cs" />
     <Compile Include="DAL_THIETBI.cs" />
+    <Compile Include="DAL_THIETBI_PHONG.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

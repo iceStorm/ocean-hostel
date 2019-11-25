@@ -177,6 +177,7 @@
             this.btn_lamMoi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_lamMoi.TextMarginLeft = 0;
             this.btn_lamMoi.UseDefaultRadiusAndThickness = true;
+            this.btn_lamMoi.Click += new System.EventHandler(this.btn_lamMoi_Click);
             // 
             // btn_xoa
             // 

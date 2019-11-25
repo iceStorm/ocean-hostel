@@ -45,6 +45,7 @@
     <Compile Include="DTO_PHONG.cs" />
     <Compile Include="DTO_TANG.cs" />
     <Compile Include="DTO_THIETBI.cs" />
+    <Compile Include="DTO_THIETBI_PHONG.cs" />
     <Compile Include="Khach.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

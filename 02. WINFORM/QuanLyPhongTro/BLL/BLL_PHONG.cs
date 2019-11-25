@@ -16,6 +16,39 @@ namespace BLL
             return DAL_PHONG.LayDanhSachPhong();
         }
 
+        public static DataTable LayDanhSachPhong_TheoMaTang(DTO_TANG tang)
+        {
+            return DAL_PHONG.LayDanhSachPhong_TheoMaTang(tang);
+        }
+
+        public static string LayMaPhongTheoTenPhong(DTO_PHONG phong)
+        {
+            DataTable dt = LayDanhSachPhong();
+            string maPhong = "";
+
+            foreach (DataRow dr in dt.Rows)
+                if (phong.TenPhong == (string)dr["TENPHG"])
+                {
+                    maPhong = (string)dr["MAPHG"];
+                    break;
+                }
+
+            return maPhong;
+        }
+
+        public static string[] LayDanhSachTenPhongTheoMaTang(DTO_TANG tang)
+        {
+            DataTable dt = LayDanhSachPhong_TheoMaTang(tang);
+            List<string> result = new List<string>();
+
+            foreach (DataRow dr in dt.Rows)
+                if (tang.MaTang == (string)dr["MATANG"])
+                    result.Add((string)dr["TENPHG"]);
+
+            return result.ToArray();
+        }
+
+
         public static bool ThemPhong(DTO_PHONG phong)
         {
             return DAL_PHONG.ThemPhong(phong) == 1;
