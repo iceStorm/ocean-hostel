@@ -80,12 +80,12 @@ namespace GUI
         }
 
         private void fMain_FormClosing(object sender, FormClosingEventArgs e)
-        {
+        {/*
             DialogResult dr = XtraMessageBox.Show("Xác nhận thoát ?", "Thông báo",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (dr == DialogResult.No)
-                e.Cancel = true;
+                e.Cancel = true;*/
         }
 
         private void HideSkins(string[] skinsToHide)
@@ -221,6 +221,40 @@ namespace GUI
         }
 
         #endregion
+
+
+        #region DỊCH VỤ
+
+        private void btn_danhMucDichVu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (XtraForm childForm in this.MdiChildren)
+                if (childForm.Name == "fDanhMucDichVu")
+                {
+                    childForm.Activate();
+                    return;
+                }
+
+            XtraForm FormDichVu = new ChildrenForms.DichVu.DanhMucDichVu.fDanhMucDichVu();
+            FormDichVu.MdiParent = this;
+            FormDichVu.Show();
+        }
+
+        private void btn_dichVuMoiPhong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (XtraForm childForm in this.MdiChildren)
+                if (childForm.Name == "fDichVuMoiPhong")
+                {
+                    childForm.Activate();
+                    return;
+                }
+
+            XtraForm FormDichVuPhong = new ChildrenForms.DichVu.DichVuMoiPhong.fDichVuMoiPhong();
+            FormDichVuPhong.MdiParent = this;
+            FormDichVuPhong.Show();
+        }
+
+        #endregion
+
 
 
 

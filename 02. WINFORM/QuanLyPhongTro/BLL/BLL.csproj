@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL_DICHVU.cs" />
     <Compile Include="BLL_KHU.cs" />
     <Compile Include="BLL_LOAIPHONG.cs" />
     <Compile Include="BLL_NGUOIDUNG.cs" />

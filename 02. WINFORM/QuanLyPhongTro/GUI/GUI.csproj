@@ -198,6 +198,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChildrenForms\DichVu\DanhMucDichVu\fAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\DichVu\DanhMucDichVu\fAlter.Designer.cs">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\DichVu\DanhMucDichVu\fDanhMucDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\DichVu\DanhMucDichVu\fDanhMucDichVu.Designer.cs">
+      <DependentUpon>fDanhMucDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\DichVu\DichVuMoiPhong\fDichVuMoiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\DichVu\DichVuMoiPhong\fDichVuMoiPhong.Designer.cs">
+      <DependentUpon>fDichVuMoiPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fDanhSachHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fDanhSachHoaDon.Designer.cs">
+      <DependentUpon>fDanhSachHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fThemHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fThemHoaDon.Designer.cs">
+      <DependentUpon>fThemHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildrenForms\QuanLyPhong\DayNha\fAlter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -302,6 +332,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChildrenForms\DichVu\DanhMucDichVu\fAlter.resx">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\DichVu\DanhMucDichVu\fDanhMucDichVu.resx">
+      <DependentUpon>fDanhMucDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\DichVu\DichVuMoiPhong\fDichVuMoiPhong.resx">
+      <DependentUpon>fDichVuMoiPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fThemHoaDon.resx">
+      <DependentUpon>fThemHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildrenForms\QuanLyPhong\DayNha\fAlter.resx">
       <DependentUpon>fAlter.cs</DependentUpon>
     </EmbeddedResource>
@@ -488,6 +530,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\ICONS\icons8-log-cabin-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\products_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\products_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formatcells_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formatcells_16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

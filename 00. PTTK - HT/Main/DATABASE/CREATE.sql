@@ -255,6 +255,7 @@ CREATE  TABLE   DICHVU
     MADICHVU        VARCHAR(10),
     TENDICHVU       NVARCHAR(20)                NOT NULL,
     GIADICHVU       INT                         NOT NULL,
+    BATBUOC			BIT							NOT NULL		DEFAULT	'False'
 
     CONSTRAINT      PK__DICHVU                  PRIMARY KEY(MADICHVU),
     CONSTRAINT      UN__DICHVU__TENDICHVU       UNIQUE(TENDICHVU)

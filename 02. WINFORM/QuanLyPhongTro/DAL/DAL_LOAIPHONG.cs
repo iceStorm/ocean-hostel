@@ -55,7 +55,7 @@ namespace DAL
                              FROM PHONG
                              WHERE MALOAIPHG = @@MALOAIPHG";
 
-            return ExecuteNonQuery(query, new object[]{loaiPhong.MaLoaiPhong});
+            return ExecuteScalar(query, new object[]{loaiPhong.MaLoaiPhong});
         }
 
     }

@@ -16,6 +16,7 @@ namespace GUI.ChildrenForms.QuanLyPhong.LoaiPhong
     public partial class fAlter : DevExpress.XtraEditors.XtraForm
     {
         private DTO_LOAIPHONG loaiPhong;
+        private bool isAdd = true;
 
         public fAlter(DTO_LOAIPHONG loaiPhong = null)
         {
@@ -23,6 +24,7 @@ namespace GUI.ChildrenForms.QuanLyPhong.LoaiPhong
 
             if (loaiPhong != null)
             {
+                isAdd = false;
                 this.loaiPhong = loaiPhong;
                 this.btn_them.Text = "Lưu";
                 this.Text = "Sửa thông tin Loại phòng";
@@ -68,17 +70,16 @@ namespace GUI.ChildrenForms.QuanLyPhong.LoaiPhong
                 return;
 
 
-            if (this.loaiPhong == null)     //  Thêm
+            try
             {
-                this.loaiPhong = new DTO_LOAIPHONG
+                if (isAdd == true)     //  Thêm
                 {
-                    TenLoaiPhong = this.txt_tenLoaiPhong.Text,
-                    GiaPhong = int.Parse(this.txt_giaPhong.Text)
-                };
+                    this.loaiPhong = new DTO_LOAIPHONG
+                    {
+                        TenLoaiPhong = this.txt_tenLoaiPhong.Text,
+                        GiaPhong = int.Parse(this.txt_giaPhong.Text)
+                    };
 
-                
-                try
-                {
                     if (BLL_LOAIPHONG.ThemLoaiPhong(loaiPhong) == true)
                     {
                         XtraMessageBox.Show("Thêm loại phòng thành công !", "Thông báo",
@@ -88,28 +89,12 @@ namespace GUI.ChildrenForms.QuanLyPhong.LoaiPhong
                         this.Close();
                     }
                 }
-                catch (Exception ex)
+                else
                 {
-                    if (ex.Message.Contains("duplicate"))   //  Trùng tên loại phòng
-                    {
-                        XtraMessageBox.Show("Tên loại phòng đã tồn tại !", "Thông báo",
-                            MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    this.loaiPhong.TenLoaiPhong = this.txt_tenLoaiPhong.Text;
+                    this.loaiPhong.GiaPhong = int.Parse(this.txt_giaPhong.Text);
 
-                        this.txt_tenLoaiPhong.Focus();
-                        this.txt_tenLoaiPhong.SelectAll();
-                    }
-                    else
-                        XtraMessageBox.Show("Lỗi khi thêm loại phòng !" + "\n\nNội dung lỗi: \n" + ex.Message,
-                            "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-            }
-            else
-            {
-                this.loaiPhong.TenLoaiPhong = this.txt_tenLoaiPhong.Text;
-                this.loaiPhong.GiaPhong = int.Parse(this.txt_giaPhong.Text);
 
-                try
-                {
                     if (BLL_LOAIPHONG.SuaLoaiPhong(loaiPhong) == true)
                     {
                         XtraMessageBox.Show("Sửa thông tin loại phòng thành công !", "Thông báo",
@@ -119,21 +104,22 @@ namespace GUI.ChildrenForms.QuanLyPhong.LoaiPhong
                         this.Close();
                     }
                 }
-                catch (Exception ex)
-                {
-                    if (ex.Message.Contains("duplicate"))   //  Trùng tên loại phòng
-                    {
-                        XtraMessageBox.Show("Tên loại phòng đã tồn tại !", "Thông báo",
-                            MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-                        this.txt_tenLoaiPhong.Focus();
-                        this.txt_tenLoaiPhong.SelectAll();
-                    }
-                    else
-                        XtraMessageBox.Show("Lỗi khi cập nhật thông tin loại phòng !" + "\n\nNội dung lỗi: \n" + ex.Message,
-                            "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
             }
+            catch(Exception ex)
+            {
+                if (ex.Message.Contains("duplicate"))   //  Trùng tên loại phòng
+                {
+                    XtraMessageBox.Show("Tên loại phòng đã tồn tại !", "Thông báo",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    this.txt_tenLoaiPhong.Focus();
+                    this.txt_tenLoaiPhong.SelectAll();
+                }
+                else
+                    XtraMessageBox.Show("Lỗi truy vấn !" + "\n\nNội dung lỗi: \n" + ex.Message,
+                        "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
         }
     }
 }
