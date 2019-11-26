@@ -210,6 +210,12 @@
     <Compile Include="ChildrenForms\DichVu\DanhMucDichVu\fDanhMucDichVu.Designer.cs">
       <DependentUpon>fDanhMucDichVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildrenForms\DichVu\DichVuMoiPhong\fAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\DichVu\DichVuMoiPhong\fAlter.Designer.cs">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildrenForms\DichVu\DichVuMoiPhong\fDichVuMoiPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -337,6 +343,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildrenForms\DichVu\DanhMucDichVu\fDanhMucDichVu.resx">
       <DependentUpon>fDanhMucDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\DichVu\DichVuMoiPhong\fAlter.resx">
+      <DependentUpon>fAlter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildrenForms\DichVu\DichVuMoiPhong\fDichVuMoiPhong.resx">
       <DependentUpon>fDichVuMoiPhong.cs</DependentUpon>

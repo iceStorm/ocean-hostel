@@ -10,6 +10,12 @@ namespace DAL
 {
     public class DAL_DICHVU:DataProvider
     {
+        public static DataTable LayThongTinDichVuTheoMaDichVu(DTO_DICHVU dichVu)
+        {
+            string query = @"SELECT * FROM DICHVU WHERE MADICHVU = @@MADVU";
+            return ExecuteQuery(query, new object[] { dichVu.MaDichVu });
+        }
+
         public static DataTable LayDanhSachDichVu()
         {
             string query = @"SELECT * FROM DICHVU";
@@ -54,10 +60,17 @@ namespace DAL
 
         public static int XoaDichVu(DTO_DICHVU dichVu)
         {
-            string query = @"EXEC PROC__DICHVU__UPDATE
+            string query = @"EXEC PROC__DICHVU__DELETE
                              @MADICHVU = @@MADICHVU";
 
             return ExecuteNonQuery(query, new object[] { dichVu.MaDichVu });
+        }
+
+        
+        public static object DichVuDaDuocThamChieu(DTO_DICHVU dichVu)
+        {
+            string query = @"EXEC PROC__DICHVU__IsReferenced @MADICHVU = @@MADVU";
+            return ExecuteScalar(query, new object[] { dichVu.MaDichVu });
         }
 
     }

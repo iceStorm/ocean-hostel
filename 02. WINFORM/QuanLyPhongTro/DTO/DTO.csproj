@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTO_DICHVU.cs" />
+    <Compile Include="DTO_DICHVU_PHONG.cs" />
     <Compile Include="DTO_KHU.cs" />
     <Compile Include="DTO_LOAIPHONG.cs" />
     <Compile Include="DTO_NGUOIDUNG.cs" />

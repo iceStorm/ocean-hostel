@@ -65,7 +65,48 @@ namespace GUI.ChildrenForms.DichVu.DanhMucDichVu
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
+            try
+            {
+                DTO_DICHVU dichVuHienTai = LayDichVuHienTai();
 
+
+                if (dichVuHienTai.TenDichVu == "Tiền điện" ||
+                    dichVuHienTai.TenDichVu == "Tiền nước")
+                {
+                    XtraMessageBox.Show("Dịch vụ này là mặc định, không thể xoá !", "Thông báo",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    return;
+                }
+                else
+                {
+                    if (BLL_DICHVU.DichVuDaDuocThamChieu(dichVuHienTai) == true)
+                    {
+                        XtraMessageBox.Show("Thông tin dịch vụ đang được sử dụng, không thể xoá !",
+                            "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                        return;
+                    }
+                    else
+                    {
+                        DialogResult dr = XtraMessageBox.Show(String.Format("Xác nhận xoá dịch vụ: {0} ?", dichVuHienTai.TenDichVu),
+                            "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+
+                        if (dr== DialogResult.Yes)
+                            if (BLL_DICHVU.XoaDichVu(dichVuHienTai) == true)
+                            {
+                                XtraMessageBox.Show("Xoá thông tin dịch vụ thành công !");
+                                LoadData();
+                            }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Lỗi truy vấn !\n\n" + "Nội dung lỗi:\n" + ex.Message,
+                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btn_lamMoi_Click(object sender, EventArgs e)
