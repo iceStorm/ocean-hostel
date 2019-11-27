@@ -280,7 +280,7 @@ CREATE  TABLE   HOADON
     MAPHG           VARCHAR(10)                 NOT NULL,
     THANG           INT                         NOT NULL,
     NAM             INT                         NOT NULL,
-    TRANGTHAI       BIT                         NOT NULL        DEFAULT 'False',     --  Thanh toán đủ hay chưa
+    DATHANHTOAN		BIT                         NOT NULL        DEFAULT 'False',     --  Thanh toán đủ hay chưa
     TIENPHONG		INT							NOT NULL,							 --  Giá cũ vẫn giữ nguyên khi loại phòng thay đổi giá
 
     CONSTRAINT      PK__HOADON                  PRIMARY KEY(MAHOADON),
@@ -302,13 +302,13 @@ CREATE  TABLE   HOADON_DIENNUOC     --  1 hoá đơn chỉ có một thông tin 
 );
 
 
-CREATE  TABLE   HOADON_DICHVU   --  1 hoá đơn có thể nhiều dịch vụ ==> 1:n
+CREATE  TABLE   HOADON_DICHVU   --  1 hoá đơn có thể nhiều dịch vụ và ngược lại ==> n:n
 (
     MAHOADON        VARCHAR(15),
     MADICHVU        VARCHAR(10),
     TENDICHVU       NVARCHAR(20),
     GIADICHVU       INT,
 
-    CONSTRAINT      PK__HOADON_DICHVU                   PRIMARY KEY(MADICHVU),
+    CONSTRAINT      PK__HOADON_DICHVU                   PRIMARY KEY(MAHOADON, MADICHVU),
     CONSTRAINT      FK__HOADON_DICHVU__MAHOADON         FOREIGN KEY(MAHOADON)   REFERENCES HOADON(MAHOADON)
 );
