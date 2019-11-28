@@ -17,5 +17,10 @@ namespace GUI.ChildrenForms.HoaDonChiTieu.DanhSachHoaDon
         {
             InitializeComponent();
         }
+
+        private void btn_huy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

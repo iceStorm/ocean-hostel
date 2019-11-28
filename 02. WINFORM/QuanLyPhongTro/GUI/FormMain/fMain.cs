@@ -256,6 +256,32 @@ namespace GUI
         #endregion
 
 
+        #region HOÁ ĐƠN
+
+        private void btn_danhSachHoaDon_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (XtraForm childForm in this.MdiChildren)
+                if (childForm.Name == "fDanhSachHoaDon")
+                {
+                    childForm.Activate();
+                    return;
+                }
+
+            XtraForm FormHoaDon = new ChildrenForms.HoaDonChiTieu.DanhSachHoaDon.fDanhSachHoaDon();
+            FormHoaDon.MdiParent = this;
+            FormHoaDon.Show();
+        }
+
+        private void btn_nhapHoaDon_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            XtraForm FormThemHoaDon = new ChildrenForms.HoaDonChiTieu.DanhSachHoaDon.fThemHoaDon();
+            FormThemHoaDon.ShowDialog();
+        }
+
+        #endregion
+
+
+
 
 
     }

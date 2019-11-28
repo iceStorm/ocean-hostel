@@ -228,10 +228,10 @@
     <Compile Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fDanhSachHoaDon.Designer.cs">
       <DependentUpon>fDanhSachHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fThemHoaDon.cs">
+    <Compile Include="ChildrenForms\HoaDonChiTieu\fThemHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fThemHoaDon.Designer.cs">
+    <Compile Include="ChildrenForms\HoaDonChiTieu\fThemHoaDon.Designer.cs">
       <DependentUpon>fThemHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildrenForms\QuanLyPhong\DayNha\fAlter.cs">
@@ -350,7 +350,10 @@
     <EmbeddedResource Include="ChildrenForms\DichVu\DichVuMoiPhong\fDichVuMoiPhong.resx">
       <DependentUpon>fDichVuMoiPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fThemHoaDon.resx">
+    <EmbeddedResource Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fDanhSachHoaDon.resx">
+      <DependentUpon>fDanhSachHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\HoaDonChiTieu\fThemHoaDon.resx">
       <DependentUpon>fThemHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildrenForms\QuanLyPhong\DayNha\fAlter.resx">

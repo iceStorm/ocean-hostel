@@ -64,8 +64,8 @@
             this.btn_loaiPhong = new DevExpress.XtraBars.BarButtonItem();
             this.btn_danhMucDichVu = new DevExpress.XtraBars.BarButtonItem();
             this.btn_dichVuMoiPhong = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_bieuDo = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_baoCao = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -143,8 +143,8 @@
             this.btn_loaiPhong,
             this.btn_danhMucDichVu,
             this.btn_dichVuMoiPhong,
-            this.barButtonItem4,
-            this.barButtonItem5});
+            this.btn_bieuDo,
+            this.btn_baoCao});
             this.rib_main.Location = new System.Drawing.Point(0, 0);
             this.rib_main.MaxItemId = 51;
             this.rib_main.Name = "rib_main";
@@ -391,6 +391,7 @@
             this.btn_danhSachHoaDon.ImageOptions.LargeImage = global::GUI.Properties.Resources.icons8_paycheque_32;
             this.btn_danhSachHoaDon.Name = "btn_danhSachHoaDon";
             this.btn_danhSachHoaDon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_danhSachHoaDon.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_danhSachHoaDon_ItemClick);
             // 
             // btn_nhapHoaDon
             // 
@@ -399,6 +400,7 @@
             this.btn_nhapHoaDon.ImageOptions.Image = global::GUI.Properties.Resources.icons8_add_property_32;
             this.btn_nhapHoaDon.Name = "btn_nhapHoaDon";
             this.btn_nhapHoaDon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_nhapHoaDon.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_nhapHoaDon_ItemClick);
             // 
             // barButtonItem26
             // 
@@ -446,22 +448,22 @@
             this.btn_dichVuMoiPhong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btn_dichVuMoiPhong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_dichVuMoiPhong_ItemClick);
             // 
-            // barButtonItem4
+            // btn_bieuDo
             // 
-            this.barButtonItem4.Caption = "Biểu đồ";
-            this.barButtonItem4.Id = 49;
-            this.barButtonItem4.ImageOptions.Image = global::GUI.Properties.Resources.chart_16x16;
-            this.barButtonItem4.ImageOptions.LargeImage = global::GUI.Properties.Resources.chart_32x32;
-            this.barButtonItem4.Name = "barButtonItem4";
-            this.barButtonItem4.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_bieuDo.Caption = "Biểu đồ";
+            this.btn_bieuDo.Id = 49;
+            this.btn_bieuDo.ImageOptions.Image = global::GUI.Properties.Resources.chart_16x16;
+            this.btn_bieuDo.ImageOptions.LargeImage = global::GUI.Properties.Resources.chart_32x32;
+            this.btn_bieuDo.Name = "btn_bieuDo";
+            this.btn_bieuDo.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
-            // barButtonItem5
+            // btn_baoCao
             // 
-            this.barButtonItem5.Caption = "Xem báo cáo";
-            this.barButtonItem5.Id = 50;
-            this.barButtonItem5.ImageOptions.Image = global::GUI.Properties.Resources.icons8_business_report_32;
-            this.barButtonItem5.Name = "barButtonItem5";
-            this.barButtonItem5.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_baoCao.Caption = "Xem báo cáo";
+            this.btn_baoCao.Id = 50;
+            this.btn_baoCao.ImageOptions.Image = global::GUI.Properties.Resources.icons8_business_report_32;
+            this.btn_baoCao.Name = "btn_baoCao";
+            this.btn_baoCao.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // ribbonPage8
             // 
@@ -673,7 +675,7 @@
             // ribbonPageGroup6
             // 
             this.ribbonPageGroup6.AllowTextClipping = false;
-            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem4);
+            this.ribbonPageGroup6.ItemLinks.Add(this.btn_bieuDo);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.ShowCaptionButton = false;
             this.ribbonPageGroup6.Text = "Thống kê";
@@ -681,7 +683,7 @@
             // ribbonPageGroup15
             // 
             this.ribbonPageGroup15.AllowTextClipping = false;
-            this.ribbonPageGroup15.ItemLinks.Add(this.barButtonItem5);
+            this.ribbonPageGroup15.ItemLinks.Add(this.btn_baoCao);
             this.ribbonPageGroup15.Name = "ribbonPageGroup15";
             this.ribbonPageGroup15.ShowCaptionButton = false;
             this.ribbonPageGroup15.Text = "Báo cáo";
@@ -704,6 +706,7 @@
             // 
             // ribbonStatusBar1
             // 
+            this.ribbonStatusBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ribbonStatusBar1.ItemLinks.Add(this.txt_date);
             this.ribbonStatusBar1.ItemLinks.Add(this.txt_time);
             this.ribbonStatusBar1.ItemLinks.Add(this.barButtonItem7);
@@ -840,8 +843,8 @@
         private DevExpress.XtraBars.BarButtonItem btn_danhMucDichVu;
         private DevExpress.XtraBars.BarButtonItem btn_dichVuMoiPhong;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup20;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
+        private DevExpress.XtraBars.BarButtonItem btn_bieuDo;
+        private DevExpress.XtraBars.BarButtonItem btn_baoCao;
 
     }
 }
