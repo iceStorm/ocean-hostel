@@ -1,6 +1,6 @@
-﻿namespace GUI
+﻿namespace GUI.ChildrenForms.KhachTro.DanhSachKhach
 {
-    partial class fModel
+    partial class fKhach
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // fModel
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(636, 402);
-            this.MaximizeBox = false;
-            this.Name = "fModel";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fModel";
-            this.ResumeLayout(false);
-
+            this.Text = "fKhach";
         }
 
         #endregion

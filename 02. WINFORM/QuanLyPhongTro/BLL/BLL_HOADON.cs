@@ -31,5 +31,10 @@ namespace BLL
             return (int)DAL_HOADON.PhongDaGhiHoaDon(hoaDon) == 1;
         }
 
+        public static bool XoaHoaDon(DTO_HOADON hoaDon)
+        {
+            return (int)DAL_HOADON.XoaHoaDon(hoaDon) > 0;
+        }
+
     }
 }

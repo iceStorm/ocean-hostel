@@ -174,3 +174,27 @@ BEGIN
 	RETURN @SONUOCTHANGNAY - @SONUOCTHANGTRUOC
 END
 GO
+
+------------------------------------------------------------
+CREATE	FUNCTION	FUNC__HOADON__TongTienDichVu (@MAPHG	VARCHAR(10),
+												  @THANG	INT,
+												  @NAM	INT)
+RETURNS INT
+AS
+BEGIN
+	DECLARE @TOTAL INT
+	
+	SELECT @TOTAL = SUM(dv.GIADICHVU)
+	FROM DICHVU_PHONG dp, DICHVU dv
+	WHERE dp.MAPHG = @MAPHG
+		AND dv.MADICHVU = dp.MADICHVU
+		AND dv.TENDICHVU <> N'Tiền điện'
+		AND dv.TENDICHVU <> N'Tiền nước'
+
+
+	IF (@TOTAL IS NULL)
+		SET @TOTAL = 0
+		
+	RETURN @TOTAL
+END
+GO

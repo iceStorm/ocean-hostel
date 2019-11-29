@@ -16,6 +16,11 @@ namespace GUI.ChildrenForms.HoaDonChiTieu.DanhSachHoaDon
     public partial class fThemHoaDon : DevExpress.XtraEditors.XtraForm
     {
         int tongTien = 0;
+        int tienPhong = 0;
+        int tienDichVu = 0;
+        int tienDien = 0;
+        int tienNuoc = 0;
+        int cbPhong_lastSelectedIndex = -1;
 
         public fThemHoaDon()
         {
@@ -80,6 +85,16 @@ namespace GUI.ChildrenForms.HoaDonChiTieu.DanhSachHoaDon
 
         private void cb_phong_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (this.cb_phong.SelectedIndex != this.cbPhong_lastSelectedIndex)
+            {
+                this.cbPhong_lastSelectedIndex = this.cb_phong.SelectedIndex;
+            }
+            else
+            {
+                return;
+            }
+
+
             ResetForm();
 
             int thang = DateTime.Today.Month;
@@ -108,9 +123,19 @@ namespace GUI.ChildrenForms.HoaDonChiTieu.DanhSachHoaDon
                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                         this.cb_phong.SelectedIndex = -1;
+                        this.btn_luuVaNhap.Enabled = false;
+                        this.btn_luuVaThoat.Enabled = false;
+                        this.num_soDienMoi.Enabled = false;
+                        this.num_soNuocMoi.Enabled = false;
                     }
                     else
                     {
+                        this.btn_luuVaNhap.Enabled = true;
+                        this.btn_luuVaThoat.Enabled = true;
+                        this.num_soDienMoi.Enabled = true;
+                        this.num_soNuocMoi.Enabled = true;
+
+
                         DataTable dt = BLL_PHONG.LayThongTinLoaiPhongTheoTenPhong(phong);
                         this.lb_loaiPhong.Text = (string)dt.Rows[0]["TENLOAIPHG"];
                         int giaPhong = (int)dt.Rows[0]["GIAPHG"];
@@ -118,7 +143,7 @@ namespace GUI.ChildrenForms.HoaDonChiTieu.DanhSachHoaDon
                         this.lb_loaiPhong.Visible = true;
                         this.lb_giaPhong.Visible = true;
 
-                        this.tongTien += giaPhong;
+                        this.tienPhong = giaPhong;
                         SetTotal();
 
 
@@ -149,13 +174,16 @@ namespace GUI.ChildrenForms.HoaDonChiTieu.DanhSachHoaDon
                             this.lb_tongTienDichVu.Visible = true;
                             this.lb_tongTienDichVu.Text = String.Format("{0:#,##0}", sum);
 
-                            this.tongTien += sum;
+                            this.tienDichVu = sum;
                             SetTotal();
                         }
                     }
                 else
                 {
-                    ResetForm();
+                    this.btn_luuVaNhap.Enabled = false;
+                    this.btn_luuVaThoat.Enabled = false;
+                    this.num_soDienMoi.Enabled = false;
+                    this.num_soNuocMoi.Enabled = false;
                 }
             }
             catch (Exception ex)
@@ -171,7 +199,7 @@ namespace GUI.ChildrenForms.HoaDonChiTieu.DanhSachHoaDon
             this.txt_soDienTieuThu.Text = soDienTieuThu.ToString();
 
             int tongTienDien = soDienTieuThu * (int.Parse(Str.Remove(this.lb_giaDien.Text, ',')));
-            this.tongTien += tongTienDien;
+            this.tienDien = tongTienDien;
             SetTotal();
 
             this.lb_tongTienDien.Visible = true;
@@ -184,7 +212,7 @@ namespace GUI.ChildrenForms.HoaDonChiTieu.DanhSachHoaDon
             this.txt_soNuocTieuThu.Text = soNuocTieuThu.ToString();
 
             int tongTienNuoc = soNuocTieuThu * (int.Parse(Str.Remove(this.lb_giaNuoc.Text, ',')));
-            this.tongTien += tongTienNuoc;
+            this.tienNuoc = tongTienNuoc;
             SetTotal();
 
             this.lb_tongTienNuoc.Visible = true;
@@ -194,6 +222,8 @@ namespace GUI.ChildrenForms.HoaDonChiTieu.DanhSachHoaDon
 
         private void SetTotal()
         {
+            this.tongTien = this.tienPhong + this.tienDichVu + this.tienDien + this.tienNuoc;
+
             this.lb_tongTien.Text = String.Format("{0:#,##0} đ", this.tongTien);
             this.lb_tienBangChu.Text = Reader.ReadNumber((decimal)this.tongTien);
         }
@@ -214,13 +244,17 @@ namespace GUI.ChildrenForms.HoaDonChiTieu.DanhSachHoaDon
             this.txt_soDienTieuThu.Text = "–";
             this.txt_soNuocTieuThu.Text = "–";
 
-            this.gridControl_dichVuPhong.DataSource = null;
-
-            this.tongTien = 0;
+            this.tienDichVu = 0;
+            this.tienPhong = 0;
+            this.tienDien = 0;
+            this.tienNuoc = 0;
             SetTotal();
+
+            this.gridControl_dichVuPhong.DataSource = null;
         }
 
-        private void btn_luuVaThoat_Click(object sender, EventArgs e)
+
+        private bool LuuHoaDon()
         {
             if ((int)this.num_soDienMoi.Value < (int.Parse(this.txt_soDienCu.Text)))
             {
@@ -260,7 +294,7 @@ namespace GUI.ChildrenForms.HoaDonChiTieu.DanhSachHoaDon
                             XtraMessageBox.Show("Ghi hoá đơn thành công !", "Thông báo",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            this.Close();
+                            return true;
                         }
                     }
                     catch (Exception ex)
@@ -269,6 +303,27 @@ namespace GUI.ChildrenForms.HoaDonChiTieu.DanhSachHoaDon
                             "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
+
+
+            return false;
+        }
+
+        private void btn_luuVaThoat_Click(object sender, EventArgs e)
+        {
+           if (LuuHoaDon() == true)
+                this.Close();
+        }
+
+        private void btn_luuVaNhap_Click(object sender, EventArgs e)
+        {
+            if (LuuHoaDon() == true)
+            {
+                ResetForm();
+
+                this.cb_khu.SelectedIndex = -1;
+                this.cb_tang.SelectedIndex = -1;
+                this.cb_phong.SelectedIndex = - 1;
+            }
         }
 
     }

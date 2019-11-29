@@ -162,8 +162,8 @@
             // lb_tenPhong
             // 
             this.lb_tenPhong.AutoSize = true;
-            this.lb_tenPhong.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F);
-            this.lb_tenPhong.Location = new System.Drawing.Point(187, 22);
+            this.lb_tenPhong.Font = new System.Drawing.Font("Segoe UI", 13.25F, System.Drawing.FontStyle.Bold);
+            this.lb_tenPhong.Location = new System.Drawing.Point(189, 22);
             this.lb_tenPhong.Name = "lb_tenPhong";
             this.lb_tenPhong.Size = new System.Drawing.Size(20, 25);
             this.lb_tenPhong.TabIndex = 5;
@@ -173,10 +173,10 @@
             // lb_khuTang
             // 
             this.lb_khuTang.AutoSize = true;
-            this.lb_khuTang.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F);
+            this.lb_khuTang.Font = new System.Drawing.Font("Segoe UI", 13.25F, System.Drawing.FontStyle.Bold);
             this.lb_khuTang.Location = new System.Drawing.Point(396, 22);
             this.lb_khuTang.Name = "lb_khuTang";
-            this.lb_khuTang.Size = new System.Drawing.Size(117, 25);
+            this.lb_khuTang.Size = new System.Drawing.Size(121, 25);
             this.lb_khuTang.TabIndex = 4;
             this.lb_khuTang.Text = "KHU – TẦNG";
             this.lb_khuTang.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -184,10 +184,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.25F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(104, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 25);
+            this.label1.Size = new System.Drawing.Size(78, 25);
             this.label1.TabIndex = 4;
             this.label1.Text = "PHÒNG";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;

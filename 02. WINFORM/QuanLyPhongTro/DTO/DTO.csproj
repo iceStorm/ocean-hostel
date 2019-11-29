@@ -42,6 +42,7 @@
     <Compile Include="DTO_DICHVU.cs" />
     <Compile Include="DTO_DICHVU_PHONG.cs" />
     <Compile Include="DTO_HOADON.cs" />
+    <Compile Include="DTO_HOADON_DICHVU.cs" />
     <Compile Include="DTO_HOADON_DIENNUOC.cs" />
     <Compile Include="DTO_KHU.cs" />
     <Compile Include="DTO_LOAIPHONG.cs" />
@@ -50,7 +51,7 @@
     <Compile Include="DTO_TANG.cs" />
     <Compile Include="DTO_THIETBI.cs" />
     <Compile Include="DTO_THIETBI_PHONG.cs" />
-    <Compile Include="Khach.cs" />
+    <Compile Include="DTO_KHACH.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

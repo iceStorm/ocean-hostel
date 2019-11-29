@@ -232,6 +232,12 @@
     <Compile Include="ChildrenForms\DichVu\DichVuMoiPhong\fDichVuMoiPhong.Designer.cs">
       <DependentUpon>fDichVuMoiPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fChiTietHoaDon.Designer.cs">
+      <DependentUpon>fChiTietHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fDanhSachHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +249,12 @@
     </Compile>
     <Compile Include="ChildrenForms\HoaDonChiTieu\fThemHoaDon.Designer.cs">
       <DependentUpon>fThemHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\KhachTro\DanhSachKhach\fKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\KhachTro\DanhSachKhach\fKhach.Designer.cs">
+      <DependentUpon>fKhach.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildrenForms\QuanLyPhong\DayNha\fAlter.cs">
       <SubType>Form</SubType>
@@ -322,12 +334,6 @@
     <Compile Include="FormDashboard\fDashboard.Designer.cs">
       <DependentUpon>fDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLock\fLock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormLock\fLock.Designer.cs">
-      <DependentUpon>fLock.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormLogin\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -339,12 +345,6 @@
     </Compile>
     <Compile Include="FormMain\fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="fModel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fModel.Designer.cs">
-      <DependentUpon>fModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -361,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildrenForms\DichVu\DichVuMoiPhong\fDichVuMoiPhong.resx">
       <DependentUpon>fDichVuMoiPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fChiTietHoaDon.resx">
+      <DependentUpon>fChiTietHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fDanhSachHoaDon.resx">
       <DependentUpon>fDanhSachHoaDon.cs</DependentUpon>
@@ -407,17 +410,11 @@
     <EmbeddedResource Include="FormDashboard\fDashboard.resx">
       <DependentUpon>fDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLock\fLock.resx">
-      <DependentUpon>fLock.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fModel.resx">
-      <DependentUpon>fModel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <None Include="bin\Debug\ICONS\icons8-stairs-up-32.png" />
@@ -491,6 +488,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ChildrenForms\HeThong\" />
+    <Folder Include="ChildrenForms\KhachTro\HopDong\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\ICONS\icons8-pie-chart-32.png" />

@@ -9,14 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace GUI
+namespace GUI.ChildrenForms.KhachTro.DanhSachKhach
 {
-    public partial class fModel : DevExpress.XtraEditors.XtraForm
+    public partial class fKhach : DevExpress.XtraEditors.XtraForm
     {
-        public fModel()
+        public fKhach()
         {
             InitializeComponent();
         }
-
     }
 }

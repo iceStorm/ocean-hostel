@@ -121,6 +121,7 @@
             this.btn_luuVaThoat.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn_luuVaThoat.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btn_luuVaThoat.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btn_luuVaThoat.Enabled = false;
             this.btn_luuVaThoat.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btn_luuVaThoat.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
             this.btn_luuVaThoat.ForeColor = System.Drawing.Color.White;
@@ -185,6 +186,7 @@
             this.btn_luuVaNhap.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn_luuVaNhap.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btn_luuVaNhap.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btn_luuVaNhap.Enabled = false;
             this.btn_luuVaNhap.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btn_luuVaNhap.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
             this.btn_luuVaNhap.ForeColor = System.Drawing.Color.White;
@@ -192,7 +194,7 @@
             this.btn_luuVaNhap.IconMarginLeft = 11;
             this.btn_luuVaNhap.IconPadding = 10;
             this.btn_luuVaNhap.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_luuVaNhap.IdleBorderColor = System.Drawing.Color.Lime;
+            this.btn_luuVaNhap.IdleBorderColor = System.Drawing.Color.LimeGreen;
             this.btn_luuVaNhap.IdleBorderRadius = 3;
             this.btn_luuVaNhap.IdleBorderThickness = 1;
             this.btn_luuVaNhap.IdleFillColor = System.Drawing.Color.LimeGreen;
@@ -224,6 +226,7 @@
             this.btn_luuVaNhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_luuVaNhap.TextMarginLeft = 0;
             this.btn_luuVaNhap.UseDefaultRadiusAndThickness = true;
+            this.btn_luuVaNhap.Click += new System.EventHandler(this.btn_luuVaNhap_Click);
             // 
             // btn_huy
             // 
@@ -385,6 +388,7 @@
             0,
             0,
             0});
+            this.num_soDienMoi.Enabled = false;
             this.num_soDienMoi.Location = new System.Drawing.Point(214, 70);
             this.num_soDienMoi.Name = "num_soDienMoi";
             this.num_soDienMoi.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -563,6 +567,7 @@
             0,
             0,
             0});
+            this.num_soNuocMoi.Enabled = false;
             this.num_soNuocMoi.Location = new System.Drawing.Point(215, 69);
             this.num_soNuocMoi.Name = "num_soNuocMoi";
             this.num_soNuocMoi.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);

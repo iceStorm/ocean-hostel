@@ -62,3 +62,20 @@ BEGIN
 		AND hdn.MAHOADON = hd.MAHOADON
 END
 GO
+
+
+-------------------------------------------------------------ư
+CREATE	PROC	PROC__HOADON_DIENNUOC__LayThongTinThangHienTai
+@MAPHG	VARCHAR(10),
+@THANG	INT,
+@NAM	INT
+AS
+BEGIN
+	SELECT hdn.*
+	FROM HOADON hd, HOADON_DIENNUOC hdn
+	WHERE hd.MAPHG = @MAPHG
+		AND hd.NAM = @NAM
+		AND hd.THANG = @THANG
+		AND hdn.MAHOADON = hd.MAHOADON
+END
+GO

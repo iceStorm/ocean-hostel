@@ -42,7 +42,9 @@
     <Compile Include="DAL_DICHVU.cs" />
     <Compile Include="DAL_DICHVU_PHONG.cs" />
     <Compile Include="DAL_HOADON.cs" />
+    <Compile Include="DAL_HOADON_DICHVU.cs" />
     <Compile Include="DAL_HOADON_DIENNUOC.cs" />
+    <Compile Include="DAL_KHACH.cs" />
     <Compile Include="DAL_KHU.cs" />
     <Compile Include="DAL_LOAIPHONG.cs" />
     <Compile Include="DAL_NGUOIDUNG.cs" />

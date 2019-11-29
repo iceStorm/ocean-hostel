@@ -27,5 +27,22 @@ namespace DAL
             return ExecuteQuery(query, obj);
         }
 
+        public static DataTable LayThongTinDienNuocThangHienTai(DTO_HOADON hoaDon)
+        {
+            string query = @"EXEC PROC__HOADON_DIENNUOC__LayThongTinThangHienTai
+                             @MAPHG = @@MAPHG ,
+                             @THANG = @@THANG ,
+                             @NAM = @@NAM";
+
+            object[] obj = new object[]
+            {
+                hoaDon.MaPhong,
+                hoaDon.Thang,
+                hoaDon.Nam
+            };
+
+            return ExecuteQuery(query, obj);
+        }
+
     }
 }

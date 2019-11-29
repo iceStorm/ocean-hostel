@@ -281,6 +281,25 @@ namespace GUI
         #endregion
 
 
+        #region KHÁCH TRỌ
+        
+        private void btn_khachTro_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (XtraForm childForm in this.MdiChildren)
+                if (childForm.Name == "fDanhSachKhachTro")
+                {
+                    childForm.Activate();
+                    return;
+                }
+
+            XtraForm FormKhachTro = new ChildrenForms.KhachTro.DanhSachKhach.fKhach();
+            FormKhachTro.MdiParent = this;
+            FormKhachTro.Show();
+        }
+
+        #endregion
+
+
 
 
 

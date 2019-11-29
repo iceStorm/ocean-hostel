@@ -45,6 +45,13 @@ namespace DAL
             return ExecuteNonQuery(query, obj);
         }
 
+
+        public static int XoaHoaDon(DTO_HOADON hoaDon)
+        {
+            string query = @"EXEC PROC__HOADON__DELETE @MAHOADON = @@MAHD";
+            return ExecuteNonQuery(query, new object[]{hoaDon.MaHoaDon});
+        }
+
         public static object PhongDaGhiHoaDon(DTO_HOADON hoaDon)
         {
             string query = @"EXEC PROC__HOADON__PhongDaGhiHoaDon

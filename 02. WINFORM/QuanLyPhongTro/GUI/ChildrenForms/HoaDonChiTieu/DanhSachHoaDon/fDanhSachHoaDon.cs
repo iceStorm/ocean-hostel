@@ -29,7 +29,25 @@ namespace GUI.ChildrenForms.HoaDonChiTieu.DanhSachHoaDon
 
         private void LoadData()
         {
-            this.gridControl_hoaDon.DataSource = BLL_HOADON.LayDanhSachHoaDon();
+            DataTable dt = BLL_HOADON.LayDanhSachHoaDon();
+
+            if (dt.Rows.Count == 0)
+            {
+                this.btn_thanhToan.Enabled = false;
+                this.btn_xemChiTiet.Enabled = false;
+                this.btn_xoa.Enabled = false;
+                this.btn_inHoaDon.Enabled = false;
+            }
+            else
+            {
+                this.btn_thanhToan.Enabled = true;
+                this.btn_xemChiTiet.Enabled = true;
+                this.btn_xoa.Enabled = true;
+                this.btn_inHoaDon.Enabled = true;
+            }
+
+
+            this.gridControl_hoaDon.DataSource = dt;
 
             this.gridView_hoaDon.Columns["MAHOADON"].Visible = false;
             this.gridView_hoaDon.Columns["MAPHG"].Visible = false;
@@ -48,43 +66,35 @@ namespace GUI.ChildrenForms.HoaDonChiTieu.DanhSachHoaDon
 
         private void gridView_hoaDon_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
         {
-            if (this.gridView_hoaDon.DataRowCount == 0)
+            DataRow dr = this.gridView_hoaDon.GetFocusedDataRow();
+
+            DTO_HOADON hoaDonHienTai = new DTO_HOADON
+            {
+                MaHoaDon = (string)dr["MAHOADON"],
+                MaPhong = (string)dr["MAPHG"],
+                TenPhong = (string)dr["TENPHG"],
+                Thang = (int)dr["THANG"],
+                Nam = (int)dr["NAM"],
+                TienPhong = (int)dr["TIENPHONG"],
+                TienDien = (int)dr["TIENDIEN"],
+                TienNuoc = (int)dr["TIENNUOC"],
+                TienDichVu = (int)dr["TIENDICHVU"],
+                TongTien = (int)dr["TONGTIEN"],
+                DaThanhToan = dr["DATHANHTOAN"].ToString()
+            };
+
+            this.hoaDon = hoaDonHienTai;
+
+
+            if (hoaDonHienTai.DaThanhToan == "True")
             {
                 this.btn_thanhToan.Enabled = false;
-                this.btn_xemChiTiet.Enabled = false;
+                this.btn_inHoaDon.Enabled = false;
             }
             else
             {
-                DataRow dr = this.gridView_hoaDon.GetFocusedDataRow();
-
-                DTO_HOADON hoaDonHienTai = new DTO_HOADON
-                {
-                    MaHoaDon  = (string)dr["MAHOADON"],
-                    MaPhong = (string)dr["MAPHG"],
-                    TenPhong = (string)dr["TENPHG"],
-                    Thang = (int)dr["THANG"],
-                    Nam = (int)dr["NAM"],
-                    TienPhong = (int)dr["TIENPHONG"],
-                    TienDien = (int)dr["TIENDIEN"],
-                    TienNuoc = (int)dr["TIENNUOC"],
-                    TienDichVu = (int)dr["TIENDICHVU"],
-                    TongTien = (int)dr["TONGTIEN"],
-                    DaThanhToan = dr["DATHANHTOAN"].ToString()
-                };
-
-                this.hoaDon = hoaDonHienTai;
-
-
-                if (hoaDonHienTai.DaThanhToan == "True")
-                {
-                    this.btn_thanhToan.Enabled = false;
-                    this.btn_inHoaDon.Enabled = false;
-                }
-                else
-                {
-                    this.btn_thanhToan.Enabled = true;
-                    this.btn_inHoaDon.Enabled = true;
-                }
+                this.btn_thanhToan.Enabled = true;
+                this.btn_inHoaDon.Enabled = true;
             }
         }
 
@@ -128,6 +138,35 @@ this.hoaDon.TongTien);
                     if (BLL_HOADON.ThanhToanHoaDon(this.hoaDon) == true)
                     {
                         XtraMessageBox.Show("Thanh toán thành công !", "Thông báo", 
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        LoadData();
+                    }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Lỗi truy vấn !\n\n" + "Nội dung lỗi:\n" + ex.Message,
+                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btn_xemChiTiet_Click(object sender, EventArgs e)
+        {
+            XtraForm FormChiTiet = new ChildrenForms.HoaDonChiTieu.DanhSachHoaDon.fChiTietHoaDon(this.hoaDon);
+            FormChiTiet.ShowDialog();
+        }
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult dr = XtraMessageBox.Show("Thông tin quan trọng, xác nhận xoá ?",
+                    "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dr == DialogResult.Yes)
+                    if (BLL_HOADON.XoaHoaDon(this.hoaDon) == true)
+                    {
+                        XtraMessageBox.Show("Xoá hoá đơn thành công !", "Thông báo",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         LoadData();
