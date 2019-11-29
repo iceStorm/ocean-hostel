@@ -144,6 +144,7 @@
     <Reference Include="DevExpress.Data.v19.1">
       <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.Images.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Pdf.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.PivotGrid.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -179,6 +180,7 @@
     </Reference>
     <Reference Include="DevExpress.XtraReports.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v19.1.Extensions, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -328,6 +330,30 @@
     <Compile Include="ChildrenForms\QuanLyThietBi\PhanBoThietBi\fPhanBoThietBi.Designer.cs">
       <DependentUpon>fPhanBoThietBi.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildrenForms\QuanLyViPham\KhachViPham\fAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyViPham\KhachViPham\fAlter.Designer.cs">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyViPham\KhachViPham\fKhachViPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyViPham\KhachViPham\fKhachViPham.Designer.cs">
+      <DependentUpon>fKhachViPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyViPham\ViPham\fAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyViPham\ViPham\fAlter.Designer.cs">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyViPham\ViPham\fViPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyViPham\ViPham\fViPham.Designer.cs">
+      <DependentUpon>fViPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDashboard\fDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -371,6 +397,9 @@
     <EmbeddedResource Include="ChildrenForms\HoaDonChiTieu\fThemHoaDon.resx">
       <DependentUpon>fThemHoaDon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\KhachTro\DanhSachKhach\fKhach.resx">
+      <DependentUpon>fKhach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildrenForms\QuanLyPhong\DayNha\fAlter.resx">
       <DependentUpon>fAlter.cs</DependentUpon>
     </EmbeddedResource>
@@ -406,6 +435,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildrenForms\QuanLyThietBi\PhanBoThietBi\fPhanBoThietBi.resx">
       <DependentUpon>fPhanBoThietBi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyViPham\KhachViPham\fAlter.resx">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyViPham\KhachViPham\fKhachViPham.resx">
+      <DependentUpon>fKhachViPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyViPham\ViPham\fAlter.resx">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyViPham\ViPham\fViPham.resx">
+      <DependentUpon>fViPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDashboard\fDashboard.resx">
       <DependentUpon>fDashboard.cs</DependentUpon>

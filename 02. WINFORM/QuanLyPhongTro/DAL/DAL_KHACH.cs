@@ -15,5 +15,13 @@ namespace DAL
             string query = @"SELECT * FROM KHACH";
             return ExecuteQuery(query);
         }
+
+        public static DataTable LayDanhSachKhachTheoMaPhong(DTO_PHONG phong)
+        {
+            string query = @"";
+
+            return ExecuteQuery(query, new object[]{phong.MaPhong});
+        }
+
     }
 }

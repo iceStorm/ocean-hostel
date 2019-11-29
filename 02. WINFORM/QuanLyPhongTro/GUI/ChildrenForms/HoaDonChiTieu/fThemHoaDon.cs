@@ -65,7 +65,7 @@ namespace GUI.ChildrenForms.HoaDonChiTieu.DanhSachHoaDon
             this.cb_tang.Items.Clear();
             this.cb_phong.Items.Clear();
 
-            this.cb_tang.Items.AddRange(BLL_TANG.LayDanhSachTang_TheoTenKhu(khu));
+            this.cb_tang.Items.AddRange(BLL_TANG.LayDanhSachTenTang_TheoTenKhu(khu));
         }
 
         private void cb_tang_SelectedIndexChanged(object sender, EventArgs e)
@@ -112,7 +112,7 @@ namespace GUI.ChildrenForms.HoaDonChiTieu.DanhSachHoaDon
                 Nam = nam
             };
 
-            
+
 
             try
             {
@@ -188,7 +188,7 @@ namespace GUI.ChildrenForms.HoaDonChiTieu.DanhSachHoaDon
             }
             catch (Exception ex)
             {
-                XtraMessageBox.Show("Lỗi truy vấn !\n\n" + "Nội dung lỗi:\n" + ex.Message, 
+                XtraMessageBox.Show("Lỗi truy vấn !\n\n" + "Nội dung lỗi:\n" + ex.Message,
                     "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
@@ -310,7 +310,7 @@ namespace GUI.ChildrenForms.HoaDonChiTieu.DanhSachHoaDon
 
         private void btn_luuVaThoat_Click(object sender, EventArgs e)
         {
-           if (LuuHoaDon() == true)
+            if (LuuHoaDon() == true)
                 this.Close();
         }
 
@@ -322,7 +322,7 @@ namespace GUI.ChildrenForms.HoaDonChiTieu.DanhSachHoaDon
 
                 this.cb_khu.SelectedIndex = -1;
                 this.cb_tang.SelectedIndex = -1;
-                this.cb_phong.SelectedIndex = - 1;
+                this.cb_phong.SelectedIndex = -1;
             }
         }
 

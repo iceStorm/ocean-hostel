@@ -6,3 +6,4 @@ C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài 
 C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\DTO\bin\Debug\DTO.pdb
 C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\DTO\obj\Debug\DTO.dll
 C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\DTO\obj\Debug\DTO.pdb
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache

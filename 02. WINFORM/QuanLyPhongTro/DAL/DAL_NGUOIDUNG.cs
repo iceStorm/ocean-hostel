@@ -14,7 +14,8 @@ namespace DAL
         {
             string query = @"SELECT *
                              FROM NGUOIDUNG
-                             WHERE TENDN = @TENDN AND MATKHAU = @MATKHAU";
+                             WHERE TENDN = @@TENDN 
+                                AND MATKHAU = @@MATKHAU";
 
             return ExecuteQuery(query, new object[]{nguoiDung.TenDangNhap, nguoiDung.MatKhau});
         }

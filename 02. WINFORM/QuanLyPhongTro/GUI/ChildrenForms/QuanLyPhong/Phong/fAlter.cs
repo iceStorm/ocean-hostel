@@ -74,7 +74,7 @@ namespace GUI.ChildrenForms.QuanLyPhong.Phong
             khu.TenKhu = selected_TenKhu;
 
             this.cb_tenTang.Items.Clear();
-            this.cb_tenTang.Items.AddRange(BLL_TANG.LayDanhSachTang_TheoTenKhu(khu));
+            this.cb_tenTang.Items.AddRange(BLL_TANG.LayDanhSachTenTang_TheoTenKhu(khu));
         }
 
         private void cb_tenTang_SelectedIndexChanged(object sender, EventArgs e)

@@ -37,7 +37,7 @@ namespace GUI.ChildrenForms.DichVu.DichVuMoiPhong
                 this.treeList_khuTang.Nodes.Add(new object[] { str });
                 khu.TenKhu = str;
                 khu.MaKhu = BLL_KHU.LayMaKhuTheoTenKhu(khu);
-                string[] listTang = BLL_TANG.LayDanhSachTang_TheoTenKhu(khu);   //  Lấy các tầng thuộc khu
+                string[] listTang = BLL_TANG.LayDanhSachTenTang_TheoTenKhu(khu);   //  Lấy các tầng thuộc khu
 
 
                 int countLv1Nodes = 0;

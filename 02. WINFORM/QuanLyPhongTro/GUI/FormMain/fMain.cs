@@ -286,18 +286,52 @@ namespace GUI
         private void btn_khachTro_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             foreach (XtraForm childForm in this.MdiChildren)
-                if (childForm.Name == "fDanhSachKhachTro")
+                if (childForm.Name == "fKhach")
                 {
                     childForm.Activate();
                     return;
                 }
 
-            XtraForm FormKhachTro = new ChildrenForms.KhachTro.DanhSachKhach.fKhach();
-            FormKhachTro.MdiParent = this;
-            FormKhachTro.Show();
+            XtraForm FormKhach = new ChildrenForms.KhachTro.DanhSachKhach.fKhach();
+            FormKhach.MdiParent = this;
+            FormKhach.Show();
         }
 
         #endregion
+
+
+        #region NỘI QUY
+        
+        private void btn_noiQuy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (XtraForm childForm in this.MdiChildren)
+                if (childForm.Name == "fViPham")
+                {
+                    childForm.Activate();
+                    return;
+                }
+
+            XtraForm FormNoiQuy = new GUI.ChildrenForms.QuanLyViPham.ViPham.fViPham();
+            FormNoiQuy.MdiParent = this;
+            FormNoiQuy.Show();
+        }
+
+        private void btn_danhSachViPham_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (XtraForm childForm in this.MdiChildren)
+                if (childForm.Name == "fKhachViPham")
+                {
+                    childForm.Activate();
+                    return;
+                }
+
+            XtraForm FormViPham = new GUI.ChildrenForms.QuanLyViPham.KhachViPham.fKhachViPham();
+            FormViPham.MdiParent = this;
+            FormViPham.Show();
+        }
+
+        #endregion
+
 
 
 

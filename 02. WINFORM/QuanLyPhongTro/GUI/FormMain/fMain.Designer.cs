@@ -45,8 +45,8 @@
             this.btn_nguoiDung = new DevExpress.XtraBars.BarButtonItem();
             this.btn_nhomNguoiDung = new DevExpress.XtraBars.BarButtonItem();
             this.btn_phanQuyen = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_noiQuy = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_danhSachViPham = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
             this.btn_dangXuat = new DevExpress.XtraBars.BarButtonItem();
@@ -119,8 +119,8 @@
             this.btn_nguoiDung,
             this.btn_nhomNguoiDung,
             this.btn_phanQuyen,
-            this.barButtonItem14,
-            this.barButtonItem15,
+            this.btn_noiQuy,
+            this.btn_danhSachViPham,
             this.barButtonItem16,
             this.barButtonItem17,
             this.btn_dangXuat,
@@ -273,21 +273,23 @@
             this.btn_phanQuyen.Name = "btn_phanQuyen";
             this.btn_phanQuyen.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
-            // barButtonItem14
+            // btn_noiQuy
             // 
-            this.barButtonItem14.Caption = "Danh sách nội quy";
-            this.barButtonItem14.Id = 29;
-            this.barButtonItem14.ImageOptions.Image = global::GUI.Properties.Resources.icons8_no_parking_32;
-            this.barButtonItem14.Name = "barButtonItem14";
-            this.barButtonItem14.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_noiQuy.Caption = "Danh sách nội quy";
+            this.btn_noiQuy.Id = 29;
+            this.btn_noiQuy.ImageOptions.Image = global::GUI.Properties.Resources.icons8_no_parking_32;
+            this.btn_noiQuy.Name = "btn_noiQuy";
+            this.btn_noiQuy.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_noiQuy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_noiQuy_ItemClick);
             // 
-            // barButtonItem15
+            // btn_danhSachViPham
             // 
-            this.barButtonItem15.Caption = "Danh sách khách vi phạm";
-            this.barButtonItem15.Id = 31;
-            this.barButtonItem15.ImageOptions.Image = global::GUI.Properties.Resources.icons8_denied_32;
-            this.barButtonItem15.Name = "barButtonItem15";
-            this.barButtonItem15.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_danhSachViPham.Caption = "Danh sách khách vi phạm";
+            this.btn_danhSachViPham.Id = 31;
+            this.btn_danhSachViPham.ImageOptions.Image = global::GUI.Properties.Resources.icons8_denied_32;
+            this.btn_danhSachViPham.Name = "btn_danhSachViPham";
+            this.btn_danhSachViPham.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_danhSachViPham.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_danhSachViPham_ItemClick);
             // 
             // barButtonItem16
             // 
@@ -573,7 +575,7 @@
             // ribbonPageGroup4
             // 
             this.ribbonPageGroup4.AllowTextClipping = false;
-            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem14);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btn_noiQuy);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.ShowCaptionButton = false;
             this.ribbonPageGroup4.Text = "Nội quy";
@@ -581,7 +583,7 @@
             // ribbonPageGroup14
             // 
             this.ribbonPageGroup14.AllowTextClipping = false;
-            this.ribbonPageGroup14.ItemLinks.Add(this.barButtonItem15);
+            this.ribbonPageGroup14.ItemLinks.Add(this.btn_danhSachViPham);
             this.ribbonPageGroup14.Name = "ribbonPageGroup14";
             this.ribbonPageGroup14.ShowCaptionButton = false;
             this.ribbonPageGroup14.Text = "Khách vi phạm";
@@ -762,8 +764,8 @@
         private DevExpress.XtraBars.BarButtonItem btn_phanQuyen;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem14;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem15;
+        private DevExpress.XtraBars.BarButtonItem btn_noiQuy;
+        private DevExpress.XtraBars.BarButtonItem btn_danhSachViPham;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup15;
         private DevExpress.XtraBars.BarButtonItem barButtonItem16;

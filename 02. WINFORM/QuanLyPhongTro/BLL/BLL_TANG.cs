@@ -38,10 +38,10 @@ namespace BLL
         }
 
 
-        public static string[] LayDanhSachTang_TheoTenKhu(DTO_KHU khu)
+        public static string[] LayDanhSachTenTang_TheoTenKhu(DTO_KHU khu)
         {
             khu.MaKhu = BLL_KHU.LayMaKhuTheoTenKhu(khu);
-            DataTable dt = DAL_TANG.LayDanhSachTang_TheoTenKhu(khu);
+            DataTable dt = DAL_TANG.LayDanhSachTang_TheoMaKhu(khu);
 
             List<string> tenTang = new List<string>();
 
@@ -49,6 +49,11 @@ namespace BLL
                 tenTang.Add(dr["TENTANG"].ToString());
 
             return tenTang.ToArray();
+        }
+
+        public static DataTable LayDanhSachTangTheoMaKhu(DTO_KHU khu)
+        {
+            return DAL_TANG.LayDanhSachTang_TheoMaKhu(khu);
         }
 
         public static string LayTenTangTiepTheo(DTO_TANG tang)

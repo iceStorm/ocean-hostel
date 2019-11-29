@@ -16,9 +16,9 @@ namespace DAL
             return ExecuteQuery(query);
         }
 
-        public static DataTable LayDanhSachTang_TheoTenKhu(DTO_KHU khu)
+        public static DataTable LayDanhSachTang_TheoMaKhu(DTO_KHU khu)
         {
-            string query = @"SELECT TENTANG
+            string query = @"SELECT *
                              FROM TANG
                              WHERE MAKHU = @@MAKHU";
             
