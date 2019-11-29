@@ -21,6 +21,16 @@ END
 GO
 
 
+--------------------------------------------
+CREATE	PROC	PROC__KHACH__GetListByRoomID
+@MAPHG VARCHAR(10)
+AS
+BEGIN
+END
+
+
+
+
 EXEC PROC__KHACH__INSERT
 @HO = N'Nguyễn',
 @TEN = N'Anh Tuấn',
@@ -29,6 +39,3 @@ EXEC PROC__KHACH__INSERT
 @QUEQUAN = N'Thanh Hoá',
 @SOCANCUOC = '038200016566',
 @SODIENTHOAI = '0333326585'
-
-SELECT *
-FROM KHACH
