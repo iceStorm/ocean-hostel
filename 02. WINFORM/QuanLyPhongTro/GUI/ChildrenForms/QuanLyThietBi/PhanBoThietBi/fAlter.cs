@@ -16,51 +16,17 @@ namespace GUI.ChildrenForms.QuanLyThietBi.PhanBoThietBi
     public partial class fAlter : DevExpress.XtraEditors.XtraForm
     {
         DTO_THIETBI_PHONG thietBiPhong;
-        bool isAdd = false;
 
-        public fAlter(DTO_THIETBI_PHONG thietBiPhong, bool isAdd)
+        public fAlter(DTO_THIETBI_PHONG thietBiPhong)
         {
             InitializeComponent();
             this.thietBiPhong = thietBiPhong;
-            this.isAdd = isAdd;
-
-
-            if (isAdd == false)   //  Sửa
-            {
-                this.Text = "Sửa thông tin thiết bị trong phòng";
-                this.btn_them.Text = "Lưu";
-                this.label1.Text = "Tình trạng";
-
-                this.txt_tenThietbi.Text = thietBiPhong.TenThietBi;
-                this.txt_ngayCap.Text = thietBiPhong.NgayCap.Date.ToShortDateString() + " — " + thietBiPhong.NgayCap.ToShortTimeString();
-                LoadTrangThai();
-            }
-            else
-            {
-                this.label4.Visible = false;
-                this.label2.Visible = false;
-                this.txt_tenThietbi.Visible = false;
-                this.txt_ngayCap.Visible = false;
-
-                this.label1.Location = new Point(60, 26);
-                this.cb_tenThietBi.Location = new Point(197, 25);
-                this.btn_them.Location = new Point(64, 118);
-                this.btn_huy.Location = new Point(269, 114);
-
-                this.Height = 221;
-                LoadTenThietBi();
-            }
+            LoadTenThietBi();
         }
 
         private void LoadTenThietBi()
         {
             this.cb_tenThietBi.Items.AddRange(BLL_THIETBI.LayDanhSachTenThietBi());
-        }
-
-        private void LoadTrangThai()
-        {
-            this.cb_tenThietBi.Items.AddRange(new object[]{"Bình thường", "Hư hỏng"});
-            this.cb_tenThietBi.SelectedItem = this.thietBiPhong.TrangThai;
         }
 
         private void btn_huy_Click(object sender, EventArgs e)
@@ -72,28 +38,21 @@ namespace GUI.ChildrenForms.QuanLyThietBi.PhanBoThietBi
         {
             try
             {
-                if (isAdd == true)  //  Thêm
+                DTO_THIETBI thietBi = new DTO_THIETBI();
+                thietBi.TenThietBi = this.cb_tenThietBi.Text;
+                thietBi.MaThietBi = BLL_THIETBI.LayMaThietBiTheoTenThietBi(thietBi);
+
+
+                this.thietBiPhong.MaThietBi = thietBi.MaThietBi;
+
+
+                if (BLL_THIETBI_PHONG.ThemThietBiPhong(this.thietBiPhong) == true)
                 {
-                    DTO_THIETBI thietBi = new DTO_THIETBI();
-                    thietBi.TenThietBi = this.cb_tenThietBi.Text;
-                    thietBi.MaThietBi = BLL_THIETBI.LayMaThietBiTheoTenThietBi(thietBi);
+                    XtraMessageBox.Show("Thêm thiết bị vào phòng thành công !",
+                        "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-
-                    this.thietBiPhong.MaThietBi = thietBi.MaThietBi;
-
-
-                    if (BLL_THIETBI_PHONG.ThemThietBiPhong(this.thietBiPhong) == true)
-                    {
-                        XtraMessageBox.Show("Thêm thiết bị vào phòng thành công !",
-                            "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        ChildrenForms.QuanLyThietBi.PhanBoThietBi.fPhanBoThietBi.isAdded = true;
-                        this.Close();
-                    }
-                }
-                else
-                {
-
+                    ChildrenForms.QuanLyThietBi.PhanBoThietBi.fPhanBoThietBi.isAdded = true;
+                    this.Close();
                 }
             }
             catch (Exception ex)

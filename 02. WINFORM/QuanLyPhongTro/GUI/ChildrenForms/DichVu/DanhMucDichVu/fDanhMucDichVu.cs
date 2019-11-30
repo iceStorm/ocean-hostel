@@ -30,7 +30,20 @@ namespace GUI.ChildrenForms.DichVu.DanhMucDichVu
 
         private void LoadData()
         {
-            this.gridControl_dichVu.DataSource = BLL_DICHVU.LayDanhSachDichVu();
+            DataTable dt = BLL_DICHVU.LayDanhSachDichVu();
+            if (dt.Rows.Count == 0)
+            {
+                this.btn_sua.Enabled = false;
+                this.btn_xoa.Enabled = false;
+            }
+            else
+            {
+                this.btn_sua.Enabled = true;
+                this.btn_xoa.Enabled = true;
+            }
+
+
+            this.gridControl_dichVu.DataSource = dt;
 
             this.gridView_dichVu.Columns["MADICHVU"].Visible = false;
             this.gridView_dichVu.Columns["TENDICHVU"].Caption = "Tên dịch vụ";

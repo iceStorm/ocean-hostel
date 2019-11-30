@@ -79,6 +79,10 @@ namespace GUI.ChildrenForms.DichVu.DichVuMoiPhong
 
                 if (grandNode != null)
                 {
+                    this.btn_dangKyThem.Enabled = true;
+                    this.btn_huyDichVu.Enabled = true;
+                    this.btn_lamMoi.Enabled = true;
+
                     string tenPhong = node.GetDisplayText(0);
                     string tenTang = parentNode.GetDisplayText(0);
                     string tenKhu = grandNode.GetDisplayText(0);
@@ -93,7 +97,18 @@ namespace GUI.ChildrenForms.DichVu.DichVuMoiPhong
                     phong.MaPhong = BLL_PHONG.LayMaPhongTheoTenPhong(phong);
                     this.maPhong = phong.MaPhong;
 
-                    this.gridControl_dichVuPhong.DataSource = BLL_DICHVU_PHONG.LayDanhSachDichVuTheoMaPhong(phong);
+                    DataTable dt = BLL_DICHVU_PHONG.LayDanhSachDichVuTheoMaPhong(phong);
+                    if (dt.Rows.Count == 0)
+                    {
+                        this.btn_huyDichVu.Enabled = false;
+                    }
+                    else
+                    {
+                        this.btn_huyDichVu.Enabled = true;
+                    }
+
+                    this.gridControl_dichVuPhong.DataSource = dt;
+                        
                     this.gridView_dichVuPhong.Columns["MAPHG"].Visible = false;
                     this.gridView_dichVuPhong.Columns["MADICHVU"].Visible = false;
 
@@ -107,6 +122,17 @@ namespace GUI.ChildrenForms.DichVu.DichVuMoiPhong
                     this.gridView_dichVuPhong.Columns["NGAYDANGKY"].VisibleIndex = 2;
 
                     this.gridView_dichVuPhong.Columns["BATBUOC"].Caption = "Bắt buộc";
+                }
+                else
+                {
+                    this.btn_dangKyThem.Enabled = false;
+                    this.btn_lamMoi.Enabled = false;
+                    this.btn_huyDichVu.Enabled = false;
+
+                    this.lb_tenPhong.Text = "?";
+                    this.lb_khuTang.Text = "KHU – TẦNG";
+
+                    this.gridControl_dichVuPhong.DataSource = null;
                 }
             }
         }
@@ -172,6 +198,15 @@ namespace GUI.ChildrenForms.DichVu.DichVuMoiPhong
             }
             else
             {
+                if (dichVuPhongHienTai.TenDichVu == "Tiền điện" ||
+                    dichVuPhongHienTai.TenDichVu == "Tiền nước")
+                {
+                    XtraMessageBox.Show("Dịch vụ mặc định, không thể huỷ !", "Thông báo",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    return;
+                }
+
                 string question = String.Format("Xác nhận huỷ đăng ký dịch vụ: {0} ?", dichVuPhongHienTai.TenDichVu);
 
                 DialogResult dr = XtraMessageBox.Show(question, "Thông báo",

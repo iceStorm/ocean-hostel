@@ -147,16 +147,6 @@
         vwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btn_sua.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGYAAAAmCAYAAAA2h+4OAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD8SURBVGhD7ZsxCsJAEEXnKB7FE3hLqzQ2goV4B1GwywWs
-        vMCOsymChc2v9gdeIATCFMu8fX+qieDx7UC+YtceMdU3ecf1oBicO4v1prRn3PJaBzryDu3BJbJYzCuY
-        xRKgePSgWADG8TICxjQlAAMYj+x2jK1/Z8IYjMEYxVaMwRiMwRhTCwADGOJJsUCpZfib2gUYwBB7RJmp
-        BYABDPGkWKDUMvxN7QIMYIg9oszUAsAAhnhSLFBqGf6mdgEGMMQeUWZqAWAAQzwpFii1DH9TuwCzATB9
-        WSZPpgdVYmDrtdOyuPT53Y/Z1483a37j1vx67zuUdo+D71IoJ4svLQ5GRz7kYFwAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="btn_them.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGYAAAAmCAYAAAA2h+4OAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

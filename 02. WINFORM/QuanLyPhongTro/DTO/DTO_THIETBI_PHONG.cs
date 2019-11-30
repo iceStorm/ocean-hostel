@@ -12,7 +12,6 @@ namespace DTO
         string _maPhong;
         string _tenThietBi;
         DateTime _ngayCap;
-        string _trangThai;
 
         public string TenThietBi
         {
@@ -24,12 +23,6 @@ namespace DTO
         {
             get { return _ngayCap; }
             set { _ngayCap = value; }
-        }
-
-        public string TrangThai
-        {
-            get { return _trangThai; }
-            set { _trangThai = value; }
         }
 
         public string MaThietBi

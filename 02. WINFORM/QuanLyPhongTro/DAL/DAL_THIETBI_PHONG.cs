@@ -12,8 +12,7 @@ namespace DAL
     {
         public static DataTable LayDanhSachThietBiPhongTheoMaPhong(DTO_PHONG phong)
         {
-            string query = @"SELECT *
-                             FROM dbo.FUNC__THIETBI_PHONG__GetListByRoomID( @@MAPHG )";
+            string query = @"EXEC PROC__THIETBI_PHONG__GetListByRoomID @MAPHG = @@MAPHONG";
 
             return ExecuteQuery(query, new object[]{phong.MaPhong});
         }
@@ -27,5 +26,14 @@ namespace DAL
             return ExecuteNonQuery(query, new object[]{thietBiPhong.MaThietBi, thietBiPhong.MaPhong});
         }
 
+        public static int XoaThietBiPhong(DTO_THIETBI_PHONG thietBiPhong)
+        {
+            string query = @"EXEC PROC__THIETBI_PHONG__DETELE
+                             @MATBI = @@MATBI ,
+                             @MAPHG = @@MAPHG ,
+                             @THOIGIANCAP = @@TGC";
+
+            return ExecuteNonQuery(query, new object[]{thietBiPhong.MaThietBi, thietBiPhong.MaPhong, thietBiPhong.NgayCap});
+        }
     }
 }

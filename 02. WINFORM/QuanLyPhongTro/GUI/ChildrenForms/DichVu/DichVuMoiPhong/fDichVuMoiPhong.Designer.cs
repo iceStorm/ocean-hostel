@@ -210,6 +210,7 @@
             this.btn_lamMoi.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn_lamMoi.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btn_lamMoi.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btn_lamMoi.Enabled = false;
             this.btn_lamMoi.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btn_lamMoi.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
             this.btn_lamMoi.ForeColor = System.Drawing.Color.White;
@@ -274,6 +275,7 @@
             this.btn_huyDichVu.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn_huyDichVu.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btn_huyDichVu.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btn_huyDichVu.Enabled = false;
             this.btn_huyDichVu.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btn_huyDichVu.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
             this.btn_huyDichVu.ForeColor = System.Drawing.Color.White;
@@ -338,6 +340,7 @@
             this.btn_dangKyThem.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn_dangKyThem.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btn_dangKyThem.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btn_dangKyThem.Enabled = false;
             this.btn_dangKyThem.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btn_dangKyThem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
             this.btn_dangKyThem.ForeColor = System.Drawing.Color.White;

@@ -30,7 +30,19 @@ namespace GUI.ChildrenForms.QuanLyThietBi.DanhMucThietBi
 
         private void LoadData()
         {
-            this.gridControl_thietBi.DataSource = BLL_THIETBI.LayDanhSachThietBi();
+            DataTable dt = BLL_THIETBI.LayDanhSachThietBi();
+            if (dt.Rows.Count == 0)
+            {
+                this.btn_sua.Enabled = false;
+                this.btn_xoa.Enabled = false;
+            }
+            else
+            {
+                this.btn_sua.Enabled = true;
+                this.btn_xoa.Enabled = true;
+            }
+
+            this.gridControl_thietBi.DataSource = dt;
             this.gridView_thietBi.Columns["MATBI"].Visible = false;
 
             this.gridView_thietBi.Columns["TENTBI"].Caption = "Tên thiết bị";
@@ -38,7 +50,6 @@ namespace GUI.ChildrenForms.QuanLyThietBi.DanhMucThietBi
             this.gridView_thietBi.Columns["NGAYNHAP"].Caption = "Ngày nhập";
             this.gridView_thietBi.Columns["SOLG_TON"].Caption = "Số lượng tồn";
             this.gridView_thietBi.Columns["SOLG_PHANBO"].Caption = "Số lượng phân bổ";
-            this.gridView_thietBi.Columns["SOLG_HONG"].Caption = "Số lượng hư hỏng";
         }
 
         private void btn_them_Click(object sender, EventArgs e)

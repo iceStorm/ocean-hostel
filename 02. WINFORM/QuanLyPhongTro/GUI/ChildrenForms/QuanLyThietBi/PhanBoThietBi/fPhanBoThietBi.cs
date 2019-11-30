@@ -83,6 +83,10 @@ namespace GUI.ChildrenForms.QuanLyThietBi.PhanBoThietBi
 
                 if (grandNode != null)
                 {
+                    this.btn_them.Enabled = true;
+                    this.btn_xoa.Enabled = true;
+                    this.btn_lamMoi.Enabled = true;
+
                     string tenPhong = node.GetDisplayText(0);
                     string tenTang = parentNode.GetDisplayText(0);
                     string tenKhu = grandNode.GetDisplayText(0);
@@ -97,14 +101,34 @@ namespace GUI.ChildrenForms.QuanLyThietBi.PhanBoThietBi
                     phong.MaPhong = BLL_PHONG.LayMaPhongTheoTenPhong(phong);
                     this.maPhong = phong.MaPhong;
 
-                    this.gridControl_thietBiPhong.DataSource = BLL_THIETBI_PHONG.LayDanhSachThietBiPhongTheoMaPhong(phong);
+
+                    DataTable dt = BLL_THIETBI_PHONG.LayDanhSachThietBiPhongTheoMaPhong(phong);
+                    if (dt.Rows.Count == 0)
+                    {
+                        this.btn_xoa.Enabled = false;
+                    }
+                    else
+                    {
+                        this.btn_xoa.Enabled = true;
+                    }
+
+                    this.gridControl_thietBiPhong.DataSource = dt;
                     this.gridView_thietBiPhong.Columns["MAPHG"].Visible = false;
                     this.gridView_thietBiPhong.Columns["MATBI"].Visible = false;
 
                     this.gridView_thietBiPhong.Columns["TENTBI"].VisibleIndex = 0;
                     this.gridView_thietBiPhong.Columns["TENTBI"].Caption = "Tên thiết bị";
                     this.gridView_thietBiPhong.Columns["THOIGIANCAP"].Caption = "Thời gian cấp";
-                    this.gridView_thietBiPhong.Columns["TRANGTHAI"].Caption = "Trạng thái";
+                }
+                else
+                {
+                    this.btn_them.Enabled = false;
+                    this.btn_xoa.Enabled = false;
+                    this.btn_lamMoi.Enabled = false;
+
+                    this.gridControl_thietBiPhong.DataSource = null;
+                    this.lb_tenPhong.Text = "?";
+                    this.lb_khuTang.Text = "KHU – TẦNG";
                 }
             }
         }
@@ -120,7 +144,7 @@ namespace GUI.ChildrenForms.QuanLyThietBi.PhanBoThietBi
             DTO_THIETBI_PHONG thietBiPhong = new DTO_THIETBI_PHONG();
             thietBiPhong.MaPhong = this.maPhong;
 
-            XtraForm FormAlter = new ChildrenForms.QuanLyThietBi.PhanBoThietBi.fAlter(thietBiPhong, true);
+            XtraForm FormAlter = new ChildrenForms.QuanLyThietBi.PhanBoThietBi.fAlter(thietBiPhong);
             FormAlter.ShowDialog();
 
             if (isAdded == true)
@@ -135,18 +159,6 @@ namespace GUI.ChildrenForms.QuanLyThietBi.PhanBoThietBi
             LoadPhong();
         }
 
-        private void btn_sua_Click(object sender, EventArgs e)
-        {
-            DTO_THIETBI_PHONG thietBiPhongHienTai = LayThietBiPhongHienTai();
-            XtraForm FormAlter = new ChildrenForms.QuanLyThietBi.PhanBoThietBi.fAlter(thietBiPhongHienTai, false);
-            FormAlter.ShowDialog();
-
-            if (isUpdated == true)
-            {
-                isUpdated = false;
-                LoadPhong();
-            }
-        }
 
         private DTO_THIETBI_PHONG LayThietBiPhongHienTai()
         {
@@ -157,11 +169,31 @@ namespace GUI.ChildrenForms.QuanLyThietBi.PhanBoThietBi
                 MaThietBi = (string)dr["MATBI"],
                 TenThietBi = (string)dr["TENTBI"],
                 MaPhong = (string)dr["MAPHG"],
-                NgayCap = (DateTime)dr["THOIGIANCAP"],
-                TrangThai = (string)dr["TRANGTHAI"]
+                NgayCap = (DateTime)dr["THOIGIANCAP"]
             };
 
             return thietBiPhong;
+        }
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            DTO_THIETBI_PHONG thietBiPhong = LayThietBiPhongHienTai();
+            
+            try
+            {
+                if (BLL_THIETBI_PHONG.XoaThietBiPhong(thietBiPhong) == true)
+                {
+                    XtraMessageBox.Show("Gỡ thông tin thiết bị thành công !", "Thông báo",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    LoadPhong();
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Lỗi truy vấn !\n\n" + "Nội dung lỗi:\n" + ex.Message,
+                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
     }

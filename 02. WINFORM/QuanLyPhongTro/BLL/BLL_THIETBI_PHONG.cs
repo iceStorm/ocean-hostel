@@ -21,5 +21,10 @@ namespace BLL
             return DAL_THIETBI_PHONG.ThemThietBiPhong(thietBiPhong) == 2;
         }
 
+        public static bool XoaThietBiPhong(DTO_THIETBI_PHONG thietBiPhong)
+        {
+            return DAL_THIETBI_PHONG.XoaThietBiPhong(thietBiPhong) == 2; 
+        }
+
     }
 }
