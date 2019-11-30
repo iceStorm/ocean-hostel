@@ -13,6 +13,20 @@ BEGIN
 END
 GO
 
+-------------------------------------------
+CREATE	PROC	PROC__KHACH__GetListByRoomID
+@MAPHG	VARCHAR(10)
+AS
+BEGIN
+	SELECT (kh.HO + ' ' + kh.TEN) AS HOTEN, kh.MAKHACH
+	FROM KHACH kh, KHACH_HOPDONG khd, HOPDONG hd, PHONG ph
+	WHERE khd.MAKHACH = kh.MAKHACH
+		AND khd.MAHOPDONG = hd.MAHOPDONG
+		AND ph.MAPHG = hd.MAPHG
+		AND ph.MAPHG = @MAPHG
+END
+GO
+
 
 -------------------------------------------
 CREATE	PROC	PROC__KHACH__GetList

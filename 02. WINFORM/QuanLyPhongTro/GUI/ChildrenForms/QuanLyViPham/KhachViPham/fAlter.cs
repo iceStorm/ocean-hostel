@@ -43,19 +43,50 @@ namespace GUI.ChildrenForms.QuanLyViPham.KhachViPham
             this.Close();
         }
 
-        private void cb_tenPhong_KeyDown(object sender, KeyEventArgs e)
-        {
-            this.cb_tenPhong.DroppedDown = false;
-        }
-
         private void btn_them_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(this.cb_tenPhong.SelectedIndex.ToString());
+            DataRowView drv_khach = (DataRowView)this.cb_tenKhach.SelectedItem;
+            DataRowView drv_viPham = (DataRowView)this.cb_viPham.SelectedItem;
+
+            DTO_KHACH_VIPHAM khachViPham = new DTO_KHACH_VIPHAM
+            {
+                MaKhach = drv_khach.Row.ItemArray[1].ToString(),
+                MaViPham = drv_viPham.Row.ItemArray[0].ToString(),
+                GhiChu = this.txt_ghiChu.Text
+            };
+
+            try
+            {
+                if (BLL_KHACH_VIPHAM.ThemKhachViPham(khachViPham) == true)
+                {
+                    XtraMessageBox.Show("Thêm khách vi phạm thành công !", "Thông báo",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    ChildrenForms.QuanLyViPham.KhachViPham.fKhachViPham.isAdded = true;
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Lỗi truy vấn !\n\n" + "Nội dung lỗi:\n" + ex.Message,
+                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void cb_tenPhong_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cb_tenPhong.SelectedIndex >= 0)
+            {
+                DataRowView dv = (DataRowView)this.cb_tenPhong.SelectedItem;
+                DTO_PHONG phong = new DTO_PHONG();
+                //phong.MaPhong = this.cb_tenPhong.SelectedValue.ToString();
+                phong.MaPhong = (string)dv.Row.ItemArray[4].ToString();
 
+                this.cb_tenKhach.DataSource = BLL_KHACH.LayDanhSachKhachTheoMaPhong(phong);
+                this.cb_tenKhach.DisplayMember = "HOTEN";
+                this.cb_tenKhach.ValueMember = "MAKHACH";
+                this.cb_tenKhach.SelectedIndex = -1;
+            }
         }
 
     }

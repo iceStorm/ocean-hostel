@@ -12,7 +12,7 @@ namespace DAL
     {
         public static DataTable LayDanhSachHopDong()
         {
-            string query = @"SELECT * FROM HOPDONG";
+            string query = @"EXEC PROC__HOPDONG__GetList";
             return ExecuteQuery(query);
         }
 

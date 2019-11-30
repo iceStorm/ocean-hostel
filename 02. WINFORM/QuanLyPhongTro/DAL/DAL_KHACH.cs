@@ -16,17 +16,17 @@ namespace DAL
             return ExecuteQuery(query);
         }
 
+        public static DataTable LayDanhSachKhachTheoMaPhong(DTO_PHONG phong)
+        {
+            string query = @"EXEC PROC__KHACH__GetListByRoomID @MAPHG = @@MAPHONG";
+
+            return ExecuteQuery(query, new object[]{phong.MaPhong});
+        }
+
         public static object LayMaKhachTiepTheo()
         {
             string query = @"SELECT dbo.FUNC__KHACH__GetNextID()";
             return ExecuteScalar(query);
-        }
-
-        public static DataTable LayDanhSachKhachTheoMaPhong(DTO_PHONG phong)
-        {
-            string query = @"";
-
-            return ExecuteQuery(query, new object[]{phong.MaPhong});
         }
 
         public static int ThemKhach(DTO_KHACH khachTro)

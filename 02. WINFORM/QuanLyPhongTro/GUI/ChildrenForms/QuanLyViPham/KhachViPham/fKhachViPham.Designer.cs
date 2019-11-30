@@ -46,7 +46,7 @@
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btn_lamMoi = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_xoa = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btn_sua = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btn_xuLy = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_them = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_khachViPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView_khachViPham)).BeginInit();
@@ -94,6 +94,7 @@
             this.gridView_khachViPham.OptionsSelection.MultiSelect = true;
             this.gridView_khachViPham.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
             this.gridView_khachViPham.OptionsView.EnableAppearanceEvenRow = true;
+            this.gridView_khachViPham.SelectionChanged += new DevExpress.Data.SelectionChangedEventHandler(this.gridView_khachViPham_SelectionChanged);
             // 
             // bunifuGradientPanel2
             // 
@@ -102,7 +103,7 @@
             this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel2.Controls.Add(this.btn_lamMoi);
             this.bunifuGradientPanel2.Controls.Add(this.btn_xoa);
-            this.bunifuGradientPanel2.Controls.Add(this.btn_sua);
+            this.bunifuGradientPanel2.Controls.Add(this.btn_xuLy);
             this.bunifuGradientPanel2.Controls.Add(this.btn_them);
             this.bunifuGradientPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.Transparent;
@@ -152,7 +153,7 @@
             this.btn_lamMoi.IdleIconLeftImage = null;
             this.btn_lamMoi.IdleIconRightImage = null;
             this.btn_lamMoi.IndicateFocus = false;
-            this.btn_lamMoi.Location = new System.Drawing.Point(568, 12);
+            this.btn_lamMoi.Location = new System.Drawing.Point(601, 12);
             this.btn_lamMoi.Name = "btn_lamMoi";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties1.BorderRadius = 3;
@@ -215,7 +216,7 @@
             this.btn_xoa.IdleIconLeftImage = null;
             this.btn_xoa.IdleIconRightImage = null;
             this.btn_xoa.IndicateFocus = false;
-            this.btn_xoa.Location = new System.Drawing.Point(421, 12);
+            this.btn_xoa.Location = new System.Drawing.Point(454, 12);
             this.btn_xoa.Name = "btn_xoa";
             stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties3.BorderRadius = 3;
@@ -240,46 +241,47 @@
             this.btn_xoa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_xoa.TextMarginLeft = 0;
             this.btn_xoa.UseDefaultRadiusAndThickness = true;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
-            // btn_sua
+            // btn_xuLy
             // 
-            this.btn_sua.AllowToggling = false;
-            this.btn_sua.AnimationSpeed = 200;
-            this.btn_sua.AutoGenerateColors = false;
-            this.btn_sua.BackColor = System.Drawing.Color.Transparent;
-            this.btn_sua.BackColor1 = System.Drawing.Color.Orange;
-            this.btn_sua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_sua.BackgroundImage")));
-            this.btn_sua.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_sua.ButtonText = "Sửa";
-            this.btn_sua.ButtonTextMarginLeft = 0;
-            this.btn_sua.ColorContrastOnClick = 45;
-            this.btn_sua.ColorContrastOnHover = 45;
-            this.btn_sua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_xuLy.AllowToggling = false;
+            this.btn_xuLy.AnimationSpeed = 200;
+            this.btn_xuLy.AutoGenerateColors = false;
+            this.btn_xuLy.BackColor = System.Drawing.Color.Transparent;
+            this.btn_xuLy.BackColor1 = System.Drawing.Color.Orange;
+            this.btn_xuLy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_xuLy.BackgroundImage")));
+            this.btn_xuLy.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn_xuLy.ButtonText = "Đã xử lý vi phạm";
+            this.btn_xuLy.ButtonTextMarginLeft = 0;
+            this.btn_xuLy.ColorContrastOnClick = 45;
+            this.btn_xuLy.ColorContrastOnHover = 45;
+            this.btn_xuLy.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges3.BottomLeft = true;
             borderEdges3.BottomRight = true;
             borderEdges3.TopLeft = true;
             borderEdges3.TopRight = true;
-            this.btn_sua.CustomizableEdges = borderEdges3;
-            this.btn_sua.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_sua.DisabledBorderColor = System.Drawing.Color.Empty;
-            this.btn_sua.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btn_sua.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btn_sua.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btn_sua.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.btn_sua.ForeColor = System.Drawing.Color.White;
-            this.btn_sua.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_sua.IconMarginLeft = 11;
-            this.btn_sua.IconPadding = 10;
-            this.btn_sua.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_sua.IdleBorderColor = System.Drawing.Color.Gold;
-            this.btn_sua.IdleBorderRadius = 3;
-            this.btn_sua.IdleBorderThickness = 1;
-            this.btn_sua.IdleFillColor = System.Drawing.Color.Orange;
-            this.btn_sua.IdleIconLeftImage = null;
-            this.btn_sua.IdleIconRightImage = null;
-            this.btn_sua.IndicateFocus = false;
-            this.btn_sua.Location = new System.Drawing.Point(274, 11);
-            this.btn_sua.Name = "btn_sua";
+            this.btn_xuLy.CustomizableEdges = borderEdges3;
+            this.btn_xuLy.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_xuLy.DisabledBorderColor = System.Drawing.Color.Empty;
+            this.btn_xuLy.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btn_xuLy.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btn_xuLy.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btn_xuLy.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.btn_xuLy.ForeColor = System.Drawing.Color.White;
+            this.btn_xuLy.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_xuLy.IconMarginLeft = 11;
+            this.btn_xuLy.IconPadding = 10;
+            this.btn_xuLy.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_xuLy.IdleBorderColor = System.Drawing.Color.Gold;
+            this.btn_xuLy.IdleBorderRadius = 3;
+            this.btn_xuLy.IdleBorderThickness = 1;
+            this.btn_xuLy.IdleFillColor = System.Drawing.Color.Orange;
+            this.btn_xuLy.IdleIconLeftImage = null;
+            this.btn_xuLy.IdleIconRightImage = null;
+            this.btn_xuLy.IndicateFocus = false;
+            this.btn_xuLy.Location = new System.Drawing.Point(276, 11);
+            this.btn_xuLy.Name = "btn_xuLy";
             stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties5.BorderRadius = 3;
             stateProperties5.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
@@ -288,7 +290,7 @@
             stateProperties5.ForeColor = System.Drawing.Color.White;
             stateProperties5.IconLeftImage = null;
             stateProperties5.IconRightImage = null;
-            this.btn_sua.onHoverState = stateProperties5;
+            this.btn_xuLy.onHoverState = stateProperties5;
             stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties6.BorderRadius = 3;
             stateProperties6.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
@@ -297,12 +299,13 @@
             stateProperties6.ForeColor = System.Drawing.Color.White;
             stateProperties6.IconLeftImage = null;
             stateProperties6.IconRightImage = null;
-            this.btn_sua.OnPressedState = stateProperties6;
-            this.btn_sua.Size = new System.Drawing.Size(102, 38);
-            this.btn_sua.TabIndex = 1;
-            this.btn_sua.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_sua.TextMarginLeft = 0;
-            this.btn_sua.UseDefaultRadiusAndThickness = true;
+            this.btn_xuLy.OnPressedState = stateProperties6;
+            this.btn_xuLy.Size = new System.Drawing.Size(133, 38);
+            this.btn_xuLy.TabIndex = 1;
+            this.btn_xuLy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_xuLy.TextMarginLeft = 0;
+            this.btn_xuLy.UseDefaultRadiusAndThickness = true;
+            this.btn_xuLy.Click += new System.EventHandler(this.btn_xuLy_Click);
             // 
             // btn_them
             // 
@@ -341,7 +344,7 @@
             this.btn_them.IdleIconLeftImage = null;
             this.btn_them.IdleIconRightImage = null;
             this.btn_them.IndicateFocus = false;
-            this.btn_them.Location = new System.Drawing.Point(127, 12);
+            this.btn_them.Location = new System.Drawing.Point(129, 12);
             this.btn_them.Name = "btn_them";
             stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties7.BorderRadius = 3;
@@ -392,7 +395,7 @@
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_lamMoi;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_xoa;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_sua;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_xuLy;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_them;
     }
 }

@@ -13,3 +13,13 @@ BEGIN
 	VALUES (@MAHOPDONG, @MAPHONG, @THOIHAN, @TIENCOC)
 END
 GO
+
+-------------------------------------------------
+CREATE	PROC	PROC__HOPDONG__GetList
+AS
+BEGIN
+	SELECT hd.*, ph.TENPHG
+	FROM HOPDONG hd, PHONG ph
+	WHERE ph.MAPHG = hd.MAPHG
+END
+GO

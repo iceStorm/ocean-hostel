@@ -226,7 +226,6 @@
             this.cb_tenPhong.Size = new System.Drawing.Size(285, 27);
             this.cb_tenPhong.TabIndex = 0;
             this.cb_tenPhong.SelectedIndexChanged += new System.EventHandler(this.cb_tenPhong_SelectedIndexChanged);
-            this.cb_tenPhong.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cb_tenPhong_KeyDown);
             // 
             // label3
             // 
@@ -275,7 +274,6 @@
             this.cb_tenKhach.Name = "cb_tenKhach";
             this.cb_tenKhach.Size = new System.Drawing.Size(285, 27);
             this.cb_tenKhach.TabIndex = 1;
-            this.cb_tenKhach.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cb_tenPhong_KeyDown);
             // 
             // fAlter
             // 

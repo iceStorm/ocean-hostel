@@ -26,9 +26,9 @@ namespace BLL
             return DAL_KHACH_VIPHAM.XoaKhachViPham(khachViPham) == 1;
         }
 
-        public static bool SuaKhachViPham(DTO_KHACH_VIPHAM khachViPham)
+        public static bool XuLyViPham(DTO_KHACH_VIPHAM khachViPham)
         {
-            return DAL_KHACH_VIPHAM.SuaKhachViPham(khachViPham) == 1;
+            return DAL_KHACH_VIPHAM.XuLyViPham(khachViPham) == 1;
         }
 
     }

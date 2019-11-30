@@ -38,7 +38,7 @@ namespace DAL
             string query = @"EXEC PROC__KHACH_VIPHAM__DELETE
                              @MAVIPHAM = @@MAVP ,
                              @MAKHACH = @@MAKH ,
-                             @THOIGIAN = @THOIGIAN";
+                             @THOIGIAN = @@THOIGIAN";
 
             object[] obj = new object[]
             {
@@ -50,25 +50,21 @@ namespace DAL
             return ExecuteNonQuery(query, obj); 
         }
 
-        public static int SuaKhachViPham(DTO_KHACH_VIPHAM khachViPham)
+        public static int XuLyViPham(DTO_KHACH_VIPHAM khachViPham)
         {
-            string query = @"EXEC PROC__KHACH_VIPHAM__DELETE
+            string query = @"EXEC PROC__KHACH_VIPHAM__UPDATE
                              @MAVIPHAM = @@MAVP ,
                              @MAKHACH = @@MAKH ,
-                             @THOIGIAN = @THOIGIAN ,
-                             @GHICHU = @@GHICHU ,
-                             @TRANGTHAI = @@TRANGTHAI";
+                             @THOIGIAN = @@THOIGIAN@";
 
             object[] obj = new object[]
             {
                 khachViPham.MaViPham,
                 khachViPham.MaKhach,
-                khachViPham.ThoiGianViPham,
-                khachViPham.GhiChu,
-                khachViPham.DaXuLy
+                khachViPham.ThoiGianViPham
             };
 
-            return ExecuteNonQuery(query, obj);
+            return ExecuteNonQuery(query, obj); 
         }
 
     }
