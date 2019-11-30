@@ -27,6 +27,12 @@ namespace BLL
             return result.ToArray();
         }
 
+
+        public static DataTable LayThongTinDienNuoc()
+        {
+            return DAL_DICHVU.LayThongTinDienNuoc();
+        }
+
         public static DTO_DICHVU LayThongTinDichVuTheoMaDichVu(DTO_DICHVU dichVu)
         {
             DataTable dt = DAL_DICHVU.LayThongTinDichVuTheoMaDichVu(dichVu);

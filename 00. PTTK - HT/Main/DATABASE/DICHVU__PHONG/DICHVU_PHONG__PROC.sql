@@ -15,6 +15,21 @@ GO
 
 
 -------------------------------------------------------
+CREATE	PROC	PROC__DICHVU_PHONG__GetListOtherServicesByRoomID
+@MAPHG VARCHAR(10)
+AS
+BEGIN
+	SELECT dp.*, dv.TENDICHVU, dv.GIADICHVU, dv.BATBUOC
+	FROM DICHVU_PHONG dp, DICHVU dv
+	WHERE dp.MAPHG = @MAPHG
+		AND dv.MADICHVU = dp.MADICHVU
+		AND dv.TENDICHVU <> N'Tiền điện'
+		AND dv.TENDICHVU <> N'Tiền nước'
+END
+GO
+
+
+-------------------------------------------------------
 CREATE	PROC	PROC__DICHVU_PHONG__INSERT
 @MADICHVU	VARCHAR(10),
 @MAPHG		VARCHAR(10)

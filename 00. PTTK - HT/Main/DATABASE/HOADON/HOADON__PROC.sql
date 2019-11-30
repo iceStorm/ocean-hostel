@@ -31,3 +31,40 @@ BEGIN
 	@SONUOC = @#SONUOC
 END
 GO
+
+
+--------------------------------------------------------
+CREATE	PROC	PROC__HOADON__PAY
+@MAHOADON	VARCHAR(15)
+AS
+BEGIN
+	UPDATE HOADON
+	SET DATHANHTOAN = 'True'
+	WHERE MAHOADON = @MAHOADON
+END
+GO
+
+
+---------------------------------------------------------
+CREATE	PROC	PROC__HOADON__PhongDaGhiHoaDon
+@MAPHG	VARCHAR(10),
+@THANG	INT,
+@NAM	INT
+AS
+BEGIN
+	SELECT COUNT(*)
+	FROM HOADON
+	WHERE MAPHG = @MAPHG
+		AND THANG = @THANG
+		AND NAM = @NAM
+END
+GO
+
+
+SELECT * FROM PHONG
+SELECT * FROM HOADON
+
+EXEC PROC__HOADON__PhongDaGhiHoaDon
+@MAPHG = 'PHG0000004',
+@THANG = 11,
+@NAM = 2019

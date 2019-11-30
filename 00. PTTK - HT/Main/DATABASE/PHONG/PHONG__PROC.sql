@@ -62,3 +62,17 @@ BEGIN
 		DANGSUACHUA = @DANGSUACHUA
 	WHERE MAPHG = @MAPHG
 END
+GO
+
+
+--------------------------------------------------------
+CREATE	PROC	PROC__PHONG__LayThongTinLoaiPhongTheoTenPhong
+@TENPHG	NVARCHAR(15)
+AS
+BEGIN
+	SELECT lp.*
+	FROM PHONG p, LOAIPHONG lp
+	WHERE p.TENPHG = @TENPHG
+		AND lp.MALOAIPHG = p.MALOAIPHG
+END
+GO

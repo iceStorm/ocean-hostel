@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="BLL_DICHVU.cs" />
     <Compile Include="BLL_DICHVU_PHONG.cs" />
+    <Compile Include="BLL_HOADON.cs" />
     <Compile Include="BLL_KHU.cs" />
     <Compile Include="BLL_LOAIPHONG.cs" />
     <Compile Include="BLL_NGUOIDUNG.cs" />
@@ -48,6 +49,7 @@
     <Compile Include="BLL_TANG.cs" />
     <Compile Include="BLL_THIETBI.cs" />
     <Compile Include="BLL_THIETBI_PHONG.cs" />
+    <Compile Include="BLL_HOADON_DIENNUOC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

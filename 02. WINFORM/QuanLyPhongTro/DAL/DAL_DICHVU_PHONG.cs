@@ -16,6 +16,12 @@ namespace DAL
             return ExecuteQuery(query, new object[]{phong.MaPhong});
         }
 
+        public static DataTable LayDanhSachDichVuKhacTheoMaPhong(DTO_PHONG phong)
+        {
+            string query = @"EXEC PROC__DICHVU_PHONG__GetListOtherServicesByRoomID @MAPHG = @@MAPHG";
+            return ExecuteQuery(query, new object[] { phong.MaPhong });
+        }
+
         public static int ThemDichVuPhong(DTO_DICHVU_PHONG dichVuPhong)
         {
             string query = @"EXEC PROC__DICHVU_PHONG__INSERT 

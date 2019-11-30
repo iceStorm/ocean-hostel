@@ -22,6 +22,12 @@ namespace DAL
             return ExecuteQuery(query);
         }
 
+        public static DataTable LayThongTinDienNuoc()
+        {
+            string query = @"EXEC PROC__DICHVU__LayThongTinDienNuoc";
+            return ExecuteQuery(query);
+        }
+
         public static int ThemDichVu(DTO_DICHVU dichVu)
         {
             string query = @"EXEC PROC__DICHVU__INSERT

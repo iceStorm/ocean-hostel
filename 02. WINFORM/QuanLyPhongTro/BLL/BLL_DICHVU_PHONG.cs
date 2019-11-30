@@ -16,6 +16,11 @@ namespace BLL
             return DAL_DICHVU_PHONG.LayDanhSachDichVuTheoMaPhong(phong);
         }
 
+        public static DataTable LayDanhSachDichVuKhacTheoMaPhong(DTO_PHONG phong)
+        {
+            return DAL_DICHVU_PHONG.LayDanhSachDichVuKhacTheoMaPhong(phong);
+        }
+
         public static string[] LayDanhSachTenDichVu_TheoMaPhong(DTO_PHONG phong)
         {
             List<string> danhSachDichVuDaDangKy = new List<string>();

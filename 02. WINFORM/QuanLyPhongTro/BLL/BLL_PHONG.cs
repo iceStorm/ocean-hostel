@@ -49,6 +49,11 @@ namespace BLL
         }
 
 
+        public static DataTable LayThongTinLoaiPhongTheoTenPhong(DTO_PHONG phong)
+        {
+            return DAL_PHONG.LayThongTinLoaiPhongTheoTenPhong(phong);
+        }
+
         public static bool ThemPhong(DTO_PHONG phong)
         {
             return DAL_PHONG.ThemPhong(phong) == 1;

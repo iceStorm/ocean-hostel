@@ -23,6 +23,15 @@ namespace DAL
             return ExecuteQuery(query, new object[]{tang.MaTang});
         }
 
+
+        public static DataTable LayThongTinLoaiPhongTheoTenPhong(DTO_PHONG phong)
+        {
+            string query = @"EXEC PROC__PHONG__LayThongTinLoaiPhongTheoTenPhong
+                             @TENPHG = @@TENPHG";
+
+            return ExecuteQuery(query, new object[]{phong.TenPhong});
+        }
+
         public static int ThemPhong(DTO_PHONG phong)
         {
             string query = @"EXEC PROC__PHONG__INSERT
