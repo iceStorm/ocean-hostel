@@ -27,9 +27,23 @@ namespace GUI.ChildrenForms.KhachTro.DanhSachKhach
 
         private void LoadData()
         {
-            this.gridControl_khach.DataSource = BLL_KHACH.LayDanhSachKhach();
+            DataTable dt = BLL_KHACH.LayDanhSachKhach();
+
+            if (dt.Rows.Count == 0)
+            {
+                this.btn_sua.Enabled = false;
+            }
+            else
+            {
+                this.btn_sua.Enabled = true;
+            }
+
+
+            this.gridControl_khach.DataSource = dt;
 
             this.gridView_khach.Columns["MAKHACH"].Visible = false;
+            this.gridView_khach.Columns["MAPHG"].Visible = false;
+
             this.gridView_khach.Columns["HO"].Caption = "Họ";
             this.gridView_khach.Columns["TEN"].Caption = "Tên";
             this.gridView_khach.Columns["GIOITINH"].Caption = "Giới tính";
@@ -38,6 +52,24 @@ namespace GUI.ChildrenForms.KhachTro.DanhSachKhach
             this.gridView_khach.Columns["SOCANCUOC"].Caption = "Số căn cước";
             this.gridView_khach.Columns["SODIENTHOAI"].Caption = "Số điện thoại";
             this.gridView_khach.Columns["TRANGTHAI"].Caption = "Trạng thái ở";
+            this.gridView_khach.Columns["TENPHG"].Caption = "Tên phòng";
+            this.gridView_khach.Columns["TENPHG"].VisibleIndex = 0;
+        }
+
+        private void btn_lamMoi_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.gridView_khach.GetFocusedDataRow();
+
+            DTO_KHACH khach = new DTO_KHACH
+            {
+
+            };
+
         }
 
     }

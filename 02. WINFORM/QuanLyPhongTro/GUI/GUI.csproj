@@ -258,6 +258,24 @@
     <Compile Include="ChildrenForms\KhachTro\DanhSachKhach\fKhach.Designer.cs">
       <DependentUpon>fKhach.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildrenForms\KhachTro\HopDong\fHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\KhachTro\HopDong\fHopDong.Designer.cs">
+      <DependentUpon>fHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\KhachTro\HopDong\ThemHopDong\fThemHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\KhachTro\HopDong\ThemHopDong\fThemHopDong.Designer.cs">
+      <DependentUpon>fThemHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\KhachTro\HopDong\ThemHopDong\fThemThongTinKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\KhachTro\HopDong\ThemHopDong\fThemThongTinKhach.Designer.cs">
+      <DependentUpon>fThemThongTinKhach.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildrenForms\QuanLyPhong\DayNha\fAlter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -400,6 +418,15 @@
     <EmbeddedResource Include="ChildrenForms\KhachTro\DanhSachKhach\fKhach.resx">
       <DependentUpon>fKhach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\KhachTro\HopDong\fHopDong.resx">
+      <DependentUpon>fHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\KhachTro\HopDong\ThemHopDong\fThemHopDong.resx">
+      <DependentUpon>fThemHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\KhachTro\HopDong\ThemHopDong\fThemThongTinKhach.resx">
+      <DependentUpon>fThemThongTinKhach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildrenForms\QuanLyPhong\DayNha\fAlter.resx">
       <DependentUpon>fAlter.cs</DependentUpon>
     </EmbeddedResource>
@@ -529,7 +556,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ChildrenForms\HeThong\" />
-    <Folder Include="ChildrenForms\KhachTro\HopDong\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\ICONS\icons8-pie-chart-32.png" />

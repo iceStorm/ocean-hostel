@@ -136,17 +136,6 @@
         AAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btn_xoa.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGYAAAAmCAYAAAA2h+4OAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEKSURBVGhD7ZshDsJAEEV7h07AchAECgkXwHIY0pSKHgON
-        5SSEIDAEDJolS8YUhRi1v8nbZN2Izbx9f9RUFUe3A3nazT7WHrL1mVuuB6lujs5i+CnJmtPTtvlsc27B
-        Htxtk1PdXgYwbglQND6lswBMQTv+iQAYQSgOCzCA0cjuscxQjMEYjInYijEYgzEYI2oBYABDPEUsiNQy
-        /EXtAgxgiD2iTNQCwACGeIpYEKll+IvaBRjAEHtEmagFgAEM8RSxIFLL8Be1CzCAIfaIMlELAAMY4ili
-        QaSW4S9qF2DGAMaXZW62ZkemMKyrLXOy/eu3H1P3i2TdgzW/cmt+3nuH8p7sVrpLobys+gJshvniI0vF
-        vwAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="btn_sua.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGYAAAAmCAYAAAA2h+4OAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -155,17 +144,6 @@
         xRKgePSgWADG8TICxjQlAAMYj+x2jK1/Z8IYjMEYxVaMwRiMwRhTCwADGOJJsUCpZfib2gUYwBB7RJmp
         BYABDPGkWKDUMvxN7QIMYIg9oszUAsAAhnhSLFBqGf6mdgEGMMQeUWZqAWAAQzwpFii1DH9TuwCzATB9
         WSZPpgdVYmDrtdOyuPT53Y/Z1483a37j1vx67zuUdo+D71IoJ4svLQ5GRz7kYFwAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btn_them.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGYAAAAmCAYAAAA2h+4OAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAESSURBVGhD7ZshDsJAEEU3254CAw6DqkYQDlDFVWibQMKB
-        0FhugELgQCCrEARaSJaMWYcYtdPkbbJuxGbevj9qnOPY7cAuuEnd+/326wI3XQ+qV34QFvGnVO/8uLqP
-        QnEquAl7UN7Goe6yawQjlgDFxqcUFoBJaMc/EQBjEIrAAgxgbGT3UGYoxmAMxmhsxRiMwRiMMWoBYABD
-        PGks0NQy/I3aBRjAEHtEmVELAAMY4kljgaaW4W/ULsAAhtgjyoxaABjAEE8aCzS1DH+jdgEGMMQeUWbU
-        AsAAhnjSWKCpZfgbtQswQwAjyzLLy5QdmcSw5udZaDr/iPsxm49bNL1vWfNLt+YnvRco62dW2l0K5WXu
-        B8HJCtButQCPAAAAAElFTkSuQmCC
 </value>
   </data>
 </root>

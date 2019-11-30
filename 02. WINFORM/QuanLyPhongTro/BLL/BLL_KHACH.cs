@@ -15,5 +15,21 @@ namespace BLL
         {
             return DAL_KHACH.LayDanhSachKhach();
         }
+
+        public static string LayMaKhachTiepTheo()
+        {
+            return (string)DAL_KHACH.LayMaKhachTiepTheo();
+        }
+
+        public static bool ThemKhach(DTO_KHACH khachTro)
+        {
+            return DAL_KHACH.ThemKhach(khachTro) == 1;
+        }
+
+        public static bool SoCanCuocDaTonTai(DTO_KHACH khachTro)
+        {
+            return (int)DAL_KHACH.SoCanCuocDaTonTai(khachTro) == 1;
+        }
+
     }
 }

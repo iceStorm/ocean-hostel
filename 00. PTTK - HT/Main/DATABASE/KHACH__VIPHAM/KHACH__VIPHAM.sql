@@ -2,6 +2,7 @@ USE OCEAN_HOSTEL
 GO
 
 
+EXEC PROC__KHACH_VIPHAM__GetList
 
 CREATE	PROC	PROC__KHACH_VIPHAM__GetList
 AS
@@ -11,6 +12,7 @@ BEGIN
 	WHERE khvp.MAKHACH = kh.MAKHACH
 		AND vp.MAVIPHAM = khvp.MAVIPHAM
 END
+GO
 
 
 --------------------------------------------

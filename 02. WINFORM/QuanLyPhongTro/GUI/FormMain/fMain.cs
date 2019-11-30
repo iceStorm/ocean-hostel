@@ -333,7 +333,29 @@ namespace GUI
         #endregion
 
 
+        #region HỢP ĐỒNG
+        
+        private void btn_danhSachHopDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (XtraForm childForm in this.MdiChildren)
+                if (childForm.Name == "fHopDong")
+                {
+                    childForm.Activate();
+                    return;
+                }
 
+            XtraForm FormHopDong = new GUI.ChildrenForms.KhachTro.HopDong.fHopDong();
+            FormHopDong.MdiParent = this;
+            FormHopDong.Show();
+        }
+
+        private void btn_themHopDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            XtraForm FormThemHopDong = new GUI.ChildrenForms.KhachTro.HopDong.ThemHopDong.fThemHopDong();
+            FormThemHopDong.ShowDialog();
+        }
+
+        #endregion
 
 
 

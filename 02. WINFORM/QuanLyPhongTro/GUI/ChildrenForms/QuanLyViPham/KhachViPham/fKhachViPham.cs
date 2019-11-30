@@ -41,5 +41,11 @@ namespace GUI.ChildrenForms.QuanLyViPham.KhachViPham
             }
         }
 
+        private void btn_them_Click(object sender, EventArgs e)
+        {
+            XtraForm FormAlter = new ChildrenForms.QuanLyViPham.KhachViPham.fAlter();
+            FormAlter.ShowDialog();
+        }
+
     }
 }

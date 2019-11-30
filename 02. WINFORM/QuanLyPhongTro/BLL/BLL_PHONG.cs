@@ -16,6 +16,11 @@ namespace BLL
             return DAL_PHONG.LayDanhSachPhong();
         }
 
+        public static DataTable LayDanhSachPhongConTrong()
+        {
+            return DAL_PHONG.LayDanhSachPhongConTrong();
+        }
+
         public static DataTable LayDanhSachPhong_TheoMaTang(DTO_TANG tang)
         {
             return DAL_PHONG.LayDanhSachPhong_TheoMaTang(tang);

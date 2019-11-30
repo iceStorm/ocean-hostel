@@ -16,6 +16,11 @@ namespace DAL
             return ExecuteQuery(query);
         }
 
+        public static DataTable LayDanhSachPhongConTrong()
+        {
+            string query = "EXEC PROC__PHONG_GetEmptyList";
+            return ExecuteQuery(query);
+        }
 
         public static DataTable LayDanhSachPhong_TheoMaTang(DTO_TANG tang)
         {

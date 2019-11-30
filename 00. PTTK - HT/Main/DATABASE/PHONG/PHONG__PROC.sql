@@ -2,6 +2,14 @@ USE OCEAN_HOSTEL
 GO
 
 
+CREATE	PROC	PROC__PHONG_GetEmptyList	--	Phòng còn dư chỗ
+AS
+BEGIN
+	SELECT *
+	FROM PHONG
+	WHERE SOLG_DANGO < SOLG_TOIDA
+END
+GO
 
 --------------------------------------------------------
 CREATE	PROC	PROC__PHONG__GetList

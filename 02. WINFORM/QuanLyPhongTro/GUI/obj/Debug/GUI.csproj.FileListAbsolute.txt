@@ -95,3 +95,6 @@ C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài 
 C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\GUI\obj\Debug\GUI.pdb
 C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\GUI\obj\Debug\GUI.ChildrenForms.QuanLyViPham.ViPham.fAlter.resources
 C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\GUI\obj\Debug\GUI.ChildrenForms.QuanLyViPham.KhachViPham.fAlter.resources
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\GUI\obj\Debug\GUI.ChildrenForms.KhachTro.HopDong.fHopDong.resources
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\GUI\obj\Debug\GUI.ChildrenForms.KhachTro.HopDong.ThemHopDong.fThemHopDong.resources
+C:\Users\Ocean\OneDrive\01. Study\03. Programming\02. C#\WinForm\07. Đề tài cuối kỳ 4\02. WINFORM\QuanLyPhongTro\GUI\obj\Debug\GUI.ChildrenForms.KhachTro.HopDong.ThemHopDong.fThemThongTinKhach.resources

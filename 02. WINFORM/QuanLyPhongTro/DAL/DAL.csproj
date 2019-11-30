@@ -44,7 +44,9 @@
     <Compile Include="DAL_HOADON.cs" />
     <Compile Include="DAL_HOADON_DICHVU.cs" />
     <Compile Include="DAL_HOADON_DIENNUOC.cs" />
+    <Compile Include="DAL_HOPDONG.cs" />
     <Compile Include="DAL_KHACH.cs" />
+    <Compile Include="DAL_KHACH_HOPDONG.cs" />
     <Compile Include="DAL_KHACH_VIPHAM.cs" />
     <Compile Include="DAL_KHU.cs" />
     <Compile Include="DAL_LOAIPHONG.cs" />
