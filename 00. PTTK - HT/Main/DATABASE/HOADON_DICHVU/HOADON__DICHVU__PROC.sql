@@ -48,3 +48,16 @@ BEGIN
 			AND MADICHVU = @#MADVU
 	END
 END
+GO
+
+
+--------------------------------------------------------------
+CREATE	PROC	PROC__HOADON_DICHVU__LayDanhSachDichVuTheoMaHoaDon
+@MAHOADON	VARCHAR(15)
+AS
+BEGIN
+	SELECT *
+	FROM HOADON_DICHVU
+	WHERE MAHOADON = @MAHOADON
+END
+GO
