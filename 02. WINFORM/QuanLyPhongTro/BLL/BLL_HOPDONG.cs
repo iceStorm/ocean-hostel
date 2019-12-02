@@ -26,5 +26,15 @@ namespace BLL
             return DAL_HOPDONG.ThemHopDong(hopDong) > 0;
         }
 
+        public static bool TraCocHopDong(DTO_HOPDONG hopDong)
+        {
+            return DAL_HOPDONG.TraCocHopDong(hopDong) == 1;
+        }
+
+        public static bool HetHanHopDong(DTO_HOPDONG hopDong)
+        {
+            return DAL_HOPDONG.HetHanHopDong(hopDong) == 1;
+        }
+
     }
 }

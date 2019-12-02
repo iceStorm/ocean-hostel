@@ -15,6 +15,8 @@ namespace GUI.ChildrenForms.KhachTro.DanhSachKhach
 {
     public partial class fKhach : DevExpress.XtraEditors.XtraForm
     {
+        public static bool isUpdated = false;
+
         public fKhach()
         {
             InitializeComponent();
@@ -67,9 +69,26 @@ namespace GUI.ChildrenForms.KhachTro.DanhSachKhach
 
             DTO_KHACH khach = new DTO_KHACH
             {
-
+                MaKhach = (string)dr["MAKHACH"],
+                Ho = (string)dr["HO"],
+                Ten = (string)dr["TEN"],
+                GioiTinh = (string)dr["GIOITINH"],
+                NgaySinh = (DateTime)dr["NGAYSINH"],
+                QueQuan = (string)dr["QUEQUAN"],
+                SoCanCuoc = (string)dr["SOCANCUOC"],
+                SoDienThoai = (string)dr["SODIENTHOAI"],
+                TrangThai = (string)dr["TRANGTHAI"]
             };
 
+
+            XtraForm FormAlter = new ChildrenForms.KhachTro.DanhSachKhach.fAlter(khach);
+            FormAlter.ShowDialog();
+
+            if (isUpdated == true)
+            {
+                LoadData();
+                isUpdated = false;
+            }
         }
 
     }

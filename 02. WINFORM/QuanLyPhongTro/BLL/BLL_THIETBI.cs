@@ -31,13 +31,14 @@ namespace BLL
             return maThietBi;
         }
 
-        public static string[] LayDanhSachTenThietBi()
+        public static string[] LayDanhSachTenThietBiConTon()    //  Thiết bị còn tồn
         {
             DataTable dt = LayDanhSachThietBi();
             List<string> result = new List<string>();
 
             foreach (DataRow dr in dt.Rows)
-                result.Add((string)dr["TENTBI"]);
+                if ((int)dr["SOLG_TON"] > 0)
+                    result.Add((string)dr["TENTBI"]);
 
             return result.ToArray();
         }

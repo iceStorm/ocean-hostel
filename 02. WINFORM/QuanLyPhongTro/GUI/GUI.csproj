@@ -12,6 +12,21 @@
     <AssemblyName>GUI</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -161,6 +176,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.XtraCharts.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.Extensions, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.UI, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.Wizard, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v19.1">
       <Private>True</Private>
     </Reference>
@@ -200,6 +218,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -234,6 +253,18 @@
     <Compile Include="ChildrenForms\DichVu\DichVuMoiPhong\fDichVuMoiPhong.Designer.cs">
       <DependentUpon>fDichVuMoiPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildrenForms\HeThong\fDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\HeThong\fDoiMatKhau.Designer.cs">
+      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\HeThong\fXemThongTinTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\HeThong\fXemThongTinTaiKhoan.Designer.cs">
+      <DependentUpon>fXemThongTinTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fChiTietHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,17 +283,29 @@
     <Compile Include="ChildrenForms\HoaDonChiTieu\fThemHoaDon.Designer.cs">
       <DependentUpon>fThemHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildrenForms\KhachTro\DanhSachKhach\fAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\KhachTro\DanhSachKhach\fAlter.Designer.cs">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildrenForms\KhachTro\DanhSachKhach\fKhach.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChildrenForms\KhachTro\DanhSachKhach\fKhach.Designer.cs">
       <DependentUpon>fKhach.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChildrenForms\KhachTro\HopDong\fHopDong.cs">
+    <Compile Include="ChildrenForms\KhachTro\HopDong\fDanhSachHopDong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChildrenForms\KhachTro\HopDong\fHopDong.Designer.cs">
-      <DependentUpon>fHopDong.cs</DependentUpon>
+    <Compile Include="ChildrenForms\KhachTro\HopDong\fDanhSachHopDong.Designer.cs">
+      <DependentUpon>fDanhSachHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\KhachTro\HopDong\GiaHanHopDong\fGiaHanHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\KhachTro\HopDong\GiaHanHopDong\fGiaHanHopDong.Designer.cs">
+      <DependentUpon>fGiaHanHopDong.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildrenForms\KhachTro\HopDong\ThemHopDong\fThemHopDong.cs">
       <SubType>Form</SubType>
@@ -372,6 +415,7 @@
     <Compile Include="ChildrenForms\QuanLyViPham\ViPham\fViPham.Designer.cs">
       <DependentUpon>fViPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataHelper.cs" />
     <Compile Include="FormDashboard\fDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -390,6 +434,12 @@
     <Compile Include="FormMain\fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="fChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fChart.Designer.cs">
+      <DependentUpon>fChart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reader.cs" />
@@ -406,6 +456,9 @@
     <EmbeddedResource Include="ChildrenForms\DichVu\DichVuMoiPhong\fDichVuMoiPhong.resx">
       <DependentUpon>fDichVuMoiPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\HeThong\fDoiMatKhau.resx">
+      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fChiTietHoaDon.resx">
       <DependentUpon>fChiTietHoaDon.cs</DependentUpon>
     </EmbeddedResource>
@@ -415,11 +468,14 @@
     <EmbeddedResource Include="ChildrenForms\HoaDonChiTieu\fThemHoaDon.resx">
       <DependentUpon>fThemHoaDon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\KhachTro\DanhSachKhach\fAlter.resx">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildrenForms\KhachTro\DanhSachKhach\fKhach.resx">
       <DependentUpon>fKhach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChildrenForms\KhachTro\HopDong\fHopDong.resx">
-      <DependentUpon>fHopDong.cs</DependentUpon>
+    <EmbeddedResource Include="ChildrenForms\KhachTro\HopDong\fDanhSachHopDong.resx">
+      <DependentUpon>fDanhSachHopDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildrenForms\KhachTro\HopDong\ThemHopDong\fThemHopDong.resx">
       <DependentUpon>fThemHopDong.cs</DependentUpon>
@@ -484,6 +540,9 @@
     <EmbeddedResource Include="FormMain\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fChart.resx">
+      <DependentUpon>fChart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <None Include="bin\Debug\ICONS\icons8-stairs-up-32.png" />
     <None Include="bin\Debug\ICONS\icons8-user-group-32.png" />
@@ -507,6 +566,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\shipmentawaiting.svg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
@@ -555,7 +615,16 @@
     <None Include="bin\Debug\ICONS\icons8-traveler-32.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ChildrenForms\HeThong\" />
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\ICONS\icons8-pie-chart-32.png" />

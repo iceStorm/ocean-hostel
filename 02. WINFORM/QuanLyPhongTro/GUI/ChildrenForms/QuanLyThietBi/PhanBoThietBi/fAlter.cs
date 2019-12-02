@@ -26,7 +26,7 @@ namespace GUI.ChildrenForms.QuanLyThietBi.PhanBoThietBi
 
         private void LoadTenThietBi()
         {
-            this.cb_tenThietBi.Items.AddRange(BLL_THIETBI.LayDanhSachTenThietBi());
+            this.cb_tenThietBi.Items.AddRange(BLL_THIETBI.LayDanhSachTenThietBiConTon());
         }
 
         private void btn_huy_Click(object sender, EventArgs e)

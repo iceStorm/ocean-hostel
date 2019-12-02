@@ -36,5 +36,10 @@ namespace BLL
             return (int)DAL_KHACH.SoCanCuocDaTonTai(khachTro) == 1;
         }
 
+        public static bool CapNhatKhach(DTO_KHACH khachTro)
+        {
+            return DAL_KHACH.CapNhatKhach(khachTro) == 1;
+        }
+
     }
 }

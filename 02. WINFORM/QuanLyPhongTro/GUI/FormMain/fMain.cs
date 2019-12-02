@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DTO;
 using BLL;
+using System.Threading;
+using DevExpress.XtraCharts;
 
 namespace GUI
 {
@@ -20,7 +22,8 @@ namespace GUI
                                            "Xmas", "Stardust", "The Asphalt World", "High Contrast",
                                            "Metropolis", "Liquid", "Dark Side", "Valentine", "Lilian",
                                            "Glass Oceans", "Money Twins"};
-        private Timer timer_open;
+
+        private System.Windows.Forms.Timer timer_open;
         private DTO_NGUOIDUNG nguoiDung;
 
         public fMain(DTO_NGUOIDUNG nguoiDung = null)
@@ -41,7 +44,7 @@ namespace GUI
             //this.rib_main.Minimized = true;
 
             this.Opacity = 0;
-            this.timer_open = new Timer();
+            this.timer_open = new System.Windows.Forms.Timer();
             this.timer_open.Interval = 1;
             this.timer_open.Tick += timer_Tick;
             this.timer_open.Start();
@@ -73,11 +76,11 @@ namespace GUI
             this.txt_time.Caption = DateTime.Today.ToLongTimeString();
             this.txt_tenNhanVien.Caption = String.Format("{0} {1}", nguoiDung.Ho, nguoiDung.Ten);
 
-
             //fDashboard FormDashboard = new fDashboard();
             //FormDashboard.MdiParent = this;
             //FormDashboard.Show();
         }
+
 
         private void fMain_FormClosing(object sender, FormClosingEventArgs e)
         {/*
@@ -344,7 +347,7 @@ namespace GUI
                     return;
                 }
 
-            XtraForm FormHopDong = new GUI.ChildrenForms.KhachTro.HopDong.fHopDong();
+            XtraForm FormHopDong = new GUI.ChildrenForms.KhachTro.HopDong.fDanhSachHopDong();
             FormHopDong.MdiParent = this;
             FormHopDong.Show();
         }
@@ -356,6 +359,49 @@ namespace GUI
         }
 
         #endregion
+
+        private void rib_main_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_dangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Thread thr = new Thread(DangXuat);
+            thr.Start();
+            this.Close();
+        }
+
+        private void DangXuat()
+        {
+            fLogin FormDangNhap = new fLogin();
+            FormDangNhap.ShowDialog();
+        }
+
+        private void btn_doiMatKhau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            XtraForm FormDoiMatKhau = new ChildrenForms.HeThong.fDoiMatKhau(this.nguoiDung);
+            FormDoiMatKhau.ShowDialog();
+        }
+
+        private void btn_giaHanHopDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btn_bieuDo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (XtraForm childForm in this.MdiChildren)
+                if (childForm.Name == "fChart")
+                {
+                    childForm.Activate();
+                    return;
+                }
+
+            XtraForm FormBieuDo = new fChart();
+            FormBieuDo.MdiParent = this;
+            FormBieuDo.Show();
+        }
 
 
 

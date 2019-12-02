@@ -62,5 +62,34 @@ namespace DAL
             return ExecuteScalar(query, new object[]{khachTro.SoCanCuoc});
         }
 
+        public static int CapNhatKhach(DTO_KHACH khachTro)
+        {
+            string query = @"EXEC PROC__KHACH__UPDATE
+                             @MAKHACH = @@MAKH ,
+                             @HO = @@HO ,
+                             @TEN = @@TEN ,
+                             @GIOITINH = @@GT ,
+                             @NGAYSINH = @@NS ,
+                             @QUEQUAN = @@QQ ,
+                             @SOCANCUOC = @@SCC ,
+                             @SODIENTHOAI = @@SDT ,
+                             @TRANGTHAI = @@TT";
+
+            object[] obj = new object[]
+            {
+                khachTro.MaKhach,
+                khachTro.Ho,
+                khachTro.Ten,
+                khachTro.GioiTinh,
+                khachTro.NgaySinh,
+                khachTro.QueQuan,
+                khachTro.SoCanCuoc,
+                khachTro.SoDienThoai,
+                khachTro.TrangThai
+            };
+
+            return ExecuteNonQuery(query, obj);
+        }
+
     }
 }

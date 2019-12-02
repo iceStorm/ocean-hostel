@@ -41,5 +41,17 @@ namespace DAL
             return ExecuteNonQuery(query, obj);
         }
 
+        public static int TraCocHopDong(DTO_HOPDONG hopDong)
+        {
+            string query = @"EXEC PROC__HOPDONG__TRACOC @MAHOPDONG = @@MHD";
+            return ExecuteNonQuery(query, new object[]{hopDong.MaHopDong});
+        }
+
+        public static int HetHanHopDong(DTO_HOPDONG hopDong)
+        {
+            string query = @"EXEC PROC__HOPDONG__HETHAN @MAHOPDONG = @@MHD";
+            return ExecuteNonQuery(query, new object[]{hopDong.MaHopDong});
+        }
+
     }
 }
