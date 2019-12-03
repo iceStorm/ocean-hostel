@@ -422,6 +422,12 @@
     <Compile Include="ChildrenForms\QuanLyViPham\ViPham\fViPham.Designer.cs">
       <DependentUpon>fViPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormWelcome\fWelcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWelcome\fWelcome.Designer.cs">
+      <DependentUpon>fWelcome.cs</DependentUpon>
+    </Compile>
     <Compile Include="UtilityClasses\DataHelper.cs" />
     <Compile Include="FormLogin\fLogin.cs">
       <SubType>Form</SubType>
@@ -543,6 +549,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormChart\fChart.resx">
       <DependentUpon>fChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWelcome\fWelcome.resx">
+      <DependentUpon>fWelcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <None Include="bin\Debug\ICONS\icons8-stairs-up-32.png" />

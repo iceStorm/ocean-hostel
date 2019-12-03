@@ -179,8 +179,6 @@ namespace GUI
                 {
                     nguoiDung.Ho = dt.Rows[0]["HO"].ToString();
                     nguoiDung.Ten = dt.Rows[0]["TEN"].ToString();
-                    nguoiDung.TrangThai = dt.Rows[0]["TRANGTHAI"].ToString();
-                    nguoiDung.DangNhapLanCuoi = DateTime.Parse(dt.Rows[0]["DANGNHAPLANCUOI"].ToString());
 
                     fMain FormMain = new fMain(nguoiDung);
                     this.Hide();
@@ -208,14 +206,6 @@ namespace GUI
             this.Close();
         }
 
-        private void lb_nhoMatKhau_Click(object sender, EventArgs e)
-        {
-            if (this.chb_ghiNho.Checked == true)
-                this.chb_ghiNho.Checked = false;
-            else
-                this.chb_ghiNho.Checked = true;
-        }
-
         #endregion
 
 
@@ -231,10 +221,6 @@ namespace GUI
             await Task.Delay(250);
             animator.Show(txt_tenTaiKhoan, true, Animation.HorizSlide);
             animator.Show(txt_matKhau, true, Animation.HorizSlide);
-
-            await Task.Delay(250);
-            animator.Show(chb_ghiNho, false, Animation.VertSlide);
-            animator.Show(lb_nhoMatKhau, false, Animation.HorizSlide);
 
             await Task.Delay(150);
             animator.Show(btn_dangNhap, true, Animation.Scale);
@@ -254,8 +240,6 @@ namespace GUI
             this.lb_matKhau.Visible = false;
             this.txt_tenTaiKhoan.Visible = false;
             this.txt_matKhau.Visible = false;
-            this.chb_ghiNho.Visible = false;
-            this.lb_nhoMatKhau.Visible = false;
 
             this.btn_cancel.Visible = false;
             this.btn_dangNhap.Visible = false;

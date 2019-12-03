@@ -108,6 +108,5 @@ namespace GUI.ChildrenForms.QuanLyPhong
             LoadData();
         }
 
-
     }
 }

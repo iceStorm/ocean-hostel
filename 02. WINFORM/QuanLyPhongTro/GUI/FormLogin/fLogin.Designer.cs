@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fLogin));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.btn_dangNhap = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.lb_loginTitle = new System.Windows.Forms.Label();
             this.lb_matKhau = new System.Windows.Forms.Label();
@@ -45,8 +45,6 @@
             this.pn_colorLayer = new System.Windows.Forms.Panel();
             this.pn_right = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btn_cancel = new System.Windows.Forms.Label();
-            this.lb_nhoMatKhau = new Bunifu.UI.WinForms.BunifuLabel();
-            this.chb_ghiNho = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.pn_left.SuspendLayout();
             this.pn_imageSlider.SuspendLayout();
             this.pn_colorLayer.SuspendLayout();
@@ -67,11 +65,11 @@
             this.btn_dangNhap.ColorContrastOnClick = 45;
             this.btn_dangNhap.ColorContrastOnHover = 45;
             this.btn_dangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btn_dangNhap.CustomizableEdges = borderEdges2;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btn_dangNhap.CustomizableEdges = borderEdges1;
             this.btn_dangNhap.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_dangNhap.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn_dangNhap.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -90,26 +88,26 @@
             this.btn_dangNhap.IdleIconLeftImage = null;
             this.btn_dangNhap.IdleIconRightImage = null;
             this.btn_dangNhap.IndicateFocus = false;
-            this.btn_dangNhap.Location = new System.Drawing.Point(37, 426);
+            this.btn_dangNhap.Location = new System.Drawing.Point(39, 416);
             this.btn_dangNhap.Name = "btn_dangNhap";
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.BorderRadius = 43;
-            stateProperties3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties3.BorderThickness = 1;
-            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.ForeColor = System.Drawing.Color.White;
-            stateProperties3.IconLeftImage = null;
-            stateProperties3.IconRightImage = null;
-            this.btn_dangNhap.onHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties4.BorderRadius = 43;
-            stateProperties4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties4.BorderThickness = 1;
-            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties4.ForeColor = System.Drawing.Color.White;
-            stateProperties4.IconLeftImage = null;
-            stateProperties4.IconRightImage = null;
-            this.btn_dangNhap.OnPressedState = stateProperties4;
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties1.BorderRadius = 43;
+            stateProperties1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties1.BorderThickness = 1;
+            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties1.ForeColor = System.Drawing.Color.White;
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.btn_dangNhap.onHoverState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties2.BorderRadius = 43;
+            stateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties2.BorderThickness = 1;
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties2.ForeColor = System.Drawing.Color.White;
+            stateProperties2.IconLeftImage = null;
+            stateProperties2.IconRightImage = null;
+            this.btn_dangNhap.OnPressedState = stateProperties2;
             this.btn_dangNhap.Size = new System.Drawing.Size(234, 48);
             this.btn_dangNhap.TabIndex = 3;
             this.btn_dangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -194,24 +192,26 @@
             // lb_slogan
             // 
             this.lb_slogan.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lb_slogan.AutoSize = true;
             this.lb_slogan.BackColor = System.Drawing.Color.Transparent;
             this.lb_slogan.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_slogan.ForeColor = System.Drawing.Color.White;
             this.lb_slogan.Location = new System.Drawing.Point(15, 48);
             this.lb_slogan.Name = "lb_slogan";
-            this.lb_slogan.Size = new System.Drawing.Size(212, 23);
+            this.lb_slogan.Size = new System.Drawing.Size(200, 23);
             this.lb_slogan.TabIndex = 7;
-            this.lb_slogan.Text = "Nhà trọ là nhà của bạn";
+            this.lb_slogan.Text = "Phòng trọ là nhà của bạn";
             // 
             // lb_brand
             // 
             this.lb_brand.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lb_brand.AutoSize = true;
             this.lb_brand.BackColor = System.Drawing.Color.Transparent;
             this.lb_brand.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_brand.ForeColor = System.Drawing.Color.White;
             this.lb_brand.Location = new System.Drawing.Point(12, 9);
             this.lb_brand.Name = "lb_brand";
-            this.lb_brand.Size = new System.Drawing.Size(256, 39);
+            this.lb_brand.Size = new System.Drawing.Size(222, 39);
             this.lb_brand.TabIndex = 6;
             this.lb_brand.Text = "OCEAN HOSTEL";
             // 
@@ -258,8 +258,6 @@
             this.pn_right.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pn_right.BackgroundImage")));
             this.pn_right.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pn_right.Controls.Add(this.btn_cancel);
-            this.pn_right.Controls.Add(this.lb_nhoMatKhau);
-            this.pn_right.Controls.Add(this.chb_ghiNho);
             this.pn_right.Controls.Add(this.btn_dangNhap);
             this.pn_right.Controls.Add(this.lb_loginTitle);
             this.pn_right.Controls.Add(this.txt_matKhau);
@@ -291,75 +289,6 @@
             this.btn_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
-            // lb_nhoMatKhau
-            // 
-            this.lb_nhoMatKhau.AutoEllipsis = false;
-            this.lb_nhoMatKhau.CursorType = null;
-            this.lb_nhoMatKhau.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.lb_nhoMatKhau.Location = new System.Drawing.Point(64, 323);
-            this.lb_nhoMatKhau.Name = "lb_nhoMatKhau";
-            this.lb_nhoMatKhau.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb_nhoMatKhau.Size = new System.Drawing.Size(104, 23);
-            this.lb_nhoMatKhau.TabIndex = 99;
-            this.lb_nhoMatKhau.TabStop = false;
-            this.lb_nhoMatKhau.Text = "Nhớ mật khẩu";
-            this.lb_nhoMatKhau.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lb_nhoMatKhau.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.lb_nhoMatKhau.Click += new System.EventHandler(this.lb_nhoMatKhau_Click);
-            // 
-            // chb_ghiNho
-            // 
-            this.chb_ghiNho.AllowBindingControlAnimation = true;
-            this.chb_ghiNho.AllowBindingControlColorChanges = false;
-            this.chb_ghiNho.AllowBindingControlLocation = true;
-            this.chb_ghiNho.AllowCheckBoxAnimation = false;
-            this.chb_ghiNho.AllowCheckmarkAnimation = true;
-            this.chb_ghiNho.AllowOnHoverStates = true;
-            this.chb_ghiNho.AutoCheck = true;
-            this.chb_ghiNho.BackColor = System.Drawing.Color.Transparent;
-            this.chb_ghiNho.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chb_ghiNho.BackgroundImage")));
-            this.chb_ghiNho.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.chb_ghiNho.BindingControl = null;
-            this.chb_ghiNho.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.chb_ghiNho.Checked = true;
-            this.chb_ghiNho.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
-            this.chb_ghiNho.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chb_ghiNho.CustomCheckmarkImage = null;
-            this.chb_ghiNho.Location = new System.Drawing.Point(38, 324);
-            this.chb_ghiNho.MinimumSize = new System.Drawing.Size(17, 17);
-            this.chb_ghiNho.Name = "chb_ghiNho";
-            this.chb_ghiNho.OnCheck.BorderColor = System.Drawing.Color.LimeGreen;
-            this.chb_ghiNho.OnCheck.BorderRadius = 2;
-            this.chb_ghiNho.OnCheck.BorderThickness = 2;
-            this.chb_ghiNho.OnCheck.CheckBoxColor = System.Drawing.Color.LimeGreen;
-            this.chb_ghiNho.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.chb_ghiNho.OnCheck.CheckmarkThickness = 2;
-            this.chb_ghiNho.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.chb_ghiNho.OnDisable.BorderRadius = 2;
-            this.chb_ghiNho.OnDisable.BorderThickness = 2;
-            this.chb_ghiNho.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chb_ghiNho.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.chb_ghiNho.OnDisable.CheckmarkThickness = 2;
-            this.chb_ghiNho.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(131)))), ((int)(((byte)(188)))));
-            this.chb_ghiNho.OnHoverChecked.BorderRadius = 2;
-            this.chb_ghiNho.OnHoverChecked.BorderThickness = 2;
-            this.chb_ghiNho.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(131)))), ((int)(((byte)(188)))));
-            this.chb_ghiNho.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.chb_ghiNho.OnHoverChecked.CheckmarkThickness = 2;
-            this.chb_ghiNho.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(131)))), ((int)(((byte)(188)))));
-            this.chb_ghiNho.OnHoverUnchecked.BorderRadius = 2;
-            this.chb_ghiNho.OnHoverUnchecked.BorderThickness = 2;
-            this.chb_ghiNho.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chb_ghiNho.OnUncheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(69)))), ((int)(((byte)(155)))));
-            this.chb_ghiNho.OnUncheck.BorderRadius = 2;
-            this.chb_ghiNho.OnUncheck.BorderThickness = 2;
-            this.chb_ghiNho.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chb_ghiNho.Size = new System.Drawing.Size(21, 21);
-            this.chb_ghiNho.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Round;
-            this.chb_ghiNho.TabIndex = 2;
-            this.chb_ghiNho.ThreeState = false;
-            this.chb_ghiNho.ToolTipText = null;
-            // 
             // fLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -378,6 +307,7 @@
             this.pn_left.ResumeLayout(false);
             this.pn_imageSlider.ResumeLayout(false);
             this.pn_colorLayer.ResumeLayout(false);
+            this.pn_colorLayer.PerformLayout();
             this.pn_right.ResumeLayout(false);
             this.pn_right.PerformLayout();
             this.ResumeLayout(false);
@@ -397,8 +327,6 @@
         private System.Windows.Forms.Panel pn_colorLayer;
         private System.Windows.Forms.Panel pn_imageSlider;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_dangNhap;
-        private Bunifu.UI.WinForms.BunifuCheckBox chb_ghiNho;
-        private Bunifu.UI.WinForms.BunifuLabel lb_nhoMatKhau;
         private Bunifu.Framework.UI.BunifuGradientPanel pn_right;
         private System.Windows.Forms.Label btn_cancel;
     }

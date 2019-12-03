@@ -39,8 +39,6 @@
             this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.txt_date = new DevExpress.XtraBars.BarStaticItem();
             this.txt_time = new DevExpress.XtraBars.BarStaticItem();
-            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
-            this.txt_tenNhanVien = new DevExpress.XtraBars.BarStaticItem();
             this.btn_doiMatKhau = new DevExpress.XtraBars.BarButtonItem();
             this.btn_thongTinTaiKhoan = new DevExpress.XtraBars.BarButtonItem();
             this.btn_noiQuy = new DevExpress.XtraBars.BarButtonItem();
@@ -106,8 +104,6 @@
             this.skinRibbonGalleryBarItem1,
             this.txt_date,
             this.txt_time,
-            this.barButtonItem7,
-            this.txt_tenNhanVien,
             this.btn_doiMatKhau,
             this.btn_thongTinTaiKhoan,
             this.btn_noiQuy,
@@ -219,18 +215,6 @@
             this.txt_time.Caption = "Time";
             this.txt_time.Id = 17;
             this.txt_time.Name = "txt_time";
-            // 
-            // barButtonItem7
-            // 
-            this.barButtonItem7.Caption = "Nhân viên";
-            this.barButtonItem7.Id = 20;
-            this.barButtonItem7.Name = "barButtonItem7";
-            // 
-            // txt_tenNhanVien
-            // 
-            this.txt_tenNhanVien.Caption = "?";
-            this.txt_tenNhanVien.Id = 21;
-            this.txt_tenNhanVien.Name = "txt_tenNhanVien";
             // 
             // btn_doiMatKhau
             // 
@@ -587,8 +571,6 @@
             this.ribbonStatusBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ribbonStatusBar1.ItemLinks.Add(this.txt_date);
             this.ribbonStatusBar1.ItemLinks.Add(this.txt_time);
-            this.ribbonStatusBar1.ItemLinks.Add(this.barButtonItem7);
-            this.ribbonStatusBar1.ItemLinks.Add(this.txt_tenNhanVien);
             this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 657);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.rib_main;
@@ -688,8 +670,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
         private DevExpress.XtraBars.BarStaticItem txt_date;
         private DevExpress.XtraBars.BarStaticItem txt_time;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
-        private DevExpress.XtraBars.BarStaticItem txt_tenNhanVien;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager;
         private System.Windows.Forms.Panel pn_seperator;
         private DevExpress.XtraBars.BarButtonItem btn_doiMatKhau;

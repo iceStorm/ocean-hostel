@@ -24,7 +24,7 @@ namespace DAL
 
             int countParams = 0;
             foreach (string segment in segments)
-                if (segment.Contains("@@"))
+                if (segment.Contains("@@")) //  Đây là một parameter trong chuỗi query
                 {
                     SqlParameter sp = new SqlParameter
                     {
@@ -61,10 +61,17 @@ namespace DAL
 
             SqlCommand command = new SqlCommand(query, connection);
 
+
             if (parameters != null)
                 command.Parameters.AddRange(GetParamsList(query, parameters));
 
-            return command.ExecuteNonQuery();
+			int result = command.ExecuteNonQuery();
+			
+
+			if (connection.State == ConnectionState.Open)
+				connection.Close();
+			
+            return result;
         }
 
         protected static object ExecuteScalar(string query, object[] parameters = null)
@@ -74,10 +81,17 @@ namespace DAL
 
             SqlCommand command = new SqlCommand(query, connection);
 
+
             if (parameters != null)
                 command.Parameters.AddRange(GetParamsList(query, parameters));
 
-            return command.ExecuteScalar();
+            object result = command.ExecuteScalar();
+
+
+            if (connection.State == ConnectionState.Open)
+                connection.Close();
+
+            return result;
         }
     }
 }

@@ -71,14 +71,12 @@ namespace GUI
         {
             HideSkins(skinsToHide);
 
-
             this.txt_date.Caption = DateTime.Today.ToLongDateString();
             this.txt_time.Caption = DateTime.Today.ToLongTimeString();
-            this.txt_tenNhanVien.Caption = String.Format("{0} {1}", nguoiDung.Ho, nguoiDung.Ten);
 
-            //fDashboard FormDashboard = new fDashboard();
-            //FormDashboard.MdiParent = this;
-            //FormDashboard.Show();
+            fWelcome FormWelcome = new fWelcome(this.nguoiDung);
+            FormWelcome.MdiParent = this;
+            FormWelcome.Show();
         }
 
 
