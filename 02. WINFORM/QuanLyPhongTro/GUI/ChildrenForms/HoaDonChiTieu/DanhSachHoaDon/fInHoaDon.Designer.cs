@@ -28,11 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // fInHoaDon
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "fInHoaDon";
+            this.ClientSize = new System.Drawing.Size(709, 445);
+            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "fInHoaDon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "In hoá đơn";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
     }
 }
