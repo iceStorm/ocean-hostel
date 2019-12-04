@@ -57,7 +57,6 @@
             this.btn_dichVuMoiPhong = new DevExpress.XtraBars.BarButtonItem();
             this.btn_bieuDo = new DevExpress.XtraBars.BarButtonItem();
             this.btn_baoCao = new DevExpress.XtraBars.BarButtonItem();
-            this.btn_giaHanHopDong = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -121,8 +120,7 @@
             this.btn_danhMucDichVu,
             this.btn_dichVuMoiPhong,
             this.btn_bieuDo,
-            this.btn_baoCao,
-            this.btn_giaHanHopDong});
+            this.btn_baoCao});
             this.rib_main.Location = new System.Drawing.Point(0, 0);
             this.rib_main.MaxItemId = 52;
             this.rib_main.Name = "rib_main";
@@ -380,15 +378,6 @@
             this.btn_baoCao.Name = "btn_baoCao";
             this.btn_baoCao.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
-            // btn_giaHanHopDong
-            // 
-            this.btn_giaHanHopDong.Caption = "Gia hạn hợp đồng";
-            this.btn_giaHanHopDong.Id = 51;
-            this.btn_giaHanHopDong.ImageOptions.SvgImage = global::GUI.Properties.Resources.shipmentawaiting;
-            this.btn_giaHanHopDong.Name = "btn_giaHanHopDong";
-            this.btn_giaHanHopDong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.btn_giaHanHopDong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_giaHanHopDong_ItemClick);
-            // 
             // ribbonPage8
             // 
             this.ribbonPage8.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -463,7 +452,6 @@
             this.ribbonPageGroup2.AllowTextClipping = false;
             this.ribbonPageGroup2.ItemLinks.Add(this.btn_danhSachHopDong);
             this.ribbonPageGroup2.ItemLinks.Add(this.btn_themHopDong);
-            this.ribbonPageGroup2.ItemLinks.Add(this.btn_giaHanHopDong);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.ShowCaptionButton = false;
             this.ribbonPageGroup2.Text = "Hợp đồng thuê";
@@ -583,6 +571,7 @@
             this.xtraTabbedMdiManager.FloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.False;
             this.xtraTabbedMdiManager.FloatOnDrag = DevExpress.Utils.DefaultBoolean.False;
             this.xtraTabbedMdiManager.MdiParent = this;
+            this.xtraTabbedMdiManager.PinPageButtonShowMode = DevExpress.XtraTab.PinPageButtonShowMode.InActiveTabPageHeaderAndOnMouseHover;
             this.xtraTabbedMdiManager.ShowHeaderFocus = DevExpress.Utils.DefaultBoolean.True;
             // 
             // pn_seperator
@@ -697,7 +686,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup20;
         private DevExpress.XtraBars.BarButtonItem btn_bieuDo;
         private DevExpress.XtraBars.BarButtonItem btn_baoCao;
-        private DevExpress.XtraBars.BarButtonItem btn_giaHanHopDong;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
 
     }

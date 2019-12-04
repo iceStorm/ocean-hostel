@@ -93,7 +93,7 @@ namespace DAL
         public static object PhongDaDuocThamChieu(DTO_PHONG phong)
         {
             string query = @"SELECT dbo.FUNC__PHONG__IsReferenced( @@MAPHG )";
-            return ExecuteNonQuery(query, new object[]{phong.MaPhong});
+            return ExecuteScalar(query, new object[]{phong.MaPhong});
         }
 
     }

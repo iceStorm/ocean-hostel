@@ -11,6 +11,13 @@ namespace DTO
         string _maTang;
         string _tenTang;
         string _maKhu;
+        string _tenKhu;
+
+        public string TenKhu
+        {
+            get { return _tenKhu; }
+            set { _tenKhu = value; }
+        }
 
         public string MaKhu
         {

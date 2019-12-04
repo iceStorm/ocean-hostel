@@ -278,12 +278,6 @@
     <Compile Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fDanhSachHoaDon.Designer.cs">
       <DependentUpon>fDanhSachHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fInHoaDon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fInHoaDon.Designer.cs">
-      <DependentUpon>fInHoaDon.cs</DependentUpon>
-    </Compile>
     <Compile Include="ChildrenForms\HoaDonChiTieu\fThemHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -308,11 +302,11 @@
     <Compile Include="ChildrenForms\KhachTro\HopDong\fDanhSachHopDong.Designer.cs">
       <DependentUpon>fDanhSachHopDong.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChildrenForms\KhachTro\HopDong\GiaHanHopDong\fGiaHanHopDong.cs">
+    <Compile Include="ChildrenForms\KhachTro\HopDong\ThemHopDong\fChonKhachCu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChildrenForms\KhachTro\HopDong\GiaHanHopDong\fGiaHanHopDong.Designer.cs">
-      <DependentUpon>fGiaHanHopDong.cs</DependentUpon>
+    <Compile Include="ChildrenForms\KhachTro\HopDong\ThemHopDong\fChonKhachCu.Designer.cs">
+      <DependentUpon>fChonKhachCu.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildrenForms\KhachTro\HopDong\ThemHopDong\fThemHopDong.cs">
       <SubType>Form</SubType>
@@ -472,9 +466,6 @@
     <EmbeddedResource Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fDanhSachHoaDon.resx">
       <DependentUpon>fDanhSachHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fInHoaDon.resx">
-      <DependentUpon>fInHoaDon.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ChildrenForms\HoaDonChiTieu\fThemHoaDon.resx">
       <DependentUpon>fThemHoaDon.cs</DependentUpon>
     </EmbeddedResource>
@@ -486,6 +477,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildrenForms\KhachTro\HopDong\fDanhSachHopDong.resx">
       <DependentUpon>fDanhSachHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\KhachTro\HopDong\ThemHopDong\fChonKhachCu.resx">
+      <DependentUpon>fChonKhachCu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildrenForms\KhachTro\HopDong\ThemHopDong\fThemHopDong.resx">
       <DependentUpon>fThemHopDong.cs</DependentUpon>

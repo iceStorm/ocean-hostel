@@ -43,13 +43,6 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dgv_thongTinKhach = new System.Windows.Forms.DataGridView();
-            this.HO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GIOITINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NGAYSINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QUEQUAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CANCUOC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DIENTHOAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.num_thoiHan = new DevExpress.XtraEditors.SpinEdit();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,6 +54,14 @@
             this.btn_chinhSua = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_themKhachMoi = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_tao = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.MAKHACH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GIOITINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NGAYSINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QUEQUAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CANCUOC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DIENTHOAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_thongTinKhach)).BeginInit();
@@ -85,6 +86,7 @@
             this.dgv_thongTinKhach.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_thongTinKhach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_thongTinKhach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MAKHACH,
             this.HO,
             this.TEN,
             this.GIOITINH,
@@ -99,47 +101,7 @@
             this.dgv_thongTinKhach.Size = new System.Drawing.Size(771, 180);
             this.dgv_thongTinKhach.TabIndex = 0;
             this.dgv_thongTinKhach.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgv_thongTinKhach_RowsRemoved);
-            // 
-            // HO
-            // 
-            this.HO.HeaderText = "Họ";
-            this.HO.Name = "HO";
-            this.HO.ReadOnly = true;
-            // 
-            // TEN
-            // 
-            this.TEN.HeaderText = "Tên";
-            this.TEN.Name = "TEN";
-            // 
-            // GIOITINH
-            // 
-            this.GIOITINH.HeaderText = "Giới tính";
-            this.GIOITINH.Name = "GIOITINH";
-            this.GIOITINH.ReadOnly = true;
-            // 
-            // NGAYSINH
-            // 
-            this.NGAYSINH.HeaderText = "Ngày sinh";
-            this.NGAYSINH.Name = "NGAYSINH";
-            this.NGAYSINH.ReadOnly = true;
-            // 
-            // QUEQUAN
-            // 
-            this.QUEQUAN.HeaderText = "Quê quán";
-            this.QUEQUAN.Name = "QUEQUAN";
-            this.QUEQUAN.ReadOnly = true;
-            // 
-            // CANCUOC
-            // 
-            this.CANCUOC.HeaderText = "Số căn cước";
-            this.CANCUOC.Name = "CANCUOC";
-            this.CANCUOC.ReadOnly = true;
-            // 
-            // DIENTHOAI
-            // 
-            this.DIENTHOAI.HeaderText = "Số điện thoại";
-            this.DIENTHOAI.Name = "DIENTHOAI";
-            this.DIENTHOAI.ReadOnly = true;
+            this.dgv_thongTinKhach.SelectionChanged += new System.EventHandler(this.dgv_thongTinKhach_SelectionChanged);
             // 
             // label1
             // 
@@ -370,7 +332,7 @@
             this.btn_themKhachMoi.BackColor1 = System.Drawing.Color.LimeGreen;
             this.btn_themKhachMoi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_themKhachMoi.BackgroundImage")));
             this.btn_themKhachMoi.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_themKhachMoi.ButtonText = "Thêm khách mới";
+            this.btn_themKhachMoi.ButtonText = "Thêm khách";
             this.btn_themKhachMoi.ButtonTextMarginLeft = 0;
             this.btn_themKhachMoi.ColorContrastOnClick = 45;
             this.btn_themKhachMoi.ColorContrastOnHover = 45;
@@ -490,6 +452,53 @@
             this.btn_tao.UseDefaultRadiusAndThickness = true;
             this.btn_tao.Click += new System.EventHandler(this.btn_tao_Click);
             // 
+            // MAKHACH
+            // 
+            this.MAKHACH.HeaderText = "MAKHACH";
+            this.MAKHACH.Name = "MAKHACH";
+            this.MAKHACH.Visible = false;
+            // 
+            // HO
+            // 
+            this.HO.HeaderText = "Họ";
+            this.HO.Name = "HO";
+            this.HO.ReadOnly = true;
+            // 
+            // TEN
+            // 
+            this.TEN.HeaderText = "Tên";
+            this.TEN.Name = "TEN";
+            // 
+            // GIOITINH
+            // 
+            this.GIOITINH.HeaderText = "Giới tính";
+            this.GIOITINH.Name = "GIOITINH";
+            this.GIOITINH.ReadOnly = true;
+            // 
+            // NGAYSINH
+            // 
+            this.NGAYSINH.HeaderText = "Ngày sinh";
+            this.NGAYSINH.Name = "NGAYSINH";
+            this.NGAYSINH.ReadOnly = true;
+            // 
+            // QUEQUAN
+            // 
+            this.QUEQUAN.HeaderText = "Quê quán";
+            this.QUEQUAN.Name = "QUEQUAN";
+            this.QUEQUAN.ReadOnly = true;
+            // 
+            // CANCUOC
+            // 
+            this.CANCUOC.HeaderText = "Số căn cước";
+            this.CANCUOC.Name = "CANCUOC";
+            this.CANCUOC.ReadOnly = true;
+            // 
+            // DIENTHOAI
+            // 
+            this.DIENTHOAI.HeaderText = "Số điện thoại";
+            this.DIENTHOAI.Name = "DIENTHOAI";
+            this.DIENTHOAI.ReadOnly = true;
+            // 
             // fThemHopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -540,6 +549,7 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_themKhachMoi;
         private System.Windows.Forms.DataGridView dgv_thongTinKhach;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_chinhSua;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MAKHACH;
         private System.Windows.Forms.DataGridViewTextBoxColumn HO;
         private System.Windows.Forms.DataGridViewTextBoxColumn TEN;
         private System.Windows.Forms.DataGridViewTextBoxColumn GIOITINH;

@@ -36,14 +36,12 @@ namespace GUI.ChildrenForms.HoaDonChiTieu.DanhSachHoaDon
                 this.btn_thanhToan.Enabled = false;
                 this.btn_xemChiTiet.Enabled = false;
                 this.btn_xoa.Enabled = false;
-                this.btn_inHoaDon.Enabled = false;
             }
             else
             {
                 this.btn_thanhToan.Enabled = true;
                 this.btn_xemChiTiet.Enabled = true;
                 this.btn_xoa.Enabled = true;
-                this.btn_inHoaDon.Enabled = true;
             }
 
 
@@ -89,12 +87,10 @@ namespace GUI.ChildrenForms.HoaDonChiTieu.DanhSachHoaDon
             if (hoaDonHienTai.DaThanhToan == "True")
             {
                 this.btn_thanhToan.Enabled = false;
-                this.btn_inHoaDon.Enabled = false;
             }
             else
             {
                 this.btn_thanhToan.Enabled = true;
-                this.btn_inHoaDon.Enabled = true;
             }
         }
 

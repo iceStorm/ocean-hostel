@@ -25,7 +25,17 @@ namespace GUI.ChildrenForms.QuanLyPhong
 
         private void LoadData()
         {
-            this.gridControl_tang.DataSource = BLL_TANG.LayDanhSachTang();
+            DataTable dt = BLL_TANG.LayDanhSachTang();
+            if (dt.Rows.Count == 0)
+            {
+                this.btn_xoa.Enabled = false;
+            }
+            else
+            {
+                this.btn_xoa.Enabled = true;
+            }
+
+            this.gridControl_tang.DataSource = dt;
             this.gridView_tang.Columns["TENKHU"].Caption = "Tên Khu";
             this.gridView_tang.Columns["TENTANG"].Caption = "Tên Tầng";
 
@@ -59,31 +69,50 @@ namespace GUI.ChildrenForms.QuanLyPhong
 
             try
             {
-                if (BLL_TANG.TangDaDuocThamChieu(tangHienTai) == true)
+                DTO_TANG tangCaoNhat = BLL_TANG.LayTangCaoNhat_TheoMaKhu(tangHienTai);
+                if (tangCaoNhat != null)
                 {
-                    XtraMessageBox.Show("Thông tin tầng đang được sử dụng, không thể xoá !",
-                        "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    string message = String.Format("Bạn đang chọn khu {0}, tầng cao nhất là {1}.\n" +
+                        "Chỉ có thể xoá thông tin từ tầng cao nhất trở xuống.\n" +
+                        "Xác nhận xoá ?", tangCaoNhat.TenKhu, tangCaoNhat.TenTang);
+
+                    DialogResult dr = XtraMessageBox.Show(message, "Thông báo",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+
+                    if (dr == DialogResult.Yes)
+                        if (BLL_TANG.TangDaDuocThamChieu(tangCaoNhat) == true)
+                        {
+                            XtraMessageBox.Show("Thông tin tầng đang được sử dụng, không thể xoá !\n" +
+                            "Vui lòng xoá thông tin các PHÒNG của tầng này trước.",
+                                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                        {
+                            message = String.Format("Xác nhận xoá thông tin: {0} ?", tangCaoNhat.TenTang);
+                            dr = XtraMessageBox.Show(message, "Thông báo", MessageBoxButtons.YesNo);
+
+                            if (dr == DialogResult.Yes)
+                            {
+                                if (BLL_TANG.XoaTang(tangCaoNhat) == true)
+                                {
+                                    XtraMessageBox.Show("Xoá thông tin tầng thành công !",
+                                        "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                    LoadData();
+                                }
+                            }
+                        }
                 }
                 else
                 {
-                    DialogResult dr = XtraMessageBox.Show(String.Format("Xác nhận xoá thông tin: {0} ?", tangHienTai.TenTang),
-                    "Thông báo", MessageBoxButtons.YesNo);
-
-                    if (dr == DialogResult.Yes)
-                    {
-                        if (BLL_TANG.XoaTang(tangHienTai) == true)
-                        {
-                            XtraMessageBox.Show("Xoá thông tin tầng thành công !",
-                                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            LoadData();
-                        }
-                    }
+                   //   Không xảy ra - Chỉ khi có tầng trong khu thì mới có thể chọn
                 }
             }
             catch (Exception ex)
             {
-
+                XtraMessageBox.Show("Lỗi truy vấn !\n\n" + "Nội dung lỗi:\n" + ex.Message,
+                    "Thông báo", MessageBoxButtons.OK,  MessageBoxIcon.Warning);
             }
         }
 
@@ -97,7 +126,8 @@ namespace GUI.ChildrenForms.QuanLyPhong
             {
                 MaKhu = dr["MAKHU"].ToString(),
                 MaTang = dr["MATANG"].ToString(),
-                TenTang = dr["TENTANG"].ToString()
+                TenTang = dr["TENTANG"].ToString(),
+                TenKhu = dr["TENKHU"].ToString()
             };
 
             return tang;

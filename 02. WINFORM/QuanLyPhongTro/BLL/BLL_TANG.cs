@@ -37,6 +37,25 @@ namespace BLL
             return maTang;
         }
 
+        public static DTO_TANG LayTangCaoNhat_TheoMaKhu(DTO_TANG tang)
+        {
+            DataTable dt = DAL_TANG.LayTangCaoNhat_TheoMaKhu(tang);
+            DTO_TANG tangCaoNhat = new DTO_TANG();
+
+            if (dt.Rows.Count > 0)
+            {
+                tangCaoNhat.MaKhu = dt.Rows[0]["MAKHU"].ToString();
+                tangCaoNhat.MaTang = dt.Rows[0]["MATANG"].ToString();
+                tangCaoNhat.TenKhu = dt.Rows[0]["TENKHU"].ToString();
+                tangCaoNhat.TenTang = dt.Rows[0]["TENTANG"].ToString();
+            }
+            else
+            {
+                tangCaoNhat = null;
+            }
+
+            return tangCaoNhat;
+        }
 
         public static string[] LayDanhSachTenTang_TheoTenKhu(DTO_KHU khu)
         {

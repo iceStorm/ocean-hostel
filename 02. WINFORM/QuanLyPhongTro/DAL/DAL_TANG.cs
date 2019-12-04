@@ -25,6 +25,12 @@ namespace DAL
             return ExecuteQuery(query, new object[]{khu.MaKhu});
         }
 
+        public static DataTable LayTangCaoNhat_TheoMaKhu(DTO_TANG tang)
+        {
+            string query = @"EXEC PROC__TANG__GetLastFloor_ByAreaID @@MAKHU";
+            return ExecuteQuery(query, new object[]{tang.MaKhu});
+        }
+
         public static int ThemTang(DTO_TANG tang)
         {
             string query = @"EXEC PROC__TANG__INSERT @MAKHU = @@MAKHU";

@@ -15,9 +15,10 @@ namespace GUI.ChildrenForms.KhachTro.HopDong.ThemHopDong
 {
     public partial class fThemThongTinKhach : DevExpress.XtraEditors.XtraForm
     {
-        private DTO_KHACH khachTro;
+        public static DTO_KHACH khachTro;
         private List<DTO_KHACH> listKhach;
         private bool isAdd = true;
+        private bool isOldCustomer = false;
 
         public fThemThongTinKhach(List<DTO_KHACH> listKhach, DTO_KHACH khachTro = null)
         {
@@ -29,7 +30,7 @@ namespace GUI.ChildrenForms.KhachTro.HopDong.ThemHopDong
             {
                 isAdd = false;
 
-                this.khachTro = khachTro;
+                khachTro = khachTro;
                 this.Text = "Sửa thông tin khách trọ";
                 this.btn_them.Text = "Lưu";
 
@@ -43,6 +44,9 @@ namespace GUI.ChildrenForms.KhachTro.HopDong.ThemHopDong
             }
         }
 
+
+        #region TEXTBOX CHECKING
+        
         private void NumberTextBoxes_Keypress(object sender, KeyPressEventArgs e)
         {
             if (char.IsControl(e.KeyChar) == true)
@@ -67,6 +71,11 @@ namespace GUI.ChildrenForms.KhachTro.HopDong.ThemHopDong
                 e.Handled = true;
         }
 
+        #endregion
+
+
+        #region BUTTONS CLICK
+        
         private void btn_huy_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -103,6 +112,32 @@ namespace GUI.ChildrenForms.KhachTro.HopDong.ThemHopDong
                 this.Close();
             }
         }
+
+        private void btn_chonKhachCu_Click(object sender, EventArgs e)
+        {
+            XtraForm FormChonKhachCu = new ChildrenForms.KhachTro.HopDong.ThemHopDong.fChonKhachCu();
+            this.Hide();
+            FormChonKhachCu.ShowDialog();
+            this.Show();
+
+            if (khachTro != null)      
+            {
+                this.txt_ho.Text = khachTro.Ho;
+                this.txt_ten.Text = khachTro.Ten;
+                this.cb_gioiTinh.SelectedItem = khachTro.GioiTinh;
+                this.dtp_ngaySinh.Value = khachTro.NgaySinh;
+                this.txt_queQuan.Text = khachTro.QueQuan;
+                this.txt_soCanCuoc.Text = khachTro.SoCanCuoc;
+                this.txt_soDienThoai.Text = khachTro.SoDienThoai;
+
+                foreach (Control ctrl in this.Controls) //  Đóng băng không cho sửa khi chọn khách cũ
+                    if (ctrl.GetType() != typeof(Bunifu.UI.WinForms.BunifuButton.BunifuButton))
+                        ctrl.Enabled = false;
+            }
+        }
+
+        #endregion
+
 
         private bool CheckBeforeAdd()
         {
@@ -154,62 +189,69 @@ namespace GUI.ChildrenForms.KhachTro.HopDong.ThemHopDong
                             }
                             else
                             {
-                                bool khachVangLaiDaTonTai = false;
-
-                                foreach (DTO_KHACH khach in this.listKhach)
+                                if (khachTro.MaKhach == null)   //  Khách mới
                                 {
-                                    if (this.txt_soCanCuoc.Text == khach.SoCanCuoc)
+                                    bool khachDaTonTai = false; //  Xác định liệu có phải khách cũ hay không
+
+                                    foreach (DTO_KHACH khach in this.listKhach)
                                     {
-                                        if (BLL_KHACH.SoCanCuocDaTonTai(khachTro) == true)
+                                        if (this.txt_soCanCuoc.Text == khach.SoCanCuoc)
                                         {
-                                            XtraMessageBox.Show("Số căn cước " + khachTro.SoCanCuoc + " đã tồn tại ",
-                                                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                            if (BLL_KHACH.SoCanCuocDaTonTai(khachTro) == true)
+                                            {
+                                                XtraMessageBox.Show("Số căn cước " + khachTro.SoCanCuoc + " đã tồn tại ",
+                                                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                                            this.txt_soCanCuoc.Focus();
-                                            this.txt_soCanCuoc.SelectAll();
+                                                this.txt_soCanCuoc.Focus();
+                                                this.txt_soCanCuoc.SelectAll();
 
-                                            khachVangLaiDaTonTai = true;
+                                                khachDaTonTai = true;
+                                            }
                                         }
                                     }
-                                }
 
 
-                                if (khachVangLaiDaTonTai == false)
-                                {
-
-                                    this.khachTro = new DTO_KHACH();
-                                    this.khachTro.Ho = this.txt_ho.Text;
-                                    this.khachTro.Ten = this.txt_ten.Text;
-                                    this.khachTro.GioiTinh = this.cb_gioiTinh.Text;
-                                    this.khachTro.NgaySinh = this.dtp_ngaySinh.Value;
-                                    this.khachTro.QueQuan = this.txt_queQuan.Text;
-                                    this.khachTro.SoCanCuoc = this.txt_soCanCuoc.Text;
-                                    this.khachTro.SoDienThoai = this.txt_soDienThoai.Text;
-
-                                    try
+                                    if (khachDaTonTai == false)
                                     {
-                                        if (BLL_KHACH.SoCanCuocDaTonTai(khachTro) == true)
-                                        {
-                                            XtraMessageBox.Show("Số căn cước " + khachTro.SoCanCuoc + " đã tồn tại ",
-                                                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        khachTro = new DTO_KHACH();
+                                        khachTro.Ho = this.txt_ho.Text;
+                                        khachTro.Ten = this.txt_ten.Text;
+                                        khachTro.GioiTinh = this.cb_gioiTinh.Text;
+                                        khachTro.NgaySinh = this.dtp_ngaySinh.Value;
+                                        khachTro.QueQuan = this.txt_queQuan.Text;
+                                        khachTro.SoCanCuoc = this.txt_soCanCuoc.Text;
+                                        khachTro.SoDienThoai = this.txt_soDienThoai.Text;
 
-                                            this.txt_soCanCuoc.Focus();
-                                            this.txt_soCanCuoc.SelectAll();
+                                        try
+                                        {
+                                            if (BLL_KHACH.SoCanCuocDaTonTai(khachTro) == true)
+                                            {
+                                                XtraMessageBox.Show("Số căn cước " + khachTro.SoCanCuoc + " đã tồn tại ",
+                                                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                                                this.txt_soCanCuoc.Focus();
+                                                this.txt_soCanCuoc.SelectAll();
+
+                                                state = false;
+                                            }
+                                        }
+                                        catch (Exception ex)
+                                        {
+                                            XtraMessageBox.Show("Lỗi truy vấn !\n\n" + "Nội dung lỗi:" + ex.Message,
+                                                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                                             state = false;
                                         }
-                                    }
-                                    catch (Exception ex)
-                                    {
-                                        XtraMessageBox.Show("Lỗi truy vấn !\n\n" + "Nội dung lỗi:" + ex.Message,
-                                            "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                                        state = false;
                                     }
                                 }
                             }
 
             return state;
+        }
+
+        private void fThemThongTinKhach_Load(object sender, EventArgs e)
+        {
+
         }
 
     }

@@ -61,7 +61,7 @@ namespace BLL
 
         public static bool ThemPhong(DTO_PHONG phong)
         {
-            return DAL_PHONG.ThemPhong(phong) == 1;
+            return DAL_PHONG.ThemPhong(phong) == 3;
         }
         
         public static bool SuaPhong(DTO_PHONG phong)
@@ -71,17 +71,13 @@ namespace BLL
 
         public static bool XoaPhong(DTO_PHONG phong)
         {
-            return DAL_PHONG.XoaPhong(phong) == 1;
+            return DAL_PHONG.XoaPhong(phong) > 0;
         }
 
         public static bool PhongDaDuocThamChieu(DTO_PHONG phong)
         {
-            bool state = false;
-
-            if ((int)DAL_PHONG.PhongDaDuocThamChieu(phong) > 0)
-                state = true;
-
-            return state;
+            object result = DAL_PHONG.PhongDaDuocThamChieu(phong);
+            return (bool)result;
         }
 
 

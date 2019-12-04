@@ -33,7 +33,7 @@ GO
 
 
 ---------------------------------------------------------------
-CREATE	FUNCTION	FUNC__PHONG__IsReferenced(@MAPHG VARCHAR(10))
+CREATE FUNCTION	FUNC__PHONG__IsReferenced(@MAPHG VARCHAR(10))
 RETURNS BIT
 AS
 BEGIN
@@ -56,7 +56,9 @@ BEGIN
 							
 	SET @COUNT = @COUNT + (SELECT COUNT(MAPHG)
 							FROM DICHVU_PHONG
-							WHERE MAPHG = @MAPHG)
+							WHERE MAPHG = @MAPHG
+								AND MADICHVU <> 'DVU0000001'
+								AND MADICHVU <> 'DVU0000002')
 	
 	IF @COUNT > 0
 		SET @RESULT = 'True'

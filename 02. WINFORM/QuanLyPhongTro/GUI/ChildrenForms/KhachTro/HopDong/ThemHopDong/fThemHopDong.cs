@@ -115,6 +115,7 @@ namespace GUI.ChildrenForms.KhachTro.HopDong.ThemHopDong
             {
                 this.dgv_thongTinKhach.Rows.Add
                 (
+                    khachTro.MaKhach,
                     khachTro.Ho,
                     khachTro.Ten,
                     khachTro.GioiTinh,
@@ -124,8 +125,13 @@ namespace GUI.ChildrenForms.KhachTro.HopDong.ThemHopDong
                     khachTro.SoDienThoai
                 );
 
+
+                if (khachTro.MaKhach == null)   //  Khách mới chưa có mã thì cho sửa
+                    this.btn_chinhSua.Enabled = true;
+                else
+                    this.btn_chinhSua.Enabled = false;
+
                 this.btn_tao.Enabled = true;
-                this.btn_chinhSua.Enabled = true;
                 khachTro = null;
             }
         }
@@ -196,6 +202,11 @@ namespace GUI.ChildrenForms.KhachTro.HopDong.ThemHopDong
         private void btn_huy_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgv_thongTinKhach_SelectionChanged(object sender, EventArgs e)
+        {
+
         }
 
 

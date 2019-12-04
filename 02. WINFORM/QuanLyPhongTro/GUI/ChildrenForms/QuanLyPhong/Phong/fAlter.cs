@@ -29,6 +29,8 @@ namespace GUI.ChildrenForms.QuanLyPhong.Phong
 
                 this.btn_them.Text = "Lưu";
                 this.Text = "Sửa thông tin Phòng";
+                this.cb_tenTang.Enabled = false;
+                this.cb_tenKhu.Enabled = false;
 
                 AssignData();
             }
