@@ -35,9 +35,6 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_ho = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,7 +57,6 @@
             this.btn_huy = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_them = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.dtp_ngaySinh = new Bunifu.UI.WinForms.BunifuDatePicker();
-            this.btn_chonKhachCu = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.SuspendLayout();
             // 
             // label1
@@ -455,77 +451,12 @@
             this.dtp_ngaySinh.TabIndex = 3;
             this.dtp_ngaySinh.Value = new System.DateTime(2019, 11, 30, 0, 0, 0, 0);
             // 
-            // btn_chonKhachCu
-            // 
-            this.btn_chonKhachCu.AllowToggling = false;
-            this.btn_chonKhachCu.AnimationSpeed = 200;
-            this.btn_chonKhachCu.AutoGenerateColors = false;
-            this.btn_chonKhachCu.BackColor = System.Drawing.Color.Transparent;
-            this.btn_chonKhachCu.BackColor1 = System.Drawing.Color.DarkOrange;
-            this.btn_chonKhachCu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_chonKhachCu.BackgroundImage")));
-            this.btn_chonKhachCu.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_chonKhachCu.ButtonText = "Chọn khách cũ";
-            this.btn_chonKhachCu.ButtonTextMarginLeft = 0;
-            this.btn_chonKhachCu.ColorContrastOnClick = 45;
-            this.btn_chonKhachCu.ColorContrastOnHover = 45;
-            this.btn_chonKhachCu.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btn_chonKhachCu.CustomizableEdges = borderEdges3;
-            this.btn_chonKhachCu.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_chonKhachCu.DisabledBorderColor = System.Drawing.Color.Empty;
-            this.btn_chonKhachCu.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btn_chonKhachCu.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btn_chonKhachCu.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btn_chonKhachCu.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.btn_chonKhachCu.ForeColor = System.Drawing.Color.White;
-            this.btn_chonKhachCu.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_chonKhachCu.IconMarginLeft = 11;
-            this.btn_chonKhachCu.IconPadding = 10;
-            this.btn_chonKhachCu.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_chonKhachCu.IdleBorderColor = System.Drawing.Color.Orange;
-            this.btn_chonKhachCu.IdleBorderRadius = 3;
-            this.btn_chonKhachCu.IdleBorderThickness = 1;
-            this.btn_chonKhachCu.IdleFillColor = System.Drawing.Color.DarkOrange;
-            this.btn_chonKhachCu.IdleIconLeftImage = null;
-            this.btn_chonKhachCu.IdleIconRightImage = null;
-            this.btn_chonKhachCu.IndicateFocus = false;
-            this.btn_chonKhachCu.Location = new System.Drawing.Point(261, 417);
-            this.btn_chonKhachCu.Name = "btn_chonKhachCu";
-            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties5.BorderRadius = 3;
-            stateProperties5.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties5.BorderThickness = 1;
-            stateProperties5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties5.ForeColor = System.Drawing.Color.White;
-            stateProperties5.IconLeftImage = null;
-            stateProperties5.IconRightImage = null;
-            this.btn_chonKhachCu.onHoverState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties6.BorderRadius = 3;
-            stateProperties6.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties6.BorderThickness = 1;
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties6.ForeColor = System.Drawing.Color.White;
-            stateProperties6.IconLeftImage = null;
-            stateProperties6.IconRightImage = null;
-            this.btn_chonKhachCu.OnPressedState = stateProperties6;
-            this.btn_chonKhachCu.Size = new System.Drawing.Size(125, 45);
-            this.btn_chonKhachCu.TabIndex = 7;
-            this.btn_chonKhachCu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_chonKhachCu.TextMarginLeft = 0;
-            this.btn_chonKhachCu.UseDefaultRadiusAndThickness = true;
-            this.btn_chonKhachCu.Click += new System.EventHandler(this.btn_chonKhachCu_Click);
-            // 
             // fThemThongTinKhach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(655, 475);
             this.Controls.Add(this.btn_huy);
-            this.Controls.Add(this.btn_chonKhachCu);
             this.Controls.Add(this.btn_them);
             this.Controls.Add(this.cb_gioiTinh);
             this.Controls.Add(this.dtp_ngaySinh);
@@ -584,6 +515,5 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_chonKhachCu;
     }
 }

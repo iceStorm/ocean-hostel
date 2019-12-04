@@ -24,6 +24,7 @@ namespace GUI
                                            "Glass Oceans", "Money Twins"};
 
         private System.Windows.Forms.Timer timer_open;
+        private System.Windows.Forms.Timer timer_hour;
         private DTO_NGUOIDUNG nguoiDung;
 
         public fMain(DTO_NGUOIDUNG nguoiDung = null)
@@ -41,13 +42,21 @@ namespace GUI
             InitializeComponent();
             SetFormSize();
 
-            //this.rib_main.Minimized = true;
-
             this.Opacity = 0;
             this.timer_open = new System.Windows.Forms.Timer();
             this.timer_open.Interval = 1;
             this.timer_open.Tick += timer_Tick;
             this.timer_open.Start();
+
+            this.timer_hour = new System.Windows.Forms.Timer();
+            this.timer_hour.Interval = 1000;
+            this.timer_hour.Tick += timer_hour_Tick;
+            this.timer_hour.Start();
+        }
+
+        private void timer_hour_Tick(object sender, EventArgs e)
+        {
+            this.txt_time.Caption = DateTime.Now.ToShortTimeString();
         }
 
         private void timer_Tick(object sender, EventArgs e)

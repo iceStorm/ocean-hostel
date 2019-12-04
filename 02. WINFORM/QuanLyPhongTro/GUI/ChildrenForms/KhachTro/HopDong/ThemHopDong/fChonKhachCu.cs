@@ -15,9 +15,12 @@ namespace GUI.ChildrenForms.KhachTro.HopDong.ThemHopDong
 {
     public partial class fChonKhachCu : DevExpress.XtraEditors.XtraForm
     {
-        public fChonKhachCu()
+        List<DTO_KHACH> listKhach;
+
+        public fChonKhachCu(List<DTO_KHACH> listKhach)
         {
             InitializeComponent();
+            this.listKhach = listKhach;
         }
 
         private void cb_soCanCuoc_SelectedIndexChanged(object sender, EventArgs e)
@@ -38,14 +41,16 @@ namespace GUI.ChildrenForms.KhachTro.HopDong.ThemHopDong
 
         private void btn_huy_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void btn_them_Click(object sender, EventArgs e)
         {
             if (this.cb_soCanCuoc.SelectedIndex == -1)
             {
-                MessageBox.Show("Vui lòng chọn đúng số căn cước !");
+                XtraMessageBox.Show("Vui lòng chọn đúng số căn cước !", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 this.cb_soCanCuoc.Focus();
             }
             else
@@ -54,7 +59,7 @@ namespace GUI.ChildrenForms.KhachTro.HopDong.ThemHopDong
                 if ((string)drv.Row.ItemArray[8] != "Hết hợp đồng")
                 {
                     string message = String.Format("Khách đang ở phòng {0} !", (string)drv.Row.ItemArray[9]);
-                    MessageBox.Show(message, "Thông báo",
+                    XtraMessageBox.Show(message, "Thông báo",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     return;
@@ -74,7 +79,19 @@ namespace GUI.ChildrenForms.KhachTro.HopDong.ThemHopDong
                     TrangThai = (string)drv.Row.ItemArray[8]
                 };
 
-                ChildrenForms.KhachTro.HopDong.ThemHopDong.fThemThongTinKhach.khachTro = khachCu;
+                
+                foreach (DTO_KHACH kh in this.listKhach)
+                    if (kh.MaKhach == khachCu.MaKhach)
+                    {
+                        XtraMessageBox.Show("Khách đã có trong hàng đợi !", "Thông báo",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                        return;
+                    }
+
+
+                ChildrenForms.KhachTro.HopDong.ThemHopDong.fThemHopDong.isAdded = true;
+                ChildrenForms.KhachTro.HopDong.ThemHopDong.fThemHopDong.khachTro = khachCu;
                 this.Close();
             }
         }

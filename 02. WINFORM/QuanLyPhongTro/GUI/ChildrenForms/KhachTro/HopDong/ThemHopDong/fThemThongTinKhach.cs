@@ -17,20 +17,19 @@ namespace GUI.ChildrenForms.KhachTro.HopDong.ThemHopDong
     {
         public static DTO_KHACH khachTro;
         private List<DTO_KHACH> listKhach;
-        private bool isAdd = true;
-        private bool isOldCustomer = false;
+        private bool isAdd;
 
-        public fThemThongTinKhach(List<DTO_KHACH> listKhach, DTO_KHACH khachTro = null)
+        public fThemThongTinKhach(List<DTO_KHACH> listKhach, bool isAdd, DTO_KHACH khachHangDoi = null)
         {
+            khachTro = khachHangDoi;    //  Khách ở hàng đợi bên form thêm khách
             InitializeComponent();
             this.listKhach = listKhach;
+            this.isAdd = isAdd;
+            khachTro = khachHangDoi;
 
 
-            if (khachTro != null)
+            if (isAdd == false)
             {
-                isAdd = false;
-
-                khachTro = khachTro;
                 this.Text = "Sửa thông tin khách trọ";
                 this.btn_them.Text = "Lưu";
 
@@ -87,52 +86,26 @@ namespace GUI.ChildrenForms.KhachTro.HopDong.ThemHopDong
             {
                 if (isAdd == false)  //  Sửa
                 {
-                    ChildrenForms.KhachTro.HopDong.ThemHopDong.fThemHopDong.khachTro.Ho = this.txt_ho.Text;
-                    ChildrenForms.KhachTro.HopDong.ThemHopDong.fThemHopDong.khachTro.Ten = this.txt_ten.Text;
-                    ChildrenForms.KhachTro.HopDong.ThemHopDong.fThemHopDong.khachTro.NgaySinh = this.dtp_ngaySinh.Value;
-                    ChildrenForms.KhachTro.HopDong.ThemHopDong.fThemHopDong.khachTro.GioiTinh = this.cb_gioiTinh.Text;
-                    ChildrenForms.KhachTro.HopDong.ThemHopDong.fThemHopDong.khachTro.QueQuan = this.txt_queQuan.Text;
-                    ChildrenForms.KhachTro.HopDong.ThemHopDong.fThemHopDong.khachTro.SoCanCuoc = this.txt_soCanCuoc.Text;
-                    ChildrenForms.KhachTro.HopDong.ThemHopDong.fThemHopDong.khachTro.SoDienThoai = this.txt_soDienThoai.Text;
+                    ChildrenForms.KhachTro.HopDong.ThemHopDong.fThemHopDong.isUpdated = true;
                 }
-                else                        //  Thêm
+                else                //  Thêm
                 {
-                    ChildrenForms.KhachTro.HopDong.ThemHopDong.fThemHopDong.khachTro = new DTO.DTO_KHACH
-                    {
-                        Ho = this.txt_ho.Text,
-                        Ten = this.txt_ten.Text,
-                        NgaySinh = this.dtp_ngaySinh.Value,
-                        GioiTinh = this.cb_gioiTinh.Text,
-                        QueQuan = this.txt_queQuan.Text,
-                        SoCanCuoc = this.txt_soCanCuoc.Text,
-                        SoDienThoai = this.txt_soDienThoai.Text
-                    };
+                    ChildrenForms.KhachTro.HopDong.ThemHopDong.fThemHopDong.isAdded = true;
                 }
+
+
+                ChildrenForms.KhachTro.HopDong.ThemHopDong.fThemHopDong.khachTro = new DTO_KHACH
+                {
+                    Ho = this.txt_ho.Text,
+                    Ten = this.txt_ten.Text,
+                    GioiTinh = this.cb_gioiTinh.Text,
+                    NgaySinh = this.dtp_ngaySinh.Value,
+                    QueQuan = this.txt_queQuan.Text,
+                    SoCanCuoc = this.txt_soCanCuoc.Text,
+                    SoDienThoai = this.txt_soDienThoai.Text
+                };
 
                 this.Close();
-            }
-        }
-
-        private void btn_chonKhachCu_Click(object sender, EventArgs e)
-        {
-            XtraForm FormChonKhachCu = new ChildrenForms.KhachTro.HopDong.ThemHopDong.fChonKhachCu();
-            this.Hide();
-            FormChonKhachCu.ShowDialog();
-            this.Show();
-
-            if (khachTro != null)      
-            {
-                this.txt_ho.Text = khachTro.Ho;
-                this.txt_ten.Text = khachTro.Ten;
-                this.cb_gioiTinh.SelectedItem = khachTro.GioiTinh;
-                this.dtp_ngaySinh.Value = khachTro.NgaySinh;
-                this.txt_queQuan.Text = khachTro.QueQuan;
-                this.txt_soCanCuoc.Text = khachTro.SoCanCuoc;
-                this.txt_soDienThoai.Text = khachTro.SoDienThoai;
-
-                foreach (Control ctrl in this.Controls) //  Đóng băng không cho sửa khi chọn khách cũ
-                    if (ctrl.GetType() != typeof(Bunifu.UI.WinForms.BunifuButton.BunifuButton))
-                        ctrl.Enabled = false;
             }
         }
 
@@ -189,60 +162,37 @@ namespace GUI.ChildrenForms.KhachTro.HopDong.ThemHopDong
                             }
                             else
                             {
-                                if (khachTro.MaKhach == null)   //  Khách mới
+                                foreach (DTO_KHACH khach in this.listKhach)
+                                    if (this.txt_soCanCuoc.Text == khach.SoCanCuoc)
+                                    {
+                                        XtraMessageBox.Show("Số căn cước đã có trong hàng đợi hợp đồng !",
+                                             "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                                        this.txt_soCanCuoc.Focus();
+                                        this.txt_soCanCuoc.SelectAll();
+                                        return false;
+                                    }
+
+
+                                try
                                 {
-                                    bool khachDaTonTai = false; //  Xác định liệu có phải khách cũ hay không
-
-                                    foreach (DTO_KHACH khach in this.listKhach)
+                                    if (BLL_KHACH.SoCanCuocDaTonTai(new DTO_KHACH {SoCanCuoc = this.txt_soCanCuoc.Text }) == true)
                                     {
-                                        if (this.txt_soCanCuoc.Text == khach.SoCanCuoc)
-                                        {
-                                            if (BLL_KHACH.SoCanCuocDaTonTai(khachTro) == true)
-                                            {
-                                                XtraMessageBox.Show("Số căn cước " + khachTro.SoCanCuoc + " đã tồn tại ",
-                                                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        XtraMessageBox.Show("Số căn cước đã tồn tại ",
+                                            "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                                                this.txt_soCanCuoc.Focus();
-                                                this.txt_soCanCuoc.SelectAll();
+                                        this.txt_soCanCuoc.Focus();
+                                        this.txt_soCanCuoc.SelectAll();
 
-                                                khachDaTonTai = true;
-                                            }
-                                        }
+                                        state = false;
                                     }
+                                }
+                                catch (Exception ex)
+                                {
+                                    XtraMessageBox.Show("Lỗi truy vấn !\n\n" + "Nội dung lỗi:" + ex.Message,
+                                        "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-
-                                    if (khachDaTonTai == false)
-                                    {
-                                        khachTro = new DTO_KHACH();
-                                        khachTro.Ho = this.txt_ho.Text;
-                                        khachTro.Ten = this.txt_ten.Text;
-                                        khachTro.GioiTinh = this.cb_gioiTinh.Text;
-                                        khachTro.NgaySinh = this.dtp_ngaySinh.Value;
-                                        khachTro.QueQuan = this.txt_queQuan.Text;
-                                        khachTro.SoCanCuoc = this.txt_soCanCuoc.Text;
-                                        khachTro.SoDienThoai = this.txt_soDienThoai.Text;
-
-                                        try
-                                        {
-                                            if (BLL_KHACH.SoCanCuocDaTonTai(khachTro) == true)
-                                            {
-                                                XtraMessageBox.Show("Số căn cước " + khachTro.SoCanCuoc + " đã tồn tại ",
-                                                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                                                this.txt_soCanCuoc.Focus();
-                                                this.txt_soCanCuoc.SelectAll();
-
-                                                state = false;
-                                            }
-                                        }
-                                        catch (Exception ex)
-                                        {
-                                            XtraMessageBox.Show("Lỗi truy vấn !\n\n" + "Nội dung lỗi:" + ex.Message,
-                                                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                                            state = false;
-                                        }
-                                    }
+                                    state = false;
                                 }
                             }
 

@@ -33,21 +33,20 @@ namespace GUI.ChildrenForms.KhachTro.HopDong
                 this.btn_chiTiet.Enabled = false;
                 this.btn_traCoc.Enabled = false;
                 this.btn_xoa.Enabled = false;
-                this.btn_hetHan.Enabled = false;
             }
             else
             {
                 this.btn_chiTiet.Enabled = true;
                 this.btn_traCoc.Enabled = true;
                 this.btn_xoa.Enabled = true;
-                this.btn_hetHan.Enabled = true;
             }
 
+
             this.gridControl_hopDong.DataSource = dt;
-            this.gridView_hopDong.Columns["MAHOPDONG"].Visible = false;
             this.gridView_hopDong.Columns["MAPHG"].Visible = false;
 
-            this.gridView_hopDong.Columns["TENPHG"].VisibleIndex = 0;
+            this.gridView_hopDong.Columns["MAHOPDONG"].Caption = "Mã hợp đồng";
+            this.gridView_hopDong.Columns["MAHOPDONG"].VisibleIndex = 0;
             this.gridView_hopDong.Columns["TENPHG"].Caption = "Tên phòng";
             this.gridView_hopDong.Columns["THOIHAN"].Caption = "Thời hạn";
             this.gridView_hopDong.Columns["THOIGIANTAO"].Caption = "Ngày tạo";
@@ -97,16 +96,6 @@ namespace GUI.ChildrenForms.KhachTro.HopDong
             hopDong.DaTraCoc = (this.gridView_hopDong.GetFocusedDataRow())["DATRACOC"].ToString();
 
 
-            if (hopDong.TrangThai == "Hết hiệu lực")
-            {
-                this.btn_hetHan.Enabled = false;
-            }
-            else
-            {
-                this.btn_hetHan.Enabled = true;
-            }
-
-
             if (hopDong.DaTraCoc == "True")
             {
                 this.btn_traCoc.Enabled = false;
@@ -117,7 +106,7 @@ namespace GUI.ChildrenForms.KhachTro.HopDong
             }
         }
 
-        private void btn_hetHan_Click(object sender, EventArgs e)
+        private void btn_xoa_Click(object sender, EventArgs e)
         {
             DTO_HOPDONG hopDong = new DTO_HOPDONG();
             hopDong.MaHopDong = (string)(this.gridView_hopDong.GetFocusedDataRow())["MAHOPDONG"];

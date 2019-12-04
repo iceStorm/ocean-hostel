@@ -33,7 +33,7 @@ namespace BLL
 
         public static bool HetHanHopDong(DTO_HOPDONG hopDong)
         {
-            return DAL_HOPDONG.HetHanHopDong(hopDong) == 1;
+            return DAL_HOPDONG.HetHanHopDong(hopDong) > 0;
         }
 
     }
