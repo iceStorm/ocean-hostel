@@ -1,0 +1,802 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A95FC6B2-E734-4C68-8EAB-531D05DE6CAC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Animator, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Animator.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Core, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForm.BunifuShadowPanel, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForm.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock, Version=1.11.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGauge, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel, Version=1.11.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages, Version=1.11.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar, Version=1.11.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.ToggleSwitch, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.ToggleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v19.1">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v19.1">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Images.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v19.1.Export, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v19.1">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v19.1.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v19.1.UI, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v19.1.Extensions, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v19.1.UI, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v19.1.Wizard, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v19.1">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v19.1.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v19.1.Win, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v19.1.Extensions, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChildrenForms\DichVu\DanhMucDichVu\fAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\DichVu\DanhMucDichVu\fAlter.Designer.cs">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\DichVu\DanhMucDichVu\fDanhMucDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\DichVu\DanhMucDichVu\fDanhMucDichVu.Designer.cs">
+      <DependentUpon>fDanhMucDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\DichVu\DichVuMoiPhong\fAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\DichVu\DichVuMoiPhong\fAlter.Designer.cs">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\DichVu\DichVuMoiPhong\fDichVuMoiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\DichVu\DichVuMoiPhong\fDichVuMoiPhong.Designer.cs">
+      <DependentUpon>fDichVuMoiPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\HeThong\fDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\HeThong\fDoiMatKhau.Designer.cs">
+      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\HeThong\fXemThongTinTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\HeThong\fXemThongTinTaiKhoan.Designer.cs">
+      <DependentUpon>fXemThongTinTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fChiTietHoaDon.Designer.cs">
+      <DependentUpon>fChiTietHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fDanhSachHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fDanhSachHoaDon.Designer.cs">
+      <DependentUpon>fDanhSachHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\HoaDonChiTieu\fThemHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\HoaDonChiTieu\fThemHoaDon.Designer.cs">
+      <DependentUpon>fThemHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\KhachTro\DanhSachKhach\fAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\KhachTro\DanhSachKhach\fAlter.Designer.cs">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\KhachTro\DanhSachKhach\fKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\KhachTro\DanhSachKhach\fKhach.Designer.cs">
+      <DependentUpon>fKhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\KhachTro\HopDong\fDanhSachHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\KhachTro\HopDong\fDanhSachHopDong.Designer.cs">
+      <DependentUpon>fDanhSachHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\KhachTro\HopDong\ThemHopDong\fChonKhachCu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\KhachTro\HopDong\ThemHopDong\fChonKhachCu.Designer.cs">
+      <DependentUpon>fChonKhachCu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\KhachTro\HopDong\ThemHopDong\fThemHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\KhachTro\HopDong\ThemHopDong\fThemHopDong.Designer.cs">
+      <DependentUpon>fThemHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\KhachTro\HopDong\ThemHopDong\fThemThongTinKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\KhachTro\HopDong\ThemHopDong\fThemThongTinKhach.Designer.cs">
+      <DependentUpon>fThemThongTinKhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\DayNha\fAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\DayNha\fAlter.Designer.cs">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\DayNha\fDayNha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\DayNha\fDayNha.Designer.cs">
+      <DependentUpon>fDayNha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\LoaiPhong\fAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\LoaiPhong\fAlter.Designer.cs">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\LoaiPhong\fLoaiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\LoaiPhong\fLoaiPhong.Designer.cs">
+      <DependentUpon>fLoaiPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\Phong\fAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\Phong\fAlter.Designer.cs">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\Phong\fPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\Phong\fPhong.Designer.cs">
+      <DependentUpon>fPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\Tang\fAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\Tang\fAlter.Designer.cs">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\Tang\fTang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyPhong\Tang\fTang.Designer.cs">
+      <DependentUpon>fTang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyThietBi\DanhMucThietBi\fAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyThietBi\DanhMucThietBi\fAlter.Designer.cs">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyThietBi\DanhMucThietBi\fDanhMucThietBi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyThietBi\DanhMucThietBi\fDanhMucThietBi.Designer.cs">
+      <DependentUpon>fDanhMucThietBi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyThietBi\PhanBoThietBi\fAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyThietBi\PhanBoThietBi\fAlter.Designer.cs">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyThietBi\PhanBoThietBi\fPhanBoThietBi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyThietBi\PhanBoThietBi\fPhanBoThietBi.Designer.cs">
+      <DependentUpon>fPhanBoThietBi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyViPham\KhachViPham\fAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyViPham\KhachViPham\fAlter.Designer.cs">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyViPham\KhachViPham\fKhachViPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyViPham\KhachViPham\fKhachViPham.Designer.cs">
+      <DependentUpon>fKhachViPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyViPham\ViPham\fAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyViPham\ViPham\fAlter.Designer.cs">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyViPham\ViPham\fViPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForms\QuanLyViPham\ViPham\fViPham.Designer.cs">
+      <DependentUpon>fViPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWelcome\fWelcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWelcome\fWelcome.Designer.cs">
+      <DependentUpon>fWelcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityClasses\DataHelper.cs" />
+    <Compile Include="FormLogin\fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin\fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain\fMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain\fMain.Designer.cs">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChart\fChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChart\fChart.Designer.cs">
+      <DependentUpon>fChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UtilityClasses\Reader.cs" />
+    <Compile Include="UtilityClasses\Str.cs" />
+    <EmbeddedResource Include="ChildrenForms\DichVu\DanhMucDichVu\fAlter.resx">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\DichVu\DanhMucDichVu\fDanhMucDichVu.resx">
+      <DependentUpon>fDanhMucDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\DichVu\DichVuMoiPhong\fAlter.resx">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\DichVu\DichVuMoiPhong\fDichVuMoiPhong.resx">
+      <DependentUpon>fDichVuMoiPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\HeThong\fDoiMatKhau.resx">
+      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\HeThong\fXemThongTinTaiKhoan.resx">
+      <DependentUpon>fXemThongTinTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fChiTietHoaDon.resx">
+      <DependentUpon>fChiTietHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\HoaDonChiTieu\DanhSachHoaDon\fDanhSachHoaDon.resx">
+      <DependentUpon>fDanhSachHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\HoaDonChiTieu\fThemHoaDon.resx">
+      <DependentUpon>fThemHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\KhachTro\DanhSachKhach\fAlter.resx">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\KhachTro\DanhSachKhach\fKhach.resx">
+      <DependentUpon>fKhach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\KhachTro\HopDong\fDanhSachHopDong.resx">
+      <DependentUpon>fDanhSachHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\KhachTro\HopDong\ThemHopDong\fChonKhachCu.resx">
+      <DependentUpon>fChonKhachCu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\KhachTro\HopDong\ThemHopDong\fThemHopDong.resx">
+      <DependentUpon>fThemHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\KhachTro\HopDong\ThemHopDong\fThemThongTinKhach.resx">
+      <DependentUpon>fThemThongTinKhach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyPhong\DayNha\fAlter.resx">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyPhong\DayNha\fDayNha.resx">
+      <DependentUpon>fDayNha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyPhong\LoaiPhong\fAlter.resx">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyPhong\LoaiPhong\fLoaiPhong.resx">
+      <DependentUpon>fLoaiPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyPhong\Phong\fAlter.resx">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyPhong\Phong\fPhong.resx">
+      <DependentUpon>fPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyPhong\Tang\fAlter.resx">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyPhong\Tang\fTang.resx">
+      <DependentUpon>fTang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyThietBi\DanhMucThietBi\fAlter.resx">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyThietBi\DanhMucThietBi\fDanhMucThietBi.resx">
+      <DependentUpon>fDanhMucThietBi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyThietBi\PhanBoThietBi\fAlter.resx">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyThietBi\PhanBoThietBi\fPhanBoThietBi.resx">
+      <DependentUpon>fPhanBoThietBi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyViPham\KhachViPham\fAlter.resx">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyViPham\KhachViPham\fKhachViPham.resx">
+      <DependentUpon>fKhachViPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyViPham\ViPham\fAlter.resx">
+      <DependentUpon>fAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForms\QuanLyViPham\ViPham\fViPham.resx">
+      <DependentUpon>fViPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin\fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain\fMain.resx">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChart\fChart.resx">
+      <DependentUpon>fChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWelcome\fWelcome.resx">
+      <DependentUpon>fWelcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <None Include="bin\Debug\ICONS\icons8-stairs-up-32.png" />
+    <None Include="bin\Debug\ICONS\icons8-user-group-32.png" />
+    <None Include="bin\Debug\ICONS\icons8-collaborator-female-32.png" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\shipmentawaiting.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{804f2d77-297e-4ac8-b9a7-d267e95c8c68}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{f1db9c89-9c90-40e4-a22f-c51587f98aac}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\LOGIN_BACKGROUNDS\ColorLayer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-chart-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-time-machine-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-password-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-exit-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-shutdown-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-private-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-home-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-condo-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-contract-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-family-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-traveler-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-pie-chart-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-school-director-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-racism-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-light-automation-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-sell-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-no-parking-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-denied-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-chart-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-people-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-manager-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-good-pincode-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-lock-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-lease-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-dog-house-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-print-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bopermission_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bopermission_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-two-beds-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-log-cabin-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\products_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\products_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formatcells_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formatcells_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-paycheque-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-add-property-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-plumbing-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-business-report-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-developer-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-info-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-info-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-info-popup-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-light-off-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-hospital-room-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-home-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-home-automation-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ICONS\icons8-service-32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
